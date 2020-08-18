@@ -1,5 +1,6 @@
 ﻿@page "/Summary"
 @inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <h3>Summary</h3>
 
@@ -67,6 +68,8 @@
 
     protected override async Task OnInitializedAsync()
     {
+        await sessionStorage.RemoveItemAsync("full_name");
+        await sessionStorage.RemoveItemAsync("level");
         await base.OnParametersSetAsync();
     }
 

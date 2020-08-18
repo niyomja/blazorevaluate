@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="comevaluate" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Projects\\BlazorWebEvaluate\\BlazorWebEvaluate\\obj\\Release\\netstandard2\.1\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Release/netstandard2\.1/PubTmp/Out/$" />
   </parameter>
 </parameters>

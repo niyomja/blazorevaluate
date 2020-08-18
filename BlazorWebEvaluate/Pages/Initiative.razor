@@ -1,5 +1,6 @@
 ﻿@page "/Initiative"
 @inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <h3><b>ส่วนที่ 2</b> คิดสร้างสรรค์(Initiative)</h3>
 
@@ -133,6 +134,23 @@
     {
         initiative = new InitiativeData();
         initiative.level1 = new Level();
+        initiative.level3 = new Level();
+        initiative.level5 = new Level();
+
+        initiative.level1.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c1");
+        initiative.level1.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c2");
+        initiative.level1.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c3");
+
+        initiative.level3.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c1");
+        initiative.level3.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c2");
+        initiative.level3.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c3");
+        initiative.level3.c4 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c4");
+        initiative.level3.c5 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c5");
+
+        initiative.level5.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c1");
+        initiative.level5.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c2");
+        initiative.level5.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c3");
+
         await base.OnParametersSetAsync();
     }
 
@@ -159,10 +177,16 @@
                         {
                             initiative.level3 = new Level();
                         }
+                        sessionStorage.SetItemAsync("initiative.level1.c1", initiative.level1.c1);
+                        sessionStorage.SetItemAsync("initiative.level1.c2", initiative.level1.c2);
+                        sessionStorage.SetItemAsync("initiative.level1.c3", initiative.level1.c3);
                         step++;
                     }
                     else
                     {
+                        sessionStorage.SetItemAsync("initiative.level1.c1", initiative.level1.c1);
+                        sessionStorage.SetItemAsync("initiative.level1.c2", initiative.level1.c2);
+                        sessionStorage.SetItemAsync("initiative.level1.c3", initiative.level1.c3);
                         NavigationManager.NavigateTo("Collaboration");
                     }
                 }; break;
@@ -174,15 +198,28 @@
                         {
                             initiative.level5 = new Level();
                         }
+                        sessionStorage.SetItemAsync("initiative.level3.c1", initiative.level3.c1);
+                        sessionStorage.SetItemAsync("initiative.level3.c2", initiative.level3.c2);
+                        sessionStorage.SetItemAsync("initiative.level3.c3", initiative.level3.c3);
+                        sessionStorage.SetItemAsync("initiative.level3.c4", initiative.level3.c4);
+                        sessionStorage.SetItemAsync("initiative.level3.c5", initiative.level3.c5);
                         step++;
                     }
                     else
                     {
+                        sessionStorage.SetItemAsync("initiative.level3.c1", initiative.level3.c1);
+                        sessionStorage.SetItemAsync("initiative.level3.c2", initiative.level3.c2);
+                        sessionStorage.SetItemAsync("initiative.level3.c3", initiative.level3.c3);
+                        sessionStorage.SetItemAsync("initiative.level3.c4", initiative.level3.c4);
+                        sessionStorage.SetItemAsync("initiative.level3.c5", initiative.level3.c5);
                         NavigationManager.NavigateTo("Collaboration");
                     }
                 }; break;
             case 3:
                 {
+                    sessionStorage.SetItemAsync("initiative.level5.c1", initiative.level5.c1);
+                    sessionStorage.SetItemAsync("initiative.level5.c2", initiative.level5.c2);
+                    sessionStorage.SetItemAsync("initiative.level5.c3", initiative.level5.c3);
                     NavigationManager.NavigateTo("Collaboration");
                 }; break;
         }

@@ -1,31 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\BlazorWebEvaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj": {}
+    "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\BlazorWebEvaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj": {
+    "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\BlazorWebEvaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj",
+        "projectUniqueName": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj",
         "projectName": "BlazorWebEvaluate",
-        "projectPath": "D:\\Projects\\BlazorWebEvaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj",
-        "packagesPath": "C:\\Users\\Tam\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\BlazorWebEvaluate\\BlazorWebEvaluate\\obj\\",
+        "projectPath": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj",
+        "packagesPath": "/Users/niyom/.nuget/packages/",
+        "outputPath": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/niyom/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,6 +39,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "Blazored.SessionStorage": {
+              "target": "Package",
+              "version": "[1.0.12, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[3.2.1, )"
@@ -76,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
         }
       }
     }
