@@ -1,0 +1,206 @@
+﻿@page "/SafetyAndSecurity"
+@inject NavigationManager NavigationManager
+
+<h3>
+    <b>ส่วนที่ 5</b> มั่นคงปลอดภัย (Safety and Security)
+</h3>
+
+<p>
+    ปฏิบัติงานตามมาตรฐานความปลอดภัยและรักษาความปลอดภัยที่เป็นปัจจุบันได้อย่างครบถ้วน สอดคล้องกับมาตรฐานสากล โดยประยุกต์ใช้เทคโนโลยีที่ทันสมัย เพื่อสนับสนุนการให้บริการได้อย่างปลอดภัย เสมอภาค ป้องกันการสูญเสีย สร้างความเชื่อมั่นให้แก่ผู้ใช้บริการ และเสริมสร้างภาพลักษณ์ที่ดีให้กับองค์กรได้อย่างยั่งยืน
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้และเข้าใจกฎ ระเบียบ มาตรฐานความปลอดภัยที่เกี่ยวข้องกับภายในหน่วยงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ปฏิบัติตามขั้นตอนความปลอดภัยและรักษาความปลอดภัยอย่างครบถ้วน เคร่งครัด  สม่ำเสมอ เสมอภาค
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. ปฏิบัติงานโดยไม่เกิดอุบัติเหตุ และความสูญเสีย ต่อร่างกายและทรัพย์สินของหน่วยงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level1.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้และเข้าใจกฎ ระเบียบ มาตรฐานความปลอดภัยฯใหม่ ที่ทันต่อการเปลี่ยนแปลง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ประยุกต์ใช้เทคโนโลยี  และดิจิตอล มีการปรับเปลี่ยนวิธีการทำงานที่ทันสมัย ดีกว่าเดิม
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. แนะนำและถ่ายทอดมาตรฐานความปลอดภัยฯภายในหน่วยงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level3.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. การให้บริการโดยคำนึงถึงความปลอดภัยฯ ทำให้สามารถป้องกันการสูญเสีย  สร้างความเชื่อมั่นต่อหน่วยงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level3.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้และเข้าใจมาตรฐานความปลอดภัยและรักษาความปลอดภัยระดับสากล- พัฒนากระบวนการ มาตรฐานให้ทันต่อสถานการณ์ ที่เปลี่ยนแปลงระดับสากล
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. สร้างและพัฒนาทีมงานที่ได้ปฏิบัติงานได้มาตรฐานในการรักษาความปลอดภัยระดับสากล
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. เป็นต้นแบบ (Role model)ในการปฏิบัติตามมาตรฐานความปลอดภัย
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. มีบทบาทสำคัญทำให้หน่วยงาน ได้รับการประเมินผ่านเกณฑ์การยอมรับว่าเป็นหน่วยงานที่มีมาตรฐานความปลอดภัยระดับสากล
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="safetyAndSecurity.level5.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    public SafetyAndSecurity safetyAndSecurity;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        safetyAndSecurity = new SafetyAndSecurity();
+        safetyAndSecurity.level1 = new Level();
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("ServiceExcellence");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (safetyAndSecurity.level1.c1 == true && safetyAndSecurity.level1.c2 == true && safetyAndSecurity.level1.c3 == true)
+                    {
+                        if (safetyAndSecurity.level3 == null)
+                        {
+                            safetyAndSecurity.level3 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("DigitalLiteracy");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (safetyAndSecurity.level3.c1 == true && safetyAndSecurity.level3.c2 == true && safetyAndSecurity.level3.c3 == true && safetyAndSecurity.level3.c4 == true)
+                    {
+                        if (safetyAndSecurity.level5 == null)
+                        {
+                            safetyAndSecurity.level5 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("DigitalLiteracy");
+                    }
+                }; break;
+            case 3:
+                {
+                    NavigationManager.NavigateTo("DigitalLiteracy");
+                }; break;
+        }
+    }
+}

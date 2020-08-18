@@ -1,0 +1,203 @@
+﻿@page "/ServiceExcellence"
+@inject NavigationManager NavigationManager
+
+<h3><b>ส่วนที่ 4</b>  มุ่งมั่นบริการ (Service Excellence)</h3>
+<p>
+    ใช้ข้อมูล วิเคราะห์  ความต้องการของผู้รับบริการ และเพิ่มความสามารถการให้บริการ โดยปรับปรุงข้อจำกัดอุปสรรค และพัฒนาระบบงานที่ทันสมัยในการสร้างสรรค์ประสบการณ์ใหม่ๆ รวมถึงพัฒนามาตรฐานคุณภาพการบริการและการอำนวยความสะดวกให้ดียิ่งขึ้น เพื่อส่งเสริมภาพลักษณ์และความพึงพอใจโดยรวมของผู้ใช้บริการในทุกมิติ  มุ่งสู่การเป็นผู้เชี่ยวชาญธุรกิจบริการท่าอากาศยานระดับโลก
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. มีความรู้ในธุรกิจและลักษณะการให้บริการของหน่วยงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. รับฟังความต้องการ สามารถตอบสนองความต้องการของผู้รับบริการได้ครบถ้วน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สามารถแก้ไขปัญหาร้องเรียนและตอบสนองความพึงพอใจของผู้รับบริการ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level1.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้และเข้าใจมาตรฐาน คุณภาพการให้บริการ ข้อตกลงในการให้บริการ(SLA)ของหน่วยงานอย่างครบถ้วน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ปฏิบัติตามขั้นตอนการให้บริการและส่งมอบตามข้อตกลงอย่างสม่ำเสมอเป็นแบบอย่างที่ดีในหน่วยงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. ตอบสนองความพึงพอใจผู้รับบริการเกินความคาดหวังได้รับคำชื่นชม
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level3.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. มีความรู้ ความเข้าใจในระบบการให้บริการของทอท. ข้อมูลความต้องการ ความคาดหวัง ของผู้รับบริการประเภทต่างๆ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ใช้ฐานข้อมูลความต้องการของผู้รับบริการแต่ละกลุ่ม  มาออกแบบ พัฒนาระบบการให้บริการ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สามารถให้คำแนะนำการบริการที่เป็นเลิศกับหน่วยงานที่เกี่ยวข้อง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. ผลักดันและร่วมออกแบบระบบการให้บริการที่สร้างสรรค์ โดยใช้เทคโนโลยีใหม่ๆ และดิจิทัลเพื่อสร้างประสบการณ์ใหม่ๆเทียบเท่าระดับสากลให้นำมาปฏิบัติได้
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level5.c4" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5. เพิ่มความพึงพอใจให้ผู้รับบริการ มีผลการประเมินความพึงพอใจจากผู้รับบริการ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="serviceExcellence.level5.c5" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    public ServiceExcellence serviceExcellence;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        serviceExcellence = new ServiceExcellence();
+        serviceExcellence.level1 = new Level();
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("Collaboration");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (serviceExcellence.level1.c1 == true && serviceExcellence.level1.c2 == true && serviceExcellence.level1.c3 == true)
+                    {
+                        if (serviceExcellence.level3 == null)
+                        {
+                            serviceExcellence.level3 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("SafetyAndSecurity");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (serviceExcellence.level3.c1 == true && serviceExcellence.level3.c2 == true && serviceExcellence.level3.c3 == true)
+                    {
+                        if (serviceExcellence.level5 == null)
+                        {
+                            serviceExcellence.level5 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("SafetyAndSecurity");
+                    }
+                }; break;
+            case 3:
+                {
+                    NavigationManager.NavigateTo("SafetyAndSecurity");
+                }; break;
+        }
+    }
+}

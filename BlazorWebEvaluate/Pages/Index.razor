@@ -1,0 +1,40 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<h3>Personal Information.</h3>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group">
+            <label for="fullname">Name - Surename</label>
+            <input @bind="personal.full_name" type="text" class="form-control" id="fullname" placeholder="Enter you name and surename" required>
+        </div>
+        <div class="form-group">
+            <label for="level">Level</label>
+            <select @bind="personal.level" class="form-control" id="level" required>
+                <option> --- Choose --- </option>
+                @for (int i = 1; i < 11; i++)
+                {
+                    <option value="@("L"+i)">@("L"+i)</option>
+                }
+            </select>
+        </div>
+        <button @onclick="gotoNext" type="button" class="btn btn-primary">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+    </div>
+</div>
+
+@code {
+    public Personal personal { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        personal = new Personal();
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoNext()
+    {
+        StateHasChanged();
+        NavigationManager.NavigateTo("BusinessAcumen");
+    }
+}

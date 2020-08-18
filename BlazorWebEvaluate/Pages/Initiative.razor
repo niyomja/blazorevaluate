@@ -1,0 +1,191 @@
+﻿@page "/Initiative"
+@inject NavigationManager NavigationManager
+
+<h3><b>ส่วนที่ 2</b> คิดสร้างสรรค์(Initiative)</h3>
+
+<p>
+    เรียนรู้ในการมองปัญหา คิดค้นริเริ่มสิ่งใหม่  โดยเข้าใจความต้องการของผู้มีส่วนได้ส่วนเสียและใช้เทคโนโลยีให้เป็นประโยชน์เพื่อหาทางเลือกใหม่ๆ มาพัฒนาออกแบบระบบกระบวนการทำงานร่วมกับเครือข่ายพันธมิตร สร้างสรรค์ให้เกิดทางออกใหม่ๆที่เพิ่มประสิทธิภาพการทำงานให้ดีขึ้น พัฒนาแผนงาน กระบวนการทำงาน  กับผู้มีส่วนได้ส่วนเสีย
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.  รู้แนวทางวิธีคิดใหม่ๆ เชื่อมโยงความคิดที่มีความหลากหลาย และหาทางออกใหม่ๆที่เป็นไปได้</td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2.  ริเริ่มหาทางเลือกใหม่ที่เป็นไปได้ในงานที่ได้รับมอบหมายได้เป็นอย่างดี</td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. นำเสนอ และแลกเปลี่ยนแนวคิดใหม่ๆ กับทีมและ/หรือผู้บังคับบัญชาได้
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level1.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@if (step == 2)
+{
+<div class="row">
+    <div class="col-lg-12">
+        <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>หัวข้อ</th>
+                    <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. รู้เรื่องแนวคิดการออกแบบ (Design Thinking) และ เทคโนโลยี</td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c1" /> ใช่</label></td>
+                </tr>
+                <tr>
+                    <td>2. อธิบายขั้นตอนแนวคิดการออกแบบ เข้าใจปัญหาผู้ใช้บริการ สร้างสรรค์ความคิดใหม่ๆที่เป็นไปได้ และสร้างต้นแบบเพื่อทดสอบพัฒนา </td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c2" /> ใช่</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        3. คิดต่อยอดจากองค์ความรู้เดิมทดลองลงมือทำตามแนวคิดที่ออกแบบไว้ภายในหน่วยงาน สามารถประยุกต์ใช้ด้วยเทคโนโลยีดิจิทัล
+                    </td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c3" /> ใช่</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        4. สอนและให้คำปรึกษาแนะนำแก่ผู้อื่นภายในหน่วยงานได้ ออกแบบวิธีการทำงานใหม่ๆ ทดลองทำผสมผสานกันระหว่างแนวคิดที่เหมือนกันและแตกต่างกัน และปรับเปลี่ยนให้ได้วิธีการที่เหมาะสม
+                    </td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c4" /> ใช่</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        5. ทดลองพัฒนาภายในหน่วยงานจนได้กระบวนการทำงานใหม่ๆที่มีผลลัพธ์ที่ดีขึ้น
+                    </td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c5" /> ใช่</label></td>
+                </tr>
+            </tbody>
+        </table>
+        <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+        <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+    </div>
+</div>
+}
+
+@if (step == 3)
+{
+<div class="row">
+    <div class="col-lg-12">
+        <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>หัวข้อ</th>
+                    <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. รู้เรื่อง เข้าใจแนวคิดการออกแบบ (Design thinking) ในระดับที่สามารถเชื่อมโยงความคิดระหว่างหน่วยงาน</td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level5.c1" /> ใช่</label></td>
+                </tr>
+                <tr>
+                    <td>2. ร่วมออกแบบและทดลองวิธีการใหม่ๆ กับผู้มีส่วนได้ส่วนเสีย</td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level5.c2" /> ใช่</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        3. ได้ต้นแบบ (Prototype) การบริการ หรือกระบวนการทำงานใหม่ๆ ที่นำไปใช้ได้
+                    </td>
+                    <td><label><input type="checkbox" value="1" @bind="initiative.level5.c3" /> ใช่</label></td>
+                </tr>
+            </tbody>
+        </table>
+        <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+        <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+    </div>
+</div>
+}
+
+@code {
+
+    public InitiativeData initiative;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        initiative = new InitiativeData();
+        initiative.level1 = new Level();
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("BusinessAcumen");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (initiative.level1.c1 == true && initiative.level1.c2 == true && initiative.level1.c3 == true)
+                    {
+                        if (initiative.level3 == null)
+                        {
+                            initiative.level3 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("Collaboration");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (initiative.level3.c1 == true && initiative.level3.c2 == true && initiative.level3.c3 == true && initiative.level3.c4 == true && initiative.level3.c5 == true)
+                    {
+                        if (initiative.level5 == null)
+                        {
+                            initiative.level5 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("Collaboration");
+                    }
+                }; break;
+            case 3:
+                {
+                    NavigationManager.NavigateTo("Collaboration");
+                }; break;
+        }
+    }
+
+}

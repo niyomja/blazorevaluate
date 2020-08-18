@@ -1,0 +1,208 @@
+﻿@page "/Collaboration"
+@inject NavigationManager NavigationManager
+
+<h3>
+    <b>ส่วนที่ 3</b> ประสานสัมพันธ์ (Collaboration)
+</h3>
+
+<p>ปฏิบัติงานด้วยความเข้าใจกระบวนการทำงานของแต่ละหน่วยงานทั้งภายใน และภายนอกองค์กรตลอดจนผู้มีส่วนได้ส่วนเสีย  โดยรับฟังความคิดเห็น แลกเปลี่ยนข้อมูล รวมถึงถ่ายทอดความรู้ระหว่างกัน  ผ่านการสร้างความร่วมมือประสานงานทั้งภายในและผู้มีส่วนได้ส่วนเสีย เพื่อให้งานบรรลุเป้าหมายในทิศทางเดียวกันทั้งในระดับ บุคคล หน่วยงาน และองค์กร นำพาองค์กรก้าวสู่การเป็นองค์กรที่มีสมรรถนะสูงระดับโลก Proficiency Level</p>
+
+
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้และเข้าใจรูปแบบการทำงานภายในหน่วยงาน ทั้งเป้าหมายร่วม ทิศทาง ลักษณะงานที่เกี่ยวข้องและผลกระทบต่อผู้อื่น
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. รับฟังความคิดเห็น มีการแลกเปลี่ยนข้อมูลระหว่างกัน ให้ข้อมูลที่ถูกต้อง รวดเร็ว
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. ทำงานที่รับผิดชอบภายในหน่วยงานที่ได้รับมอบหมายจนสำเร็จตามเป้าหมายร่วมกัน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level1.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้ เข้าใจรูปแบบ การทำงานของหน่วยงานอื่นในองค์กร เข้าใจเป้าหมาย ความต้องการ งานที่เกี่ยวข้องและผลกระทบต่อหน่วยงานข้างเคียง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ทำงานร่วมกันแบบข้ามหน่วยงานได้  ในทิศทางเดียวกัน ตามกรอบระยะเวลา และความรับผิดชอบที่ได้รับมอบหมาย รับฟังความคิดเห็น แลกเปลี่ยนข้อมูลและให้ข้อมูลที่ถูกต้อง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. ส่งต่อความรู้  สอนให้คำแนะนำผู้อื่นในทีมได้
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level3.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. มีบทบาทสำคัญทำให้งานของหน่วยงานและงานที่เกี่ยวข้องกับหน่วยงานอื่นประสบความสำเร็จตามเป้าหมายร่วมกัน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level3.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้ เข้าใจรูปแบบ การทำงานของหน่วยงานทั้งภายในและภายนอกองค์กร ความต้องการ ผลกระทบต่อหน่วยงานและผู้มีส่วนได้ส่วนเสีย
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ประสานงาน กับผู้มีส่วนได้ส่วนเสีย
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สร้างระบบการทำงานร่วมกันให้ดีขึ้นโดยใช้ข้อมูลและเทคโนโลยีดิจิทัล
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. มีบทบาทสำคัญทำให้งานของหน่วยงานและงานที่เกี่ยวข้องกับผู้มีส่วนได้ส่วนเสีย ประสบความสำเร็จตามเป้าหมายร่วมกัน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="collaboration.level5.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    public Collaboration collaboration;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        collaboration = new Collaboration();
+        collaboration.level1 = new Level();
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("Initiative");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (collaboration.level1.c1 == true && collaboration.level1.c2 == true && collaboration.level1.c3 == true)
+                    {
+                        if (collaboration.level3 == null)
+                        {
+                            collaboration.level3 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("ServiceExcellence");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (collaboration.level3.c1 == true && collaboration.level3.c2 == true && collaboration.level3.c3 == true && collaboration.level3.c4 == true)
+                    {
+                        if (collaboration.level5 == null)
+                        {
+                            collaboration.level5 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("ServiceExcellence");
+                    }
+                }; break;
+            case 3:
+                {
+                    NavigationManager.NavigateTo("ServiceExcellence");
+                }; break;
+        }
+    }
+
+
+}

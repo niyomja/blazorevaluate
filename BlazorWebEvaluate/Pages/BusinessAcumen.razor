@@ -1,0 +1,180 @@
+﻿@page "/BusinessAcumen"
+@inject NavigationManager NavigationManager
+
+<h3><b>ส่วนที่ 1</b> เชื่ยวชาญธุรกิจ (Business Acumen)</h3>
+
+<p>
+    ความเข้าใจบริบทโครงสร้างหน่วยธุรกิจ โมเดลธุรกิจภารกิจงาน แผนกลยุทธ์ขององค์กร ลูกค้าและเครือข่ายพันธมิตร สามารถวิเคราะห์ข้อมูลด้านลูกค้า การตลาดการเงิน และผลกระทบที่มีต่อผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้อง เพื่อใช้พิจารณาตัดสินใจวางแผนดำเนินงาน ธุรกิจ บริหารเครือข่ายพันธมิตรและความต่อเนื่องทางธุรกิจให้เกิดความสมดุลระหว่างคุณภาพการให้บริการ มาตรฐานความปลอดภัยระดับสากล และผลลัพธ์ด้านการเงิน
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. รู้ศัพท์ทางธุรกิจและการเงินเบื้องต้น  เข้าใจการดำเนินธุรกิจ แผนกลยุทธ์ เป้าหมายขององค์กร ความรู้เกี่ยวกับลูกค้าตลาดและบริการของทอท. ในภาพรวม</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. อธิบายภาระงานของตนเอง และระบุผลงานที่ไปสนับสนุนเป้าหมายหน่วยงานและองค์กร</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>3. กำหนดแนวทางวิธีการทำงานตามที่ได้รับมอบหมายให้สามารถสนับสนุนเป้าหมายหน่วยงานและองค์กร</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level1.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>4. ปฏิบัติงานของตนบรรลุผลสำเร็จได้ตามเป้าหมาย</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level1.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. รู้เข้าใจลึกซึ้งบริบทโครงสร้างหน่วยธุรกิจ โมเดลธุรกิจ ความต้องการของลูกค้า/เครือข่ายพันธมิตรและผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้อง</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td> 2. วิเคราะห์ข้อมูลธุรกิจ ด้านลูกค้า การตลาด การเงิน และผลกระทบต่อผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้อง</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. นำเสนอแนวทางการทำงานดำเนินธุรกิจและเป้าหมายสนับสนุนพันธกิจกลยุทธ์หน่วยงาน/องค์กรที่ตอบสนองความต้องการของลูกค้า/เครือข่ายพันธมิตร และผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้องได้อย่างรวดเร็ว ทันสถานการณ์แก่หน่วยงานที่รับผิดชอบและหน่วยงานที่เกี่ยวข้อง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level3.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>4. ตัดสินใจดำเนินงานตามแนวทางการดำเนินธุรกิจที่สนับสนุนพันธกิจกลยุทธ์องค์กรและเครือข่ายพันธมิตรในฐานะเป็น Business Partner ได้ผลลัพธ์ตามเป้าหมาย</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level3.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. รู้และตีความข้อมูลทางการเงิน (Financial Matrix) ได้อย่างถูกต้อง </td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. ศึกษาวิเคราะห์โอกาสทางธุรกิจ โมเดลธุรกิจใหม่ๆ จากคู่เทียบ / Best Practices ทั้งความรู้ด้านกลยุทธ์ การตลาดเชิงรุก การเงิน  เทคโนโลยี ความเสี่ยง การบริหารความต่อเนื่องทางธุรกิจ (Business Continuity Plan)</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. ดำเนินการและร่วมมือกับเครือข่ายพันธมิตรตามแนวทางดำเนินธุรกิจ สร้างคุณค่าต่อผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้อง ตามมาตรฐานงานที่เกี่ยวข้องทั้งในด้านคุณภาพการให้บริการ มาตรฐานความปลอดภัยในระดับสากลและเป้าหมายด้านการเงิน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>4. สร้างผลลัพธ์ความสำเร็จได้ตามมาตรฐานที่เกี่ยวข้อง และเกิดความสมดุลระหว่างความเสี่ยง การตอบสนองผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้อง และผลลัพธ์เป้าหมายด้านการเงินได้</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessAcumen.level5.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+    public BusinessAcu businessAcumen;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        businessAcumen = new BusinessAcu();
+        businessAcumen.level1 = new Level();
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+        else {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step) {
+            case 1: {
+                    if (businessAcumen.level1.c1 == true && businessAcumen.level1.c2 == true && businessAcumen.level1.c3 == true && businessAcumen.level1.c4 == true)
+                    {
+                        if (businessAcumen.level3 == null)
+                        {
+                            businessAcumen.level3 = new Level();
+                        }
+                        step++;
+                    }
+                    else {
+                        NavigationManager.NavigateTo("Initiative");
+                    }
+                };break;
+            case 2: {
+                    if (businessAcumen.level3.c1 == true && businessAcumen.level3.c2 == true && businessAcumen.level3.c3 == true && businessAcumen.level3.c4 == true)
+                    {
+                        if (businessAcumen.level5 == null)
+                        {
+                            businessAcumen.level5 = new Level();
+                        }
+                        step++;
+                    }
+                    else {
+                        NavigationManager.NavigateTo("Initiative");
+                    }
+                };break;
+            case 3: {
+                    NavigationManager.NavigateTo("Initiative");
+                };break;
+        }
+    }
+}

@@ -1,0 +1,206 @@
+﻿@page "/DigitalLiteracy"
+@inject NavigationManager NavigationManager
+
+<h3>
+    <b>ส่วนที่ 6</b> ประยุกต์ใช้ดิจิทัล (Digital Literacy)
+</h3>
+
+<p>
+    ความรอบรู้นำข้อมูลสารสนเทศ เลือกใช้เครื่องมือ อุปกรณ์เทคโนโลยีดิจิทัล มาวิเคราะห์ตัดสินใจและประยุกต์ใช้ให้เกิดประโยชน์สูงสุดคุ้มค่า ในการกำกับและอำนวยความสะดวกร่วมกับเครือข่ายพันธมิตรให้เกิดบริการที่เหนือความคาดหวัง โดยพัฒนากระบวนการ ระบบงานและเชื่อมโยงข้อมูลให้สอดคล้องกันได้อย่างทันสมัยและเกิดนวัตกรรม มุ่งสู่การเป็นองค์กรสมรรถนะขั้นสูงที่มีความสะดวก รวดเร็ว ลดต้นทุน/ขั้นตอน/ข้อผิดพลาด โดยอิงตามมาตรฐานสากลด้านความปลอดภัยควบคู่กับหลักการธรรมาภิบาล โปร่งใส ตรวจสอบได้ และสร้างรายได้อย่างสมดุล
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. อธิบายหลักการ วิธีการ ขั้นตอนใช้อุปกรณ์เทคโนโลยีและข้อมูลดิจิทัลที่กำหนด
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. เลือกใช้เครื่องมือ อุปกรณ์ เทคโนโลยีดิจิทัลหรือแอปพลิเคชันขั้นต้นที่ใช้งานได้ง่ายสอดคล้องกับมาตรฐานการทำงานและตามข้อตกลงการทำงานร่วมกับเครือข่ายพันธมิตร
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. ประยุกต์ใช้เทคโนโลยีได้อย่างเหมาะสม ถูกต้อง ได้ตามเป้าหมาย  สะดวก รวดเร็ว ลดต้นทุน ขั้นตอนและข้อผิดพลาด
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level1.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. ศึกษาแนวโน้มเทคโนโลยีสารสนเทศในอนาคตมาประยุกต์ใช้พัฒนาระบบการทำงานให้ทันต่อการเปลี่ยนแปลงที่เกิดขึ้น
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. วิเคราะห์ข้อมูลสารสนเทศที่เกี่ยวข้องเพื่อให้ได้ข้อมูลที่ถูกต้อง รวดเร็ว ทันสมัย และเป็นประโยชน์ต่อการตัดสินใจในการทำงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. กำกับ ให้ข้อคิดเห็นและตรวจสอบการปฏิบัติตามกฎหมาย กรอบธรรมาภิบาล และหลักปฏิบัติที่ดีด้านดิจิทัลร่วมกับเครือข่ายพันธมิตรให้เกิดความโปร่งใส ตรวจสอบได้
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level3.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. ช้เทคโนโลยีสารสนเทศดิจิทัลที่ทันสมัยและใช้ทรัพยากรอย่างคุ้มค่ามาพัฒนาระบบงาน กระบวนงานร่วมกับเครือข่ายพันธมิตรให้เกิดความเชื่อมโยงสอดคล้องตามหลักมาตรฐานสากลด้านความปลอดภัย คุณภาพการให้บริการ ธรรมมาภิบาลโปร่งใส และตรวจสอบได้
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level3.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. รู้แนวโน้มเทคโนโลยีดิจิทัลในอนาคตมาประยุกต์ใช้ยกระดับธุรกิจให้ทันต่อการเปลี่ยนแปลง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ให้คำปรึกษาถ่ายทอด เป็นแบบอย่างที่ดีในการทำงานแบบดิจิทัลให้กับผู้อื่น ทั้งในเรื่องความคิด ความเป็นผู้นำ และพฤติกรรม
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. กำหนดกรอบการให้บริการ แนวทางการออกแบบ การปฏิบัติการเชิงรุก และการเชื่อมโยงข้อมูลสำคัญ กระบวนการให้บริการระหว่างหน่วยงานและเครือข่ายพันธมิตรที่เกี่ยวข้องให้สอดคล้องกัน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. สร้างเครือข่ายพันธมิตรให้เกิดเป็นธุรกิจใหม่ที่สร้างรายได้เชิงพาณิชย์และผลประกอบการที่ดีขึ้นได้สำเร็จตามเป้าหมาย
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="digitalLiteracy.level5.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-success mt-5">&nbsp;&nbsp;Finish&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    public DigitalLiteracy digitalLiteracy;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        digitalLiteracy = new DigitalLiteracy();
+        digitalLiteracy.level1 = new Level();
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("ServiceExcellence");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (digitalLiteracy.level1.c1 == true && digitalLiteracy.level1.c2 == true && digitalLiteracy.level1.c3 == true)
+                    {
+                        if (digitalLiteracy.level3 == null)
+                        {
+                            digitalLiteracy.level3 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("Summary");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (digitalLiteracy.level3.c1 == true && digitalLiteracy.level3.c2 == true && digitalLiteracy.level3.c3 == true && digitalLiteracy.level3.c4 == true)
+                    {
+                        if (digitalLiteracy.level5 == null)
+                        {
+                            digitalLiteracy.level5 = new Level();
+                        }
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("Summary");
+                    }
+                }; break;
+            case 3:
+                {
+                    NavigationManager.NavigateTo("Summary");
+                }; break;
+        }
+    }
+}
