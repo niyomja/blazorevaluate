@@ -534,7 +534,6 @@ D:/Projects/BlazorWebEvaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integri
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/RazorDeclaration/App.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/RazorDeclaration/Pages/BusinessAcumen.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/RazorDeclaration/Pages/CollaborationPage.razor.g.cs
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/RazorDeclaration/Pages/Counter.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/RazorDeclaration/Pages/DigitalLiteracyPage.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/RazorDeclaration/Pages/FetchData.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/RazorDeclaration/Pages/Index.razor.g.cs
@@ -553,7 +552,6 @@ D:/Projects/BlazorWebEvaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integri
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/Razor/App.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/Razor/Pages/BusinessAcumen.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/Razor/Pages/CollaborationPage.razor.g.cs
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/Razor/Pages/Counter.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/Razor/Pages/DigitalLiteracyPage.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/Razor/Pages/FetchData.razor.g.cs
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/Razor/Pages/Index.razor.g.cs
@@ -750,6 +748,6 @@ D:/Projects/BlazorWebEvaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integri
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/LbVFInFoxYrxwTGfltPxIbhu1vEOYusJAapzXFqwC4M=.hash
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/compressed/_framework/_bin/Blazored.SessionStorage.dll.gz
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/compressed/_framework/_bin/Blazored.SessionStorage.dll.br
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/7VRzdz2U5j3VvA_sz7_-g1RT7i5n-cl78kxBi0Wihtc=.hash
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/JX-8tAzoa9sE6X9i1i-vRJ7x8HF5sTAn0pxoxkDLkHY=.hash
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/n-OWQ6TBRXXzLw9k8utBvN5_QjUH0bTc2uE4YHdZ2Zc=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/Zpjr9OI6YAlgH1tbGcowxssjpJlbXnJ3on3KhjzujDk=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/XTUggKJQQWcVmpEgyp0DBWrtFQjISKSU03z3fFfTcEU=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/kmTcggwQG-v7mDSwsf0VnxnisoTDFuUbYukNWdqtE8c=.hash

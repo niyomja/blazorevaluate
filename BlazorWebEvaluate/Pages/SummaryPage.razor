@@ -1,6 +1,7 @@
 ﻿@page "/Summary"
 @inject NavigationManager NavigationManager
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+@inject HttpClient Http
 
 <h3>Summary</h3>
 
@@ -68,6 +69,12 @@
 
     protected override async Task OnInitializedAsync()
     {
+        var evaluate = new Evaluate();
+        evaluate.full_name = await sessionStorage.GetItemAsync<string>("full_name");
+        evaluate.level = await sessionStorage.GetItemAsync<string>("level");
+
+        //await Http.PostAsJsonAsync("api/evaluate-save", evaluate);
+
         await sessionStorage.RemoveItemAsync("full_name");
         await sessionStorage.RemoveItemAsync("level");
         await base.OnParametersSetAsync();

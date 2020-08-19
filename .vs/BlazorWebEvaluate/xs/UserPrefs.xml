@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{6021519E-CEF3-4A34-BA98-ECCCA7DDA7CC}|BlazorWebEvaluate">
+  <MonoDevelop.Ide.ItemProperties.BlazorServerAppEvaluate PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorWebEvaluate/Pages/SummaryPage.razor">
+    <Files>
+      <File FileName="BlazorWebEvaluate/Pages/SummaryPage.razor" Line="76" Column="11" />
+      <File FileName="BlazorWebEvaluate/Pages/FetchData.razor" Line="1" Column="19" />
+      <File FileName="BlazorWebEvaluate/Data/Evaluate.cs" Line="4" Column="26" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BlazorWebEvaluate" expanded="True">
+            <Node name="BlazorWebEvaluate" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="SummaryPage.razor" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BlazorWebEvaluate PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+</Properties>
