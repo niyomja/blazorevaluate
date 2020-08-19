@@ -9,125 +9,63 @@
     "TagHelpers": [
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.ServiceExcellencePage",
+        "Name": "BlazorWebEvaluate.App",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ServiceExcellencePage"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.ServiceExcellencePage"
+          "Common.TypeName": "BlazorWebEvaluate.App"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.ServiceExcellencePage",
+        "Name": "BlazorWebEvaluate.App",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.Pages.ServiceExcellencePage"
+            "TagName": "BlazorWebEvaluate.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.ServiceExcellencePage",
+          "Common.TypeName": "BlazorWebEvaluate.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage",
+        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SafetyAndSecurityPage"
+            "TagName": "BusinessAcumen"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage"
+          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage",
+        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage"
+            "TagName": "BlazorWebEvaluate.Pages.BusinessAcumen"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Counter",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Counter"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Counter",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.FetchData",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.FetchData",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -195,37 +133,6 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.SummaryPage",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SummaryPage"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.SummaryPage",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.SummaryPage"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.Index",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
@@ -257,32 +164,94 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
+        "Name": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BusinessAcumen"
+            "TagName": "SafetyAndSecurityPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen"
+          "Common.TypeName": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
+        "Name": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.Pages.BusinessAcumen"
+            "TagName": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.SafetyAndSecurityPage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.ServiceExcellencePage",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ServiceExcellencePage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.ServiceExcellencePage"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.ServiceExcellencePage",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.ServiceExcellencePage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.ServiceExcellencePage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.SummaryPage",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SummaryPage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.SummaryPage",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.SummaryPage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -319,52 +288,32 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
+        "Name": "BlazorWebEvaluate.Pages.FetchData",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
+            "TagName": "FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt"
+          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
+        "Name": "BlazorWebEvaluate.Pages.FetchData",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
+            "TagName": "BlazorWebEvaluate.Pages.FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -493,32 +442,52 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.App",
+        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.App"
+          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.App",
+        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.App"
+            "TagName": "BlazorWebEvaluate.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.App",
+          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -11848,11 +11817,6 @@
     {
       "FilePath": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/Index.razor",
       "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
       "FileKind": "component"
     },
     {
