@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorServerAppEvaluate.Data;
 using Blazored.SessionStorage;
+using PreRenderComponent;
 
 namespace BlazorServerAppEvaluate
 {
@@ -32,6 +33,8 @@ namespace BlazorServerAppEvaluate
             services.AddSingleton<WeatherForecastService>();
             services.AddBlazoredSessionStorage();
             //services.AddBlazoredSessionStorage(config =>config.JsonSerializerOptions.WriteIndented = true);
+            services.AddHttpContextAccessor();
+            services.AddScoped<IPreRenderFlag, PreRenderFlag>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

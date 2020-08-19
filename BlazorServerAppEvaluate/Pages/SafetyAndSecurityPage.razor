@@ -1,5 +1,7 @@
 ﻿@page "/SafetyAndSecurity"
 @inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+@inject PreRenderComponent.IPreRenderFlag PreRenderFlag
 
 <h3>
     <b>ส่วนที่ 5</b> มั่นคงปลอดภัย (Safety and Security)
@@ -149,6 +151,26 @@
     {
         safetyAndSecurity = new SafetyAndSecurity();
         safetyAndSecurity.level1 = new Level();
+        safetyAndSecurity.level3 = new Level();
+        safetyAndSecurity.level5 = new Level();
+
+        if (!PreRenderFlag.IsPreRendering)
+        {
+            safetyAndSecurity.level1.c1 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level1.c1");
+            safetyAndSecurity.level1.c2 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level1.c2");
+            safetyAndSecurity.level1.c3 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level1.c3");
+
+            safetyAndSecurity.level3.c1 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c1");
+            safetyAndSecurity.level3.c2 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c2");
+            safetyAndSecurity.level3.c3 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c3");
+            safetyAndSecurity.level3.c4 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c4");
+
+            safetyAndSecurity.level5.c1 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c1");
+            safetyAndSecurity.level5.c2 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c2");
+            safetyAndSecurity.level5.c3 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c3");
+            safetyAndSecurity.level5.c4 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c4");
+        }
+
         await base.OnParametersSetAsync();
     }
 
@@ -175,10 +197,18 @@
                         {
                             safetyAndSecurity.level3 = new Level();
                         }
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level1.c1", safetyAndSecurity.level1.c1);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level1.c2", safetyAndSecurity.level1.c2);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level1.c3", safetyAndSecurity.level1.c3);
+
                         step++;
                     }
                     else
                     {
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level1.c1", safetyAndSecurity.level1.c1);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level1.c2", safetyAndSecurity.level1.c2);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level1.c3", safetyAndSecurity.level1.c3);
+
                         NavigationManager.NavigateTo("DigitalLiteracy");
                     }
                 }; break;
@@ -190,15 +220,28 @@
                         {
                             safetyAndSecurity.level5 = new Level();
                         }
+
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c1", safetyAndSecurity.level3.c1);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c2", safetyAndSecurity.level3.c2);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c3", safetyAndSecurity.level3.c3);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c4", safetyAndSecurity.level3.c4);
                         step++;
                     }
                     else
                     {
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c1", safetyAndSecurity.level3.c1);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c2", safetyAndSecurity.level3.c2);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c3", safetyAndSecurity.level3.c3);
+                        sessionStorage.SetItemAsync("safetyAndSecurity.level3.c4", safetyAndSecurity.level3.c4);
                         NavigationManager.NavigateTo("DigitalLiteracy");
                     }
                 }; break;
             case 3:
                 {
+                    sessionStorage.SetItemAsync("safetyAndSecurity.level5.c1", safetyAndSecurity.level5.c1);
+                    sessionStorage.SetItemAsync("safetyAndSecurity.level5.c2", safetyAndSecurity.level5.c2);
+                    sessionStorage.SetItemAsync("safetyAndSecurity.level5.c3", safetyAndSecurity.level5.c3);
+                    sessionStorage.SetItemAsync("safetyAndSecurity.level5.c4", safetyAndSecurity.level5.c4);
                     NavigationManager.NavigateTo("DigitalLiteracy");
                 }; break;
         }

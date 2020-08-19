@@ -1,6 +1,7 @@
 ﻿@page "/BusinessAcumen"
 @inject NavigationManager NavigationManager
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+@inject PreRenderComponent.IPreRenderFlag PreRenderFlag
 
 <h3><b>ส่วนที่ 1</b> เชื่ยวชาญธุรกิจ (Business Acumen)</h3>
 
@@ -134,21 +135,24 @@
         businessAcumen.level3 = new Level();
         businessAcumen.level5 = new Level();
 
-        businessAcumen.level1.c1 = await sessionStorage.GetItemAsync<bool>("level1.c1");
-        businessAcumen.level1.c2 = await sessionStorage.GetItemAsync<bool>("level1.c2");
-        businessAcumen.level1.c3 = await sessionStorage.GetItemAsync<bool>("level1.c3");
-        businessAcumen.level1.c4 = await sessionStorage.GetItemAsync<bool>("level1.c4");
+        if (!PreRenderFlag.IsPreRendering)
+        {
+            businessAcumen.level1.c1 = await sessionStorage.GetItemAsync<bool>("level1.c1");
+            businessAcumen.level1.c2 = await sessionStorage.GetItemAsync<bool>("level1.c2");
+            businessAcumen.level1.c3 = await sessionStorage.GetItemAsync<bool>("level1.c3");
+            businessAcumen.level1.c4 = await sessionStorage.GetItemAsync<bool>("level1.c4");
 
-        businessAcumen.level3.c1 = await sessionStorage.GetItemAsync<bool>("level3.c1");
-        businessAcumen.level3.c2 = await sessionStorage.GetItemAsync<bool>("level3.c2");
-        businessAcumen.level3.c3 = await sessionStorage.GetItemAsync<bool>("level3.c3");
-        businessAcumen.level3.c4 = await sessionStorage.GetItemAsync<bool>("level3.c4");
+            businessAcumen.level3.c1 = await sessionStorage.GetItemAsync<bool>("level3.c1");
+            businessAcumen.level3.c2 = await sessionStorage.GetItemAsync<bool>("level3.c2");
+            businessAcumen.level3.c3 = await sessionStorage.GetItemAsync<bool>("level3.c3");
+            businessAcumen.level3.c4 = await sessionStorage.GetItemAsync<bool>("level3.c4");
 
-        businessAcumen.level5.c1 = await sessionStorage.GetItemAsync<bool>("level5.c1");
-        businessAcumen.level5.c2 = await sessionStorage.GetItemAsync<bool>("level5.c2");
-        businessAcumen.level5.c3 = await sessionStorage.GetItemAsync<bool>("level5.c3");
-        businessAcumen.level5.c4 = await sessionStorage.GetItemAsync<bool>("level5.c4");
-        
+            businessAcumen.level5.c1 = await sessionStorage.GetItemAsync<bool>("level5.c1");
+            businessAcumen.level5.c2 = await sessionStorage.GetItemAsync<bool>("level5.c2");
+            businessAcumen.level5.c3 = await sessionStorage.GetItemAsync<bool>("level5.c3");
+            businessAcumen.level5.c4 = await sessionStorage.GetItemAsync<bool>("level5.c4");
+        }
+
         await base.OnParametersSetAsync();
     }
 
@@ -158,14 +162,17 @@
         {
             NavigationManager.NavigateTo("/");
         }
-        else {
+        else
+        {
             step--;
         }
     }
     void gotoNext()
     {
-        switch (step) {
-            case 1: {
+        switch (step)
+        {
+            case 1:
+                {
                     if (businessAcumen.level1.c1 == true && businessAcumen.level1.c2 == true && businessAcumen.level1.c3 == true && businessAcumen.level1.c4 == true)
                     {
                         if (businessAcumen.level3 == null)
@@ -178,11 +185,18 @@
                         sessionStorage.SetItemAsync("level1.c4", businessAcumen.level1.c4);
                         step++;
                     }
-                    else {
+                    else
+                    {
+                        sessionStorage.SetItemAsync("level1.c1", businessAcumen.level1.c1);
+                        sessionStorage.SetItemAsync("level1.c2", businessAcumen.level1.c2);
+                        sessionStorage.SetItemAsync("level1.c3", businessAcumen.level1.c3);
+                        sessionStorage.SetItemAsync("level1.c4", businessAcumen.level1.c4);
+
                         NavigationManager.NavigateTo("Initiative");
                     }
-                };break;
-            case 2: {
+                }; break;
+            case 2:
+                {
                     if (businessAcumen.level3.c1 == true && businessAcumen.level3.c2 == true && businessAcumen.level3.c3 == true && businessAcumen.level3.c4 == true)
                     {
                         if (businessAcumen.level5 == null)
@@ -195,21 +209,23 @@
                         sessionStorage.SetItemAsync("level3.c4", businessAcumen.level3.c4);
                         step++;
                     }
-                    else {
+                    else
+                    {
                         sessionStorage.SetItemAsync("level3.c1", businessAcumen.level3.c1);
                         sessionStorage.SetItemAsync("level3.c2", businessAcumen.level3.c2);
                         sessionStorage.SetItemAsync("level3.c3", businessAcumen.level3.c3);
                         sessionStorage.SetItemAsync("level3.c4", businessAcumen.level3.c4);
                         NavigationManager.NavigateTo("Initiative");
                     }
-                };break;
-            case 3: {
+                }; break;
+            case 3:
+                {
                     sessionStorage.SetItemAsync("level5.c1", businessAcumen.level5.c1);
                     sessionStorage.SetItemAsync("level5.c2", businessAcumen.level5.c2);
                     sessionStorage.SetItemAsync("level5.c3", businessAcumen.level5.c3);
                     sessionStorage.SetItemAsync("level5.c4", businessAcumen.level5.c4);
                     NavigationManager.NavigateTo("Initiative");
-                };break;
+                }; break;
         }
     }
 }

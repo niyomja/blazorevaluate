@@ -1,6 +1,7 @@
 ﻿@page "/Initiative"
 @inject NavigationManager NavigationManager
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+@inject PreRenderComponent.IPreRenderFlag PreRenderFlag
 
 <h3><b>ส่วนที่ 2</b> คิดสร้างสรรค์(Initiative)</h3>
 
@@ -45,84 +46,84 @@
 
 @if (step == 2)
 {
-<div class="row">
-    <div class="col-lg-12">
-        <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>หัวข้อ</th>
-                    <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1. รู้เรื่องแนวคิดการออกแบบ (Design Thinking) และ เทคโนโลยี</td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c1" /> ใช่</label></td>
-                </tr>
-                <tr>
-                    <td>2. อธิบายขั้นตอนแนวคิดการออกแบบ เข้าใจปัญหาผู้ใช้บริการ สร้างสรรค์ความคิดใหม่ๆที่เป็นไปได้ และสร้างต้นแบบเพื่อทดสอบพัฒนา </td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c2" /> ใช่</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        3. คิดต่อยอดจากองค์ความรู้เดิมทดลองลงมือทำตามแนวคิดที่ออกแบบไว้ภายในหน่วยงาน สามารถประยุกต์ใช้ด้วยเทคโนโลยีดิจิทัล
-                    </td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c3" /> ใช่</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        4. สอนและให้คำปรึกษาแนะนำแก่ผู้อื่นภายในหน่วยงานได้ ออกแบบวิธีการทำงานใหม่ๆ ทดลองทำผสมผสานกันระหว่างแนวคิดที่เหมือนกันและแตกต่างกัน และปรับเปลี่ยนให้ได้วิธีการที่เหมาะสม
-                    </td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c4" /> ใช่</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        5. ทดลองพัฒนาภายในหน่วยงานจนได้กระบวนการทำงานใหม่ๆที่มีผลลัพธ์ที่ดีขึ้น
-                    </td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level3.c5" /> ใช่</label></td>
-                </tr>
-            </tbody>
-        </table>
-        <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
-        <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. รู้เรื่องแนวคิดการออกแบบ (Design Thinking) และ เทคโนโลยี</td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. อธิบายขั้นตอนแนวคิดการออกแบบ เข้าใจปัญหาผู้ใช้บริการ สร้างสรรค์ความคิดใหม่ๆที่เป็นไปได้ และสร้างต้นแบบเพื่อทดสอบพัฒนา </td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. คิดต่อยอดจากองค์ความรู้เดิมทดลองลงมือทำตามแนวคิดที่ออกแบบไว้ภายในหน่วยงาน สามารถประยุกต์ใช้ด้วยเทคโนโลยีดิจิทัล
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level3.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. สอนและให้คำปรึกษาแนะนำแก่ผู้อื่นภายในหน่วยงานได้ ออกแบบวิธีการทำงานใหม่ๆ ทดลองทำผสมผสานกันระหว่างแนวคิดที่เหมือนกันและแตกต่างกัน และปรับเปลี่ยนให้ได้วิธีการที่เหมาะสม
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level3.c4" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5. ทดลองพัฒนาภายในหน่วยงานจนได้กระบวนการทำงานใหม่ๆที่มีผลลัพธ์ที่ดีขึ้น
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level3.c5" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
     </div>
-</div>
 }
 
 @if (step == 3)
 {
-<div class="row">
-    <div class="col-lg-12">
-        <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>หัวข้อ</th>
-                    <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1. รู้เรื่อง เข้าใจแนวคิดการออกแบบ (Design thinking) ในระดับที่สามารถเชื่อมโยงความคิดระหว่างหน่วยงาน</td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level5.c1" /> ใช่</label></td>
-                </tr>
-                <tr>
-                    <td>2. ร่วมออกแบบและทดลองวิธีการใหม่ๆ กับผู้มีส่วนได้ส่วนเสีย</td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level5.c2" /> ใช่</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        3. ได้ต้นแบบ (Prototype) การบริการ หรือกระบวนการทำงานใหม่ๆ ที่นำไปใช้ได้
-                    </td>
-                    <td><label><input type="checkbox" value="1" @bind="initiative.level5.c3" /> ใช่</label></td>
-                </tr>
-            </tbody>
-        </table>
-        <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
-        <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. รู้เรื่อง เข้าใจแนวคิดการออกแบบ (Design thinking) ในระดับที่สามารถเชื่อมโยงความคิดระหว่างหน่วยงาน</td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. ร่วมออกแบบและทดลองวิธีการใหม่ๆ กับผู้มีส่วนได้ส่วนเสีย</td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. ได้ต้นแบบ (Prototype) การบริการ หรือกระบวนการทำงานใหม่ๆ ที่นำไปใช้ได้
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="initiative.level5.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
     </div>
-</div>
 }
 
 @code {
@@ -136,20 +137,22 @@
         initiative.level1 = new Level();
         initiative.level3 = new Level();
         initiative.level5 = new Level();
+        if (!PreRenderFlag.IsPreRendering)
+        {
+            initiative.level1.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c1");
+            initiative.level1.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c2");
+            initiative.level1.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c3");
 
-        initiative.level1.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c1");
-        initiative.level1.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c2");
-        initiative.level1.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c3");
+            initiative.level3.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c1");
+            initiative.level3.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c2");
+            initiative.level3.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c3");
+            initiative.level3.c4 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c4");
+            initiative.level3.c5 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c5");
 
-        initiative.level3.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c1");
-        initiative.level3.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c2");
-        initiative.level3.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c3");
-        initiative.level3.c4 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c4");
-        initiative.level3.c5 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c5");
-
-        initiative.level5.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c1");
-        initiative.level5.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c2");
-        initiative.level5.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c3");
+            initiative.level5.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c1");
+            initiative.level5.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c2");
+            initiative.level5.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c3");
+        }
 
         await base.OnParametersSetAsync();
     }

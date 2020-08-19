@@ -1,6 +1,7 @@
 ﻿@page "/"
 @inject NavigationManager NavigationManager
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+@inject PreRenderComponent.IPreRenderFlag PreRenderFlag
 
 <h3>Personal Information.</h3>
 
@@ -27,20 +28,14 @@
 @code {
     public Personal personal { get; set; }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override async Task OnInitializedAsync()
     {
-        if (firstRender)
+        personal = new Personal();
+        if (!PreRenderFlag.IsPreRendering)
         {
             personal.full_name = await sessionStorage.GetItemAsync<string>("full_name");
             personal.level = await sessionStorage.GetItemAsync<string>("level");
         }
-    }
-
-    protected override async Task OnInitializedAsync()
-    {
-        personal = new Personal();
-        personal.full_name = await sessionStorage.GetItemAsync<string>("full_name");
-        personal.level = await sessionStorage.GetItemAsync<string>("level");
         await base.OnParametersSetAsync();
     }
 

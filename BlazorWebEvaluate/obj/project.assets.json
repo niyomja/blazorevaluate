@@ -125,6 +125,31 @@
           "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Runtime.props": {}
         }
       },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Metadata/3.1.6": {
         "type": "package",
         "compile": {
@@ -338,6 +363,20 @@
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.dll": {}
+        }
+      },
+      "PreRenderComponent/0.2.0-beta-1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/PreRenderComponent.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PreRenderComponent.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -1035,6 +1074,32 @@
         "tools/monolinker/monolinker.runtimeconfig.json"
       ]
     },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "sha512": "Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Metadata/3.1.6": {
       "sha512": "CPD6ukxTPpvtm5GfAlgRbUPF7D+eo8K7rMVgL/kLrz4aTT6gb/c0uet2ISRIO615zIS2N52ZZwLcX9hmeQhVGg==",
       "type": "package",
@@ -1327,6 +1392,19 @@
         "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.xml",
         "microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512",
         "microsoft.jsinterop.webassembly.nuspec"
+      ]
+    },
+    "PreRenderComponent/0.2.0-beta-1": {
+      "sha512": "n+AA2tAuN0KqsJhnoTJijcamLCRyRvB5txXrphdKsI9/yNaOaZIJOOV/WC7Ge2xSeVLvoml7esQF0GtKW8EGfw==",
+      "type": "package",
+      "path": "prerendercomponent/0.2.0-beta-1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/PreRenderComponent.dll",
+        "prerendercomponent.0.2.0-beta-1.nupkg.sha512",
+        "prerendercomponent.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -1659,32 +1737,37 @@
       "Microsoft.AspNetCore.Components.WebAssembly >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.1",
+      "PreRenderComponent >= 0.2.0-beta-1",
       "System.Net.Http.Json >= 3.2.0"
     ]
   },
   "packageFolders": {
-    "/Users/niyom/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Niyom Chamaree\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj",
+      "projectUniqueName": "D:\\Repositories\\blazorevaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj",
       "projectName": "BlazorWebEvaluate",
-      "projectPath": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj",
-      "packagesPath": "/Users/niyom/.nuget/packages/",
-      "outputPath": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/",
+      "projectPath": "D:\\Repositories\\blazorevaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj",
+      "packagesPath": "C:\\Users\\Niyom Chamaree\\.nuget\\packages\\",
+      "outputPath": "D:\\Repositories\\blazorevaluate\\BlazorWebEvaluate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/niyom/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Niyom Chamaree\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1719,6 +1802,10 @@
             "target": "Package",
             "version": "[3.2.1, )"
           },
+          "PreRenderComponent": {
+            "target": "Package",
+            "version": "[0.2.0-beta-1, )"
+          },
           "System.Net.Http.Json": {
             "target": "Package",
             "version": "[3.2.0, )"
@@ -1739,7 +1826,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
