@@ -748,6 +748,6 @@ D:/Projects/BlazorWebEvaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integri
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/LbVFInFoxYrxwTGfltPxIbhu1vEOYusJAapzXFqwC4M=.hash
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/compressed/_framework/_bin/Blazored.SessionStorage.dll.gz
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/compressed/_framework/_bin/Blazored.SessionStorage.dll.br
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/Zpjr9OI6YAlgH1tbGcowxssjpJlbXnJ3on3KhjzujDk=.hash
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/XTUggKJQQWcVmpEgyp0DBWrtFQjISKSU03z3fFfTcEU=.hash
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/kmTcggwQG-v7mDSwsf0VnxnisoTDFuUbYukNWdqtE8c=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/7CT1MZOGpiXwh753h6M15qWpDYLJrqc24Aw-iufa3yA=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/OojaPsid5LROW96XKLbdE43JY3hn9W7ORL9rgsDXCRc=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/qjs0y1JY6gGEqro-4ld9iKzVGpR-E7CaKGDgQjWFQ14=.hash

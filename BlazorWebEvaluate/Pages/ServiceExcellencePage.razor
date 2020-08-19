@@ -1,5 +1,6 @@
 ﻿@page "/ServiceExcellence"
 @inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <h3><b>ส่วนที่ 4</b>  มุ่งมั่นบริการ (Service Excellence)</h3>
 <p>
@@ -146,6 +147,22 @@
     {
         serviceExcellence = new ServiceExcellence();
         serviceExcellence.level1 = new Level();
+        serviceExcellence.level3 = new Level();
+        serviceExcellence.level5 = new Level();
+
+        serviceExcellence.level1.c1 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level1.c1");
+        serviceExcellence.level1.c2 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level1.c2");
+        serviceExcellence.level1.c3 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level1.c3");
+
+        serviceExcellence.level3.c1 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level3.c1");
+        serviceExcellence.level3.c2 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level3.c2");
+        serviceExcellence.level3.c3 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level3.c3");
+
+        serviceExcellence.level5.c1 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c1");
+        serviceExcellence.level5.c2 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c2");
+        serviceExcellence.level5.c3 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c3");
+        serviceExcellence.level5.c4 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c4");
+        serviceExcellence.level5.c5 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c5");
         await base.OnParametersSetAsync();
     }
 
@@ -172,6 +189,9 @@
                         {
                             serviceExcellence.level3 = new Level();
                         }
+                        sessionStorage.SetItemAsync("serviceExcellence.level1.c1", serviceExcellence.level1.c1);
+                        sessionStorage.SetItemAsync("serviceExcellence.level1.c2", serviceExcellence.level1.c2);
+                        sessionStorage.SetItemAsync("serviceExcellence.level1.c3", serviceExcellence.level1.c3);
                         step++;
                     }
                     else
@@ -187,15 +207,26 @@
                         {
                             serviceExcellence.level5 = new Level();
                         }
+                        sessionStorage.SetItemAsync("serviceExcellence.level3.c1", serviceExcellence.level3.c1);
+                        sessionStorage.SetItemAsync("serviceExcellence.level3.c2", serviceExcellence.level3.c2);
+                        sessionStorage.SetItemAsync("serviceExcellence.level3.c3", serviceExcellence.level3.c3);
                         step++;
                     }
                     else
                     {
+                        sessionStorage.SetItemAsync("serviceExcellence.level3.c1", serviceExcellence.level3.c1);
+                        sessionStorage.SetItemAsync("serviceExcellence.level3.c2", serviceExcellence.level3.c2);
+                        sessionStorage.SetItemAsync("serviceExcellence.level3.c3", serviceExcellence.level3.c3);
                         NavigationManager.NavigateTo("SafetyAndSecurity");
                     }
                 }; break;
             case 3:
                 {
+                    sessionStorage.SetItemAsync("serviceExcellence.level5.c1", serviceExcellence.level5.c1);
+                    sessionStorage.SetItemAsync("serviceExcellence.level5.c2", serviceExcellence.level5.c2);
+                    sessionStorage.SetItemAsync("serviceExcellence.level5.c3", serviceExcellence.level5.c3);
+                    sessionStorage.SetItemAsync("serviceExcellence.level5.c4", serviceExcellence.level5.c4);
+                    sessionStorage.SetItemAsync("serviceExcellence.level5.c5", serviceExcellence.level5.c5);
                     NavigationManager.NavigateTo("SafetyAndSecurity");
                 }; break;
         }

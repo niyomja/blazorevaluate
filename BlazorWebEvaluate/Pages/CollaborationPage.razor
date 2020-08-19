@@ -1,5 +1,6 @@
 ﻿@page "/Collaboration"
 @inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <h3>
     <b>ส่วนที่ 3</b> ประสานสัมพันธ์ (Collaboration)
@@ -149,6 +150,23 @@
     {
         collaboration = new Collaboration();
         collaboration.level1 = new Level();
+        collaboration.level3 = new Level();
+        collaboration.level5 = new Level();
+
+        collaboration.level1.c1 = await sessionStorage.GetItemAsync<bool>("collaboration.level1.c1");
+        collaboration.level1.c2 = await sessionStorage.GetItemAsync<bool>("collaboration.level1.c2");
+        collaboration.level1.c3 = await sessionStorage.GetItemAsync<bool>("collaboration.level1.c3");
+
+        collaboration.level3.c1 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c1");
+        collaboration.level3.c2 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c2");
+        collaboration.level3.c3 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c3");
+        collaboration.level3.c4 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c4");
+
+        collaboration.level5.c1 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c1");
+        collaboration.level5.c2 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c2");
+        collaboration.level5.c3 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c3");
+        collaboration.level5.c4 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c4");
+
         await base.OnParametersSetAsync();
     }
 
@@ -175,6 +193,9 @@
                         {
                             collaboration.level3 = new Level();
                         }
+                        sessionStorage.SetItemAsync("collaboration.level1.c1", collaboration.level1.c1);
+                        sessionStorage.SetItemAsync("collaboration.level1.c2", collaboration.level1.c2);
+                        sessionStorage.SetItemAsync("collaboration.level1.c3", collaboration.level1.c3);
                         step++;
                     }
                     else
@@ -190,15 +211,29 @@
                         {
                             collaboration.level5 = new Level();
                         }
+                        sessionStorage.SetItemAsync("collaboration.level3.c1", collaboration.level3.c1);
+                        sessionStorage.SetItemAsync("collaboration.level3.c2", collaboration.level3.c2);
+                        sessionStorage.SetItemAsync("collaboration.level3.c3", collaboration.level3.c3);
+                        sessionStorage.SetItemAsync("collaboration.level3.c4", collaboration.level3.c4);
                         step++;
                     }
                     else
                     {
+                        sessionStorage.SetItemAsync("collaboration.level3.c1", collaboration.level3.c1);
+                        sessionStorage.SetItemAsync("collaboration.level3.c2", collaboration.level3.c2);
+                        sessionStorage.SetItemAsync("collaboration.level3.c3", collaboration.level3.c3);
+                        sessionStorage.SetItemAsync("collaboration.level3.c4", collaboration.level3.c4);
+
                         NavigationManager.NavigateTo("ServiceExcellence");
                     }
                 }; break;
             case 3:
                 {
+                    sessionStorage.SetItemAsync("collaboration.level5.c1", collaboration.level5.c1);
+                    sessionStorage.SetItemAsync("collaboration.level5.c2", collaboration.level5.c2);
+                    sessionStorage.SetItemAsync("collaboration.level5.c3", collaboration.level5.c3);
+                    sessionStorage.SetItemAsync("collaboration.level5.c4", collaboration.level5.c4);
+
                     NavigationManager.NavigateTo("ServiceExcellence");
                 }; break;
         }

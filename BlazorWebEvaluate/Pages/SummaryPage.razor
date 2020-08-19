@@ -13,7 +13,7 @@
             <table class="table table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th colspan="3"><img src="/img/logo.png" /></th>
+                        <th colspan="4"><img src="/img/logo.png" /></th>
                         <th colspan="2" class="text-center">เชี่ยวชาญธุรกิจ (Business Acumen)</th>
                         <th colspan="2" class="text-center">คิดสร้างสรรค์ (Initiative)</th>
                         <th colspan="2" class="text-center">ประสานสัมพันธ์ (Collaboration)</th>
@@ -23,6 +23,7 @@
                     </tr>
                     <tr>
                         <th>No.</th>
+                        <th>ชื่อ สกุล</th>
                         <th>Level</th>
                         <th>ค่าคาดหวัง</th>
                         <th>คะแนนประเมิน</th>
@@ -39,25 +40,28 @@
                         <th>ผลการประเมิน</th>
                     </tr>
                 </thead>
+                @if(evaluate !=null){
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td class="text-center">1.</td>
+                        <td>@(evaluate.full_name)</td>
+                        <td class="text-center">@(evaluate.level)</td>
+                        <td class="text-center">@(evaluate.Max().ToString())</td>
+                        <td class="text-center">@(evaluate.businessAcu.Scroll().ToString())</td>
+                        <td class="text-center">@((evaluate.businessAcu.Scroll() - evaluate.Max()).ToString())</td>
+                        <td class="text-center">@(evaluate.initiative.Scroll().ToString())</td>
+                        <td class="text-center">@((evaluate.initiative.Scroll() - evaluate.Max()).ToString())</td>
+                        <td class="text-center">@(evaluate.collaboration.Scroll().ToString())</td>
+                        <td class="text-center">@((evaluate.collaboration.Scroll() - evaluate.Max()).ToString())</td>
+                        <td class="text-center">@(evaluate.serviceExcellence.Scroll().ToString())</td>
+                        <td class="text-center">@((evaluate.serviceExcellence.Scroll() - evaluate.Max()).ToString())</td>
+                        <td class="text-center">@(evaluate.safetyAndSecurity.Scroll().ToString())</td>
+                        <td class="text-center">@((evaluate.safetyAndSecurity.Scroll() - evaluate.Max()).ToString())</td>
+                        <td class="text-center">@(evaluate.digitalLiteracy.Scroll().ToString())</td>
+                        <td class="text-center">@((evaluate.digitalLiteracy.Scroll() - evaluate.Max()).ToString())</td>
                     </tr>
                 </tbody>
+                }
             </table>
         </div>
 
@@ -66,17 +70,140 @@
 </div>
 
 @code {
-
+    private Evaluate evaluate;
     protected override async Task OnInitializedAsync()
     {
-        var evaluate = new Evaluate();
+        evaluate = new Evaluate();
         evaluate.full_name = await sessionStorage.GetItemAsync<string>("full_name");
         evaluate.level = await sessionStorage.GetItemAsync<string>("level");
 
-        //await Http.PostAsJsonAsync("api/evaluate-save", evaluate);
+        // 1 )
+        evaluate.businessAcu = new BusinessAcu();
+        evaluate.businessAcu.level1 = new Level();
+        evaluate.businessAcu.level3 = new Level();
+        evaluate.businessAcu.level5 = new Level();
 
-        await sessionStorage.RemoveItemAsync("full_name");
-        await sessionStorage.RemoveItemAsync("level");
+        evaluate.businessAcu.level1.c1 = await sessionStorage.GetItemAsync<bool>("level1.c1");
+        evaluate.businessAcu.level1.c2 = await sessionStorage.GetItemAsync<bool>("level1.c2");
+        evaluate.businessAcu.level1.c3 = await sessionStorage.GetItemAsync<bool>("level1.c3");
+        evaluate.businessAcu.level1.c4 = await sessionStorage.GetItemAsync<bool>("level1.c4");
+
+        evaluate.businessAcu.level3.c1 = await sessionStorage.GetItemAsync<bool>("level3.c1");
+        evaluate.businessAcu.level3.c2 = await sessionStorage.GetItemAsync<bool>("level3.c2");
+        evaluate.businessAcu.level3.c3 = await sessionStorage.GetItemAsync<bool>("level3.c3");
+        evaluate.businessAcu.level3.c4 = await sessionStorage.GetItemAsync<bool>("level3.c4");
+
+        evaluate.businessAcu.level5.c1 = await sessionStorage.GetItemAsync<bool>("level5.c1");
+        evaluate.businessAcu.level5.c2 = await sessionStorage.GetItemAsync<bool>("level5.c2");
+        evaluate.businessAcu.level5.c3 = await sessionStorage.GetItemAsync<bool>("level5.c3");
+        evaluate.businessAcu.level5.c4 = await sessionStorage.GetItemAsync<bool>("level5.c4");
+
+       // 2 )
+        evaluate.initiative = new InitiativeData();
+        evaluate.initiative.level1 = new Level();
+        evaluate.initiative.level3 = new Level();
+        evaluate.initiative.level5 = new Level();
+
+        evaluate.initiative.level1.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c1");
+        evaluate.initiative.level1.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c2");
+        evaluate.initiative.level1.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level1.c3");
+
+        evaluate.initiative.level3.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c1");
+        evaluate.initiative.level3.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c2");
+        evaluate.initiative.level3.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c3");
+        evaluate.initiative.level3.c4 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c4");
+        evaluate.initiative.level3.c5 = await sessionStorage.GetItemAsync<bool>("initiative.level3.c5");
+
+        evaluate.initiative.level5.c1 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c1");
+        evaluate.initiative.level5.c2 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c2");
+        evaluate.initiative.level5.c3 = await sessionStorage.GetItemAsync<bool>("initiative.level5.c3");
+
+        // 3 )
+        evaluate.collaboration = new Collaboration();
+        evaluate.collaboration.level1 = new Level();
+        evaluate.collaboration.level3 = new Level();
+        evaluate.collaboration.level5 = new Level();
+
+        evaluate.collaboration.level1.c1 = await sessionStorage.GetItemAsync<bool>("collaboration.level1.c1");
+        evaluate.collaboration.level1.c2 = await sessionStorage.GetItemAsync<bool>("collaboration.level1.c2");
+        evaluate.collaboration.level1.c3 = await sessionStorage.GetItemAsync<bool>("collaboration.level1.c3");
+
+        evaluate.collaboration.level3.c1 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c1");
+        evaluate.collaboration.level3.c2 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c2");
+        evaluate.collaboration.level3.c3 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c3");
+        evaluate.collaboration.level3.c4 = await sessionStorage.GetItemAsync<bool>("collaboration.level3.c4");
+
+        evaluate.collaboration.level5.c1 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c1");
+        evaluate.collaboration.level5.c2 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c2");
+        evaluate.collaboration.level5.c3 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c3");
+        evaluate.collaboration.level5.c4 = await sessionStorage.GetItemAsync<bool>("collaboration.level5.c4");
+
+        // 4 )
+        evaluate.serviceExcellence = new ServiceExcellence();
+        evaluate.serviceExcellence.level1 = new Level();
+        evaluate.serviceExcellence.level3 = new Level();
+        evaluate.serviceExcellence.level5 = new Level();
+
+        evaluate.serviceExcellence.level1.c1 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level1.c1");
+        evaluate.serviceExcellence.level1.c2 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level1.c2");
+        evaluate.serviceExcellence.level1.c3 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level1.c3");
+
+        evaluate.serviceExcellence.level3.c1 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level3.c1");
+        evaluate.serviceExcellence.level3.c2 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level3.c2");
+        evaluate.serviceExcellence.level3.c3 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level3.c3");
+
+        evaluate.serviceExcellence.level5.c1 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c1");
+        evaluate.serviceExcellence.level5.c2 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c2");
+        evaluate.serviceExcellence.level5.c3 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c3");
+        evaluate.serviceExcellence.level5.c4 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c4");
+        evaluate.serviceExcellence.level5.c5 = await sessionStorage.GetItemAsync<bool>("serviceExcellence.level5.c5");
+        
+        // 5 )
+        evaluate.safetyAndSecurity = new SafetyAndSecurity();
+        evaluate.safetyAndSecurity.level1 = new Level();
+        evaluate.safetyAndSecurity.level3 = new Level();
+        evaluate.safetyAndSecurity.level5 = new Level();
+
+        evaluate.safetyAndSecurity.level1.c1 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level1.c1");
+        evaluate.safetyAndSecurity.level1.c2 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level1.c2");
+        evaluate.safetyAndSecurity.level1.c3 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level1.c3");
+
+        evaluate.safetyAndSecurity.level3.c1 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c1");
+        evaluate.safetyAndSecurity.level3.c2 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c2");
+        evaluate.safetyAndSecurity.level3.c3 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c3");
+        evaluate.safetyAndSecurity.level3.c4 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level3.c4");
+
+        evaluate.safetyAndSecurity.level5.c1 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c1");
+        evaluate.safetyAndSecurity.level5.c2 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c2");
+        evaluate.safetyAndSecurity.level5.c3 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c3");
+        evaluate.safetyAndSecurity.level5.c4 = await sessionStorage.GetItemAsync<bool>("safetyAndSecurity.level5.c4");
+
+        // 6 )
+        evaluate.digitalLiteracy = new DigitalLiteracy();
+        evaluate.digitalLiteracy.level1 = new Level();
+        evaluate.digitalLiteracy.level3 = new Level();
+        evaluate.digitalLiteracy.level5 = new Level();
+
+        evaluate.digitalLiteracy.level1.c1 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level1.c1");
+        evaluate.digitalLiteracy.level1.c2 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level1.c2");
+        evaluate.digitalLiteracy.level1.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level1.c3");
+
+        evaluate.digitalLiteracy.level3.c1 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c1");
+        evaluate.digitalLiteracy.level3.c2 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c2");
+        evaluate.digitalLiteracy.level3.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c3");
+        evaluate.digitalLiteracy.level3.c4 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c4");
+
+        evaluate.digitalLiteracy.level5.c1 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c1");
+        evaluate.digitalLiteracy.level5.c2 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c2");
+        evaluate.digitalLiteracy.level5.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c3");
+        evaluate.digitalLiteracy.level5.c4 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c4");
+
+        var response = await Http.PostAsJsonAsync("api/evaluate-save", evaluate);
+
+        if(response.IsSuccessStatusCode){
+          await sessionStorage.ClearAsync();
+        }
+
         await base.OnParametersSetAsync();
     }
 

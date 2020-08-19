@@ -1,5 +1,6 @@
 ﻿@page "/DigitalLiteracy"
 @inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <h3>
     <b>ส่วนที่ 6</b> ประยุกต์ใช้ดิจิทัล (Digital Literacy)
@@ -149,6 +150,23 @@
     {
         digitalLiteracy = new DigitalLiteracy();
         digitalLiteracy.level1 = new Level();
+        digitalLiteracy.level3 = new Level();
+        digitalLiteracy.level5 = new Level();
+
+        digitalLiteracy.level1.c1 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level1.c1");
+        digitalLiteracy.level1.c2 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level1.c2");
+        digitalLiteracy.level1.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level1.c3");
+
+        digitalLiteracy.level3.c1 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c1");
+        digitalLiteracy.level3.c2 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c2");
+        digitalLiteracy.level3.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c3");
+        digitalLiteracy.level3.c4 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level3.c4");
+
+        digitalLiteracy.level5.c1 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c1");
+        digitalLiteracy.level5.c2 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c2");
+        digitalLiteracy.level5.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c3");
+        digitalLiteracy.level5.c4 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c4");
+        
         await base.OnParametersSetAsync();
     }
 
@@ -175,6 +193,10 @@
                         {
                             digitalLiteracy.level3 = new Level();
                         }
+                        sessionStorage.SetItemAsync("digitalLiteracy.level1.c1", digitalLiteracy.level1.c1);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level1.c2", digitalLiteracy.level1.c2);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level1.c3", digitalLiteracy.level1.c3);
+                        
                         step++;
                     }
                     else
@@ -190,15 +212,30 @@
                         {
                             digitalLiteracy.level5 = new Level();
                         }
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c1", digitalLiteracy.level3.c1);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c2", digitalLiteracy.level3.c2);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c3", digitalLiteracy.level3.c3);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c4", digitalLiteracy.level3.c4);
+                        
                         step++;
                     }
                     else
                     {
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c1", digitalLiteracy.level3.c1);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c2", digitalLiteracy.level3.c2);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c3", digitalLiteracy.level3.c3);
+                        sessionStorage.SetItemAsync("digitalLiteracy.level3.c4", digitalLiteracy.level3.c4);
+                        
                         NavigationManager.NavigateTo("Summary");
                     }
                 }; break;
             case 3:
                 {
+                    sessionStorage.SetItemAsync("digitalLiteracy.level5.c1", digitalLiteracy.level5.c1);
+                    sessionStorage.SetItemAsync("digitalLiteracy.level5.c2", digitalLiteracy.level5.c2);
+                    sessionStorage.SetItemAsync("digitalLiteracy.level5.c3", digitalLiteracy.level5.c3);
+                    sessionStorage.SetItemAsync("digitalLiteracy.level5.c4", digitalLiteracy.level5.c4);
+                   
                     NavigationManager.NavigateTo("Summary");
                 }; break;
         }
