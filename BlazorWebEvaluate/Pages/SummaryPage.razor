@@ -13,7 +13,7 @@
             <table class="table table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th colspan="4"><img src="/img/logo.png" /></th>
+                        <th colspan="4"><img src="img/logo.png" /></th>
                         <th colspan="2" class="text-center">เชี่ยวชาญธุรกิจ (Business Acumen)</th>
                         <th colspan="2" class="text-center">คิดสร้างสรรค์ (Initiative)</th>
                         <th colspan="2" class="text-center">ประสานสัมพันธ์ (Collaboration)</th>
@@ -40,26 +40,35 @@
                         <th>ผลการประเมิน</th>
                     </tr>
                 </thead>
-                @if(evaluate !=null){
+                @if(evaluateList !=null){
                 <tbody>
+                    @foreach (var eval in evaluateList)
+                    {
                     <tr>
-                        <td class="text-center">1.</td>
-                        <td>@(evaluate.full_name)</td>
-                        <td class="text-center">@(evaluate.level)</td>
-                        <td class="text-center">@(evaluate.Max().ToString())</td>
-                        <td class="text-center">@(evaluate.businessAcu.Scroll().ToString())</td>
-                        <td class="text-center">@((evaluate.businessAcu.Scroll() - evaluate.Max()).ToString())</td>
-                        <td class="text-center">@(evaluate.initiative.Scroll().ToString())</td>
-                        <td class="text-center">@((evaluate.initiative.Scroll() - evaluate.Max()).ToString())</td>
-                        <td class="text-center">@(evaluate.collaboration.Scroll().ToString())</td>
-                        <td class="text-center">@((evaluate.collaboration.Scroll() - evaluate.Max()).ToString())</td>
-                        <td class="text-center">@(evaluate.serviceExcellence.Scroll().ToString())</td>
-                        <td class="text-center">@((evaluate.serviceExcellence.Scroll() - evaluate.Max()).ToString())</td>
-                        <td class="text-center">@(evaluate.safetyAndSecurity.Scroll().ToString())</td>
-                        <td class="text-center">@((evaluate.safetyAndSecurity.Scroll() - evaluate.Max()).ToString())</td>
-                        <td class="text-center">@(evaluate.digitalLiteracy.Scroll().ToString())</td>
-                        <td class="text-center">@((evaluate.digitalLiteracy.Scroll() - evaluate.Max()).ToString())</td>
+                        <td class="text-center">@(index + 1).</td>
+                        <td>@(eval.full_name)</td>
+                        <td class="text-center">@(eval.top_level)</td>
+                        <td class="text-center">@(eval.Max())</td>
+                        
+                        <td class="text-center">@(eval.businessAcu_Scroll())</td>
+                        <td class="text-center">@(eval.businessAcu_Scroll() - eval.Max())</td>
+                        
+                        <td class="text-center">@(eval.initiative_Scroll())</td>
+                        <td class="text-center"> @(eval.initiative_Scroll() - eval.Max()) </td>
+
+                        <td class="text-center"> @(eval.collaboration_Scroll()) </td>
+                        <td class="text-center"> @(eval.collaboration_Scroll() - eval.Max()) </td>
+
+                        <td class="text-center"> @(eval.serviceExcellence_Scroll()) </td>
+                        <td class="text-center"> @(eval.serviceExcellence_Scroll() - eval.Max()) </td>
+
+                        <td class="text-center"> @(eval.safetyAndSecurity_Scroll()) </td>
+                        <td class="text-center"> @(eval.safetyAndSecurity_Scroll() - eval.Max()) </td>
+
+                        <td class="text-center"> @(eval.digitalLiteracy_Scroll()) </td>
+                        <td class="text-center"> @(eval.digitalLiteracy_Scroll() -  eval.Max()) </td>
                     </tr>
+                    }
                 </tbody>
                 }
             </table>
@@ -70,7 +79,9 @@
 </div>
 
 @code {
+    private int index = 0;
     private Evaluate evaluate;
+    private List<EvaluateData> evaluateList;
     protected override async Task OnInitializedAsync()
     {
         evaluate = new Evaluate();
@@ -198,17 +209,20 @@
         evaluate.digitalLiteracy.level5.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c3");
         evaluate.digitalLiteracy.level5.c4 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c4");
 
-        var response = await Http.PostAsJsonAsync("api/evaluate-save", evaluate);
+        
+        var response = await Http.PostAsJsonAsync<Evaluate>("/plesk-site-preview/eevaluations.com/ajax/postdata.php", evaluate);
 
         if(response.IsSuccessStatusCode){
           await sessionStorage.ClearAsync();
         }
+
+        evaluateList = await Http.GetFromJsonAsync<List<EvaluateData>>("/plesk-site-preview/eevaluations.com/ajax/getdata.php");
 
         await base.OnParametersSetAsync();
     }
 
     void gotoBack()
     {
-        NavigationManager.NavigateTo("/");
+        NavigationManager.NavigateTo("");
     }
 }

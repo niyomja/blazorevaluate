@@ -3247,6 +3247,94 @@
       },
       {
         "Kind": "Components.Component",
+        "Name": "PreRenderComponent.PreRenderCascade",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PreRenderCascade"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "PreRenderComponent.PreRenderCascade",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PreRenderComponent.PreRenderCascade"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "PreRenderComponent.PreRenderCascade.ChildContent",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "PreRenderCascade"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "PreRenderComponent.PreRenderCascade.ChildContent",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "PreRenderComponent.PreRenderCascade"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.App",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,

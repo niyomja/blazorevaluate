@@ -363,10 +363,10 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "System.Net.Http.Json/3.2.0": {
+      "System.Net.Http.Json/3.2.1": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "4.7.1"
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/System.Net.Http.Json.dll": {}
@@ -422,7 +422,7 @@
           "Blazored.SessionStorage": "1.0.12",
           "Microsoft.AspNetCore.Components.WebAssembly": "3.2.1",
           "PreRenderComponent": "0.2.0-beta-1",
-          "System.Net.Http.Json": "3.2.0"
+          "System.Net.Http.Json": "3.2.1"
         },
         "compile": {
           "bin/placeholder/BlazorWebEvaluate.dll": {}
@@ -977,10 +977,10 @@
         "version.txt"
       ]
     },
-    "System.Net.Http.Json/3.2.0": {
-      "sha512": "6VUCQKGS9A0RGkIIfLpvAbBOQdTgsffQJ0OOanEMuCC/couJtjRhK65/3kE97IYi6z5kvXYvQW4buZ2rH5zsDA==",
+    "System.Net.Http.Json/3.2.1": {
+      "sha512": "KkevRTwX9uMYxuxG2/wSql8FIAItB89XT36zoh6hraQkFhf2yjotDswpAKzeuaEuMhAia6c50oZMkP1PJoYufQ==",
       "type": "package",
-      "path": "system.net.http.json/3.2.0",
+      "path": "system.net.http.json/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -991,7 +991,7 @@
         "lib/net461/System.Net.Http.Json.xml",
         "lib/netstandard2.0/System.Net.Http.Json.dll",
         "lib/netstandard2.0/System.Net.Http.Json.xml",
-        "system.net.http.json.3.2.0.nupkg.sha512",
+        "system.net.http.json.3.2.1.nupkg.sha512",
         "system.net.http.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1123,39 +1123,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Niyom Chamaree\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/niyom/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositories\\blazorevaluate\\BlazorServerAppEvaluate\\BlazorServerAppEvaluate.csproj",
+      "projectUniqueName": "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/BlazorServerAppEvaluate.csproj",
       "projectName": "BlazorServerAppEvaluate",
-      "projectPath": "D:\\Repositories\\blazorevaluate\\BlazorServerAppEvaluate\\BlazorServerAppEvaluate.csproj",
-      "packagesPath": "C:\\Users\\Niyom Chamaree\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositories\\blazorevaluate\\BlazorServerAppEvaluate\\obj\\",
+      "projectPath": "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/BlazorServerAppEvaluate.csproj",
+      "packagesPath": "/Users/niyom/.nuget/packages/",
+      "outputPath": "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Niyom Chamaree\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/niyom/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\Repositories\\blazorevaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj": {
-              "projectPath": "D:\\Repositories\\blazorevaluate\\BlazorWebEvaluate\\BlazorWebEvaluate.csproj"
+            "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj": {
+              "projectPath": "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/BlazorWebEvaluate.csproj"
             }
           }
         }
@@ -1184,24 +1180,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.0.1, 3.0.1]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.0.3, 3.0.3]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1210,7 +1188,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
       }
     }
   }

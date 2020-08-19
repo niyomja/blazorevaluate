@@ -40,32 +40,32 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
+        "Name": "BlazorWebEvaluate.Pages.CollaborationPage",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "CollaborationPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
+          "Common.TypeName": "BlazorWebEvaluate.Pages.CollaborationPage"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
+        "Name": "BlazorWebEvaluate.Pages.CollaborationPage",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.Pages.Index"
+            "TagName": "BlazorWebEvaluate.Pages.CollaborationPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.CollaborationPage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -102,6 +102,37 @@
       },
       {
         "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Index",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Index",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.Initiative",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
@@ -128,68 +159,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWebEvaluate.Pages.Initiative",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BusinessAcumen"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.BusinessAcumen"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.CollaborationPage",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CollaborationPage"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.CollaborationPage"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.CollaborationPage",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.CollaborationPage"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.CollaborationPage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -226,37 +195,6 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.DigitalLiteracyPage",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DigitalLiteracyPage"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.DigitalLiteracyPage"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.DigitalLiteracyPage",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.DigitalLiteracyPage"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.DigitalLiteracyPage",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.ServiceExcellencePage",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
@@ -288,6 +226,68 @@
       },
       {
         "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BusinessAcumen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.BusinessAcumen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.DigitalLiteracyPage",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DigitalLiteracyPage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.DigitalLiteracyPage"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.DigitalLiteracyPage",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.DigitalLiteracyPage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.DigitalLiteracyPage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.SummaryPage",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
@@ -314,6 +314,88 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Shared.NavMenu",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Shared.NavMenu"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Shared.NavMenu",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -406,88 +488,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "BlazorWebEvaluate.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Shared.NavMenu",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Shared.NavMenu"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Shared.NavMenu",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Shared.SurveyPrompt",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -2523,6 +2523,94 @@
         "Metadata": {
           "Runtime.Name": "Components.None",
           "Common.TypeName": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "PreRenderComponent.PreRenderCascade",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PreRenderCascade"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "PreRenderComponent.PreRenderCascade",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PreRenderComponent.PreRenderCascade"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "PreRenderComponent.PreRenderCascade.ChildContent",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "PreRenderCascade"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "PreRenderComponent.PreRenderCascade.ChildContent",
+        "AssemblyName": "PreRenderComponent",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "PreRenderComponent.PreRenderCascade"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "PreRenderComponent.PreRenderCascade.ChildContent",
           "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
