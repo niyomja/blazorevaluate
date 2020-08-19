@@ -133,6 +133,37 @@
       },
       {
         "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.FetchData",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.FetchData",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.Index",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
@@ -159,6 +190,37 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Initiative",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Initiative"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Initiative"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Initiative",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.Initiative"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Initiative",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -252,68 +314,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Initiative",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Initiative"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Initiative"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Initiative",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.Initiative"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Initiative",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.FetchData",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.FetchData",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
