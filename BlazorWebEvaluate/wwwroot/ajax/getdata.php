@@ -8,7 +8,7 @@ include('inc.ini.php');
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT * FROM `systema_evaluates` ORDER BY `full_name` ASC");
+    $stmt = $conn->prepare("SELECT * FROM `dev_evaluates` ORDER BY `full_name` ASC");
     $stmt->execute();
   
     // set the resulting array to associative

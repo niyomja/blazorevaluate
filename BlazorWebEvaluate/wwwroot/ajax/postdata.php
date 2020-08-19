@@ -21,13 +21,14 @@ if ($json_data) {
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // prepare sql and bind parameters
-        $stmt = $conn->prepare("INSERT INTO `systema_evaluates` 
+        $stmt = $conn->prepare("INSERT INTO `dev_evaluates` 
         (
         `full_name`,
         `top_level`,
         `businessacu_level1_c1`,
         `businessacu_level1_c2`,
         `businessacu_level1_c3`,
+        `businessacu_level1_c4`,
         `businessacu_level3_c1`,
         `businessacu_level3_c2`,
         `businessacu_level3_c3`,
@@ -97,6 +98,7 @@ if ($json_data) {
         :va1,
         :va2,
         :va3,
+        :va31,
         :va4,
         :va5,
         :va6,
@@ -167,6 +169,7 @@ if ($json_data) {
         $stmt->bindParam(":va1", $businessAcu_level1_c1);
         $stmt->bindParam(":va2", $businessAcu_level1_c2);
         $stmt->bindParam(":va3", $businessAcu_level1_c3);
+        $stmt->bindParam(":va31", $businessAcu_level1_c4);
 
         $stmt->bindParam(":va4", $businessAcu_level3_c1);
         $stmt->bindParam(":va5", $businessAcu_level3_c2);
@@ -246,6 +249,7 @@ if ($json_data) {
         $businessAcu_level1_c1 = $data->businessAcu->level1->c1;
         $businessAcu_level1_c2 = $data->businessAcu->level1->c2;
         $businessAcu_level1_c3 = $data->businessAcu->level1->c3;
+        $businessAcu_level1_c4 = $data->businessAcu->level1->c4;
         $businessAcu_level3_c1 = $data->businessAcu->level3->c1;
         $businessAcu_level3_c2 = $data->businessAcu->level3->c2;
         $businessAcu_level3_c3 = $data->businessAcu->level3->c3;

@@ -7,13 +7,14 @@ try {
     $conn = new PDO("mysql:host=".$servername.";dbname=".$database, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
-    $sql = "CREATE TABLE `systema_evaluates` (
+    $sql = "CREATE TABLE `dev_evaluates` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `full_name` varchar(255) NOT NULL,
         `top_level` varchar(20) NOT NULL,
         `businessAcu_level1_c1` tinyint(1) NOT NULL DEFAULT 0,
         `businessAcu_level1_c2` tinyint(1) NOT NULL DEFAULT 0,
         `businessAcu_level1_c3` tinyint(1) NOT NULL DEFAULT 0,
+        `businessAcu_level1_c4` tinyint(1) NOT NULL DEFAULT 0,
         `businessAcu_level3_c1` tinyint(1) NOT NULL DEFAULT 0,
         `businessAcu_level3_c2` tinyint(1) NOT NULL DEFAULT 0,
         `businessAcu_level3_c3` tinyint(1) NOT NULL DEFAULT 0,
