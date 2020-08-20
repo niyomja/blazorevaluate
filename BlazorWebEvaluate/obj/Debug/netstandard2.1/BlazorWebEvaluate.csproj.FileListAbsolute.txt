@@ -1135,6 +1135,6 @@ D:/Repositories/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integr
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/bin/Debug/netstandard2.1/publish/web.config
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/bin/Debug/netstandard2.1/publish/wwwroot/sample-data/weather.json
 /Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/bin/Debug/netstandard2.1/publish/wwwroot/_framework/blazor.boot.json
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/6PtE2LdpxVUX3IGpHuzOuzM2xTPlUbmakwhNPt71Qkw=.hash
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/OMBiDwms6qIL1T60pgtq8hOSZdO_LiGlejYOT9irfa8=.hash
-/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/S22xyrYOEVBbNeuhQJGcCl5DsjvukMvLip1TiVlzyFM=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/0eiqdQvIsH-sEGkzK2-qvdB2KBq-7QeDtjG33KjUJGs=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/qd1Q4tUDlPdnS2vylMJ-7lYbKiqKHSUQHvMP71wNlF0=.hash
+/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/obj/Debug/netstandard2.1/integrity/iAEHfkGcM3MGpKMNVpUOE6CrTDZp87DqJf9WM9pCFKc=.hash

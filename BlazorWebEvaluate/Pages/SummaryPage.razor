@@ -40,8 +40,9 @@
                         <th>ผลการประเมิน</th>
                     </tr>
                 </thead>
-                @if(evaluateList !=null){
+            @if(evaluateList !=null){
                 <tbody>
+                @if(evaluateList.Count > 0){
                     @foreach (var eval in evaluateList)
                     {
                     <tr>
@@ -69,8 +70,25 @@
                         <td class="text-center"> @(eval.digitalLiteracy_Scroll() -  eval.Max()) </td>
                     </tr>
                     }
-                </tbody>
+                }else{
+                    <tr>
+                        <td colspan="16" class="text-center">
+                            <span class="text-mute">No data to display.</span>
+                        </td>
+                    </tr>
                 }
+                </tbody>
+            }else{
+                    <tbody>
+                        <tr>
+                            <td colspan="16" class="text-center">
+                                <div class="spinner-border m-5 text-center" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+            }
             </table>
         </div>
 
@@ -210,12 +228,13 @@
         evaluate.digitalLiteracy.level5.c4 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c4");
 
         
-        var response = await Http.PostAsJsonAsync<Evaluate>("/plesk-site-preview/eevaluations.com/ajax/postdata.php", evaluate);
+        if(!String.IsNullOrEmpty(evaluate.full_name)){
+            var response = await Http.PostAsJsonAsync<Evaluate>("/plesk-site-preview/eevaluations.com/ajax/postdata.php", evaluate);
 
-        if(response.IsSuccessStatusCode){
-          await sessionStorage.ClearAsync();
+            if(response.IsSuccessStatusCode){
+                await sessionStorage.ClearAsync();
+            }
         }
-
         evaluateList = await Http.GetFromJsonAsync<List<EvaluateData>>("/plesk-site-preview/eevaluations.com/ajax/getdata.php");
 
         await base.OnParametersSetAsync();
