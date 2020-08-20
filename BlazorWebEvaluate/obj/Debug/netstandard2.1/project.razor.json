@@ -173,39 +173,6 @@
         }
       },
       {
-        "HashCode": -979537009,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 683866464,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 903710411,
         "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.Initiative",
@@ -334,6 +301,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -979537009,
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Index",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 683866464,
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Index",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
