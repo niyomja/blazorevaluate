@@ -41,39 +41,6 @@
         }
       },
       {
-        "HashCode": 1022985603,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BusinessAcumen"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen"
-        }
-      },
-      {
-        "HashCode": -890142291,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.BusinessAcumen"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -909631574,
         "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.CollaborationPage",
@@ -169,39 +136,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWebEvaluate.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -979537009,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 683866464,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -334,6 +268,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -979537009,
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Index",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 683866464,
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.Index",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1022985603,
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BusinessAcumen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen"
+        }
+      },
+      {
+        "HashCode": -890142291,
+        "Kind": "Components.Component",
+        "Name": "BlazorWebEvaluate.Pages.BusinessAcumen",
+        "AssemblyName": "BlazorWebEvaluate",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWebEvaluate.Pages.BusinessAcumen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.BusinessAcumen",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
