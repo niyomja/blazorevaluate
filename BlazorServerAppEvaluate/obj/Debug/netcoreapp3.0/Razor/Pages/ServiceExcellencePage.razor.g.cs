@@ -88,9 +88,7 @@ using BlazorWebEvaluate.Data;
             __builder.AddMarkupContent(0, "<h3><b>ส่วนที่ 4</b>  มุ่งมั่นบริการ (Service Excellence)</h3>\n");
             __builder.AddMarkupContent(1, @"<p>
     ใช้ข้อมูล วิเคราะห์  ความต้องการของผู้รับบริการ และเพิ่มความสามารถการให้บริการ โดยปรับปรุงข้อจำกัดอุปสรรค และพัฒนาระบบงานที่ทันสมัยในการสร้างสรรค์ประสบการณ์ใหม่ๆ รวมถึงพัฒนามาตรฐานคุณภาพการบริการและการอำนวยความสะดวกให้ดียิ่งขึ้น เพื่อส่งเสริมภาพลักษณ์และความพึงพอใจโดยรวมของผู้ใช้บริการในทุกมิติ  มุ่งสู่การเป็นผู้เชี่ยวชาญธุรกิจบริการท่าอากาศยานระดับโลก
-</p>
-
-");
+</p>");
 #nullable restore
 #line 11 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
  if (step == 1)
@@ -99,29 +97,23 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(2, "    ");
-            __builder.OpenElement(3, "div");
-            __builder.AddAttribute(4, "class", "row");
-            __builder.AddMarkupContent(5, "\n        ");
-            __builder.OpenElement(6, "div");
-            __builder.AddAttribute(7, "class", "col-lg-12");
-            __builder.AddMarkupContent(8, "\n            ");
-            __builder.AddMarkupContent(9, "<h4 class=\"mt-5 mb-2\">ระดับที่ 1</h4>\n            ");
-            __builder.OpenElement(10, "table");
-            __builder.AddAttribute(11, "class", "table table-bordered");
-            __builder.AddMarkupContent(12, "\n                ");
-            __builder.AddMarkupContent(13, "<thead>\n                    <tr>\n                        <th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th>\n                    </tr>\n                </thead>\n                ");
-            __builder.OpenElement(14, "tbody");
-            __builder.AddMarkupContent(15, "\n                    ");
-            __builder.OpenElement(16, "tr");
-            __builder.AddMarkupContent(17, "\n                        ");
-            __builder.AddMarkupContent(18, "<td>\n                            1. มีความรู้ในธุรกิจและลักษณะการให้บริการของหน่วยงาน\n                        </td>\n                        ");
-            __builder.OpenElement(19, "td");
-            __builder.OpenElement(20, "label");
-            __builder.OpenElement(21, "input");
-            __builder.AddAttribute(22, "type", "checkbox");
-            __builder.AddAttribute(23, "value", "1");
-            __builder.AddAttribute(24, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "row");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "col-lg-12");
+            __builder.AddMarkupContent(6, "<h4 class=\"mt-5 mb-2\">ระดับที่ 1</h4>\n            ");
+            __builder.OpenElement(7, "table");
+            __builder.AddAttribute(8, "class", "table table-bordered");
+            __builder.AddMarkupContent(9, "<thead><tr><th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th></tr></thead>\n                ");
+            __builder.OpenElement(10, "tbody");
+            __builder.OpenElement(11, "tr");
+            __builder.AddMarkupContent(12, "<td>\n                            1. มีความรู้ในธุรกิจและลักษณะการให้บริการของหน่วยงาน\n                        </td>\n                        ");
+            __builder.OpenElement(13, "td");
+            __builder.OpenElement(14, "label");
+            __builder.OpenElement(15, "input");
+            __builder.AddAttribute(16, "type", "checkbox");
+            __builder.AddAttribute(17, "value", "1");
+            __builder.AddAttribute(18, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 28 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level1.c1
@@ -130,24 +122,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(25, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level1.c1 = __value, serviceExcellence.level1.c1));
+            __builder.AddAttribute(19, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level1.c1 = __value, serviceExcellence.level1.c1));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(26, " ใช่");
+            __builder.AddMarkupContent(20, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(27, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(28, "\n                    ");
-            __builder.OpenElement(29, "tr");
-            __builder.AddMarkupContent(30, "\n                        ");
-            __builder.AddMarkupContent(31, "<td>\n                            2. รับฟังความต้องการ สามารถตอบสนองความต้องการของผู้รับบริการได้ครบถ้วน\n                        </td>\n                        ");
-            __builder.OpenElement(32, "td");
-            __builder.OpenElement(33, "label");
-            __builder.OpenElement(34, "input");
-            __builder.AddAttribute(35, "type", "checkbox");
-            __builder.AddAttribute(36, "value", "1");
-            __builder.AddAttribute(37, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(21, "\n                    ");
+            __builder.OpenElement(22, "tr");
+            __builder.AddMarkupContent(23, "<td>\n                            2. รับฟังความต้องการ สามารถตอบสนองความต้องการของผู้รับบริการได้ครบถ้วน\n                        </td>\n                        ");
+            __builder.OpenElement(24, "td");
+            __builder.OpenElement(25, "label");
+            __builder.OpenElement(26, "input");
+            __builder.AddAttribute(27, "type", "checkbox");
+            __builder.AddAttribute(28, "value", "1");
+            __builder.AddAttribute(29, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 34 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level1.c2
@@ -156,24 +146,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(38, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level1.c2 = __value, serviceExcellence.level1.c2));
+            __builder.AddAttribute(30, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level1.c2 = __value, serviceExcellence.level1.c2));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(39, " ใช่");
+            __builder.AddMarkupContent(31, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(40, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(41, "\n                    ");
-            __builder.OpenElement(42, "tr");
-            __builder.AddMarkupContent(43, "\n                        ");
-            __builder.AddMarkupContent(44, "<td>\n                            3. สามารถแก้ไขปัญหาร้องเรียนและตอบสนองความพึงพอใจของผู้รับบริการ\n                        </td>\n                        ");
-            __builder.OpenElement(45, "td");
-            __builder.OpenElement(46, "label");
-            __builder.OpenElement(47, "input");
-            __builder.AddAttribute(48, "type", "checkbox");
-            __builder.AddAttribute(49, "value", "1");
-            __builder.AddAttribute(50, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(32, "\n                    ");
+            __builder.OpenElement(33, "tr");
+            __builder.AddMarkupContent(34, "<td>\n                            3. สามารถแก้ไขปัญหาร้องเรียนและตอบสนองความพึงพอใจของผู้รับบริการ\n                        </td>\n                        ");
+            __builder.OpenElement(35, "td");
+            __builder.OpenElement(36, "label");
+            __builder.OpenElement(37, "input");
+            __builder.AddAttribute(38, "type", "checkbox");
+            __builder.AddAttribute(39, "value", "1");
+            __builder.AddAttribute(40, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 40 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level1.c3
@@ -182,21 +170,18 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(51, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level1.c3 = __value, serviceExcellence.level1.c3));
+            __builder.AddAttribute(41, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level1.c3 = __value, serviceExcellence.level1.c3));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(52, " ใช่");
+            __builder.AddMarkupContent(42, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(53, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(54, "\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(55, "\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(56, "\n            ");
-            __builder.OpenElement(57, "button");
-            __builder.AddAttribute(58, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(43, "\n            ");
+            __builder.OpenElement(44, "button");
+            __builder.AddAttribute(45, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 44 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                               gotoBack
@@ -205,13 +190,13 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(59, "type", "button");
-            __builder.AddAttribute(60, "class", "btn btn-default mt-5");
-            __builder.AddContent(61, "  Back  ");
+            __builder.AddAttribute(46, "type", "button");
+            __builder.AddAttribute(47, "class", "btn btn-default mt-5");
+            __builder.AddContent(48, "  Back  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(62, "\n            ");
-            __builder.OpenElement(63, "button");
-            __builder.AddAttribute(64, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(49, "\n            ");
+            __builder.OpenElement(50, "button");
+            __builder.AddAttribute(51, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 45 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                               gotoNext
@@ -220,15 +205,12 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(65, "type", "button");
-            __builder.AddAttribute(66, "class", "btn btn-primary mt-5");
-            __builder.AddContent(67, "  Next  ");
+            __builder.AddAttribute(52, "type", "button");
+            __builder.AddAttribute(53, "class", "btn btn-primary mt-5");
+            __builder.AddContent(54, "  Next  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(68, "\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(69, "\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(70, "\n");
 #nullable restore
 #line 48 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
 }
@@ -236,7 +218,6 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddMarkupContent(71, "\n\n");
 #nullable restore
 #line 51 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
  if (step == 2)
@@ -245,29 +226,23 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(72, "    ");
-            __builder.OpenElement(73, "div");
-            __builder.AddAttribute(74, "class", "row");
-            __builder.AddMarkupContent(75, "\n        ");
-            __builder.OpenElement(76, "div");
-            __builder.AddAttribute(77, "class", "col-lg-12");
-            __builder.AddMarkupContent(78, "\n            ");
-            __builder.AddMarkupContent(79, "<h4 class=\"mt-5 mb-2\">ระดับที่ 3</h4>\n            ");
-            __builder.OpenElement(80, "table");
-            __builder.AddAttribute(81, "class", "table table-bordered");
-            __builder.AddMarkupContent(82, "\n                ");
-            __builder.AddMarkupContent(83, "<thead>\n                    <tr>\n                        <th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th>\n                    </tr>\n                </thead>\n                ");
-            __builder.OpenElement(84, "tbody");
-            __builder.AddMarkupContent(85, "\n                    ");
-            __builder.OpenElement(86, "tr");
-            __builder.AddMarkupContent(87, "\n                        ");
-            __builder.AddMarkupContent(88, "<td>\n                            1. รู้และเข้าใจมาตรฐาน คุณภาพการให้บริการ ข้อตกลงในการให้บริการ(SLA)ของหน่วยงานอย่างครบถ้วน\n                        </td>\n                        ");
-            __builder.OpenElement(89, "td");
-            __builder.OpenElement(90, "label");
-            __builder.OpenElement(91, "input");
-            __builder.AddAttribute(92, "type", "checkbox");
-            __builder.AddAttribute(93, "value", "1");
-            __builder.AddAttribute(94, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.OpenElement(55, "div");
+            __builder.AddAttribute(56, "class", "row");
+            __builder.OpenElement(57, "div");
+            __builder.AddAttribute(58, "class", "col-lg-12");
+            __builder.AddMarkupContent(59, "<h4 class=\"mt-5 mb-2\">ระดับที่ 3</h4>\n            ");
+            __builder.OpenElement(60, "table");
+            __builder.AddAttribute(61, "class", "table table-bordered");
+            __builder.AddMarkupContent(62, "<thead><tr><th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th></tr></thead>\n                ");
+            __builder.OpenElement(63, "tbody");
+            __builder.OpenElement(64, "tr");
+            __builder.AddMarkupContent(65, "<td>\n                            1. รู้และเข้าใจมาตรฐาน คุณภาพการให้บริการ ข้อตกลงในการให้บริการ(SLA)ของหน่วยงานอย่างครบถ้วน\n                        </td>\n                        ");
+            __builder.OpenElement(66, "td");
+            __builder.OpenElement(67, "label");
+            __builder.OpenElement(68, "input");
+            __builder.AddAttribute(69, "type", "checkbox");
+            __builder.AddAttribute(70, "value", "1");
+            __builder.AddAttribute(71, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 68 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level3.c1
@@ -276,24 +251,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(95, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level3.c1 = __value, serviceExcellence.level3.c1));
+            __builder.AddAttribute(72, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level3.c1 = __value, serviceExcellence.level3.c1));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(96, " ใช่");
+            __builder.AddMarkupContent(73, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(97, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(98, "\n                    ");
-            __builder.OpenElement(99, "tr");
-            __builder.AddMarkupContent(100, "\n                        ");
-            __builder.AddMarkupContent(101, "<td>\n                            2. ปฏิบัติตามขั้นตอนการให้บริการและส่งมอบตามข้อตกลงอย่างสม่ำเสมอเป็นแบบอย่างที่ดีในหน่วยงาน\n                        </td>\n                        ");
-            __builder.OpenElement(102, "td");
-            __builder.OpenElement(103, "label");
-            __builder.OpenElement(104, "input");
-            __builder.AddAttribute(105, "type", "checkbox");
-            __builder.AddAttribute(106, "value", "1");
-            __builder.AddAttribute(107, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(74, "\n                    ");
+            __builder.OpenElement(75, "tr");
+            __builder.AddMarkupContent(76, "<td>\n                            2. ปฏิบัติตามขั้นตอนการให้บริการและส่งมอบตามข้อตกลงอย่างสม่ำเสมอเป็นแบบอย่างที่ดีในหน่วยงาน\n                        </td>\n                        ");
+            __builder.OpenElement(77, "td");
+            __builder.OpenElement(78, "label");
+            __builder.OpenElement(79, "input");
+            __builder.AddAttribute(80, "type", "checkbox");
+            __builder.AddAttribute(81, "value", "1");
+            __builder.AddAttribute(82, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 74 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level3.c2
@@ -302,24 +275,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(108, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level3.c2 = __value, serviceExcellence.level3.c2));
+            __builder.AddAttribute(83, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level3.c2 = __value, serviceExcellence.level3.c2));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(109, " ใช่");
+            __builder.AddMarkupContent(84, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(110, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(111, "\n                    ");
-            __builder.OpenElement(112, "tr");
-            __builder.AddMarkupContent(113, "\n                        ");
-            __builder.AddMarkupContent(114, "<td>\n                            3. ตอบสนองความพึงพอใจผู้รับบริการเกินความคาดหวังได้รับคำชื่นชม\n                        </td>\n                        ");
-            __builder.OpenElement(115, "td");
-            __builder.OpenElement(116, "label");
-            __builder.OpenElement(117, "input");
-            __builder.AddAttribute(118, "type", "checkbox");
-            __builder.AddAttribute(119, "value", "1");
-            __builder.AddAttribute(120, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(85, "\n                    ");
+            __builder.OpenElement(86, "tr");
+            __builder.AddMarkupContent(87, "<td>\n                            3. ตอบสนองความพึงพอใจผู้รับบริการเกินความคาดหวังได้รับคำชื่นชม\n                        </td>\n                        ");
+            __builder.OpenElement(88, "td");
+            __builder.OpenElement(89, "label");
+            __builder.OpenElement(90, "input");
+            __builder.AddAttribute(91, "type", "checkbox");
+            __builder.AddAttribute(92, "value", "1");
+            __builder.AddAttribute(93, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 80 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level3.c3
@@ -328,21 +299,18 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(121, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level3.c3 = __value, serviceExcellence.level3.c3));
+            __builder.AddAttribute(94, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level3.c3 = __value, serviceExcellence.level3.c3));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(122, " ใช่");
+            __builder.AddMarkupContent(95, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(123, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(124, "\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(125, "\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(126, "\n            ");
-            __builder.OpenElement(127, "button");
-            __builder.AddAttribute(128, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(96, "\n            ");
+            __builder.OpenElement(97, "button");
+            __builder.AddAttribute(98, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 84 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                               gotoBack
@@ -351,13 +319,13 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(129, "type", "button");
-            __builder.AddAttribute(130, "class", "btn btn-default mt-5");
-            __builder.AddContent(131, "  Back  ");
+            __builder.AddAttribute(99, "type", "button");
+            __builder.AddAttribute(100, "class", "btn btn-default mt-5");
+            __builder.AddContent(101, "  Back  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(132, "\n            ");
-            __builder.OpenElement(133, "button");
-            __builder.AddAttribute(134, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(102, "\n            ");
+            __builder.OpenElement(103, "button");
+            __builder.AddAttribute(104, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 85 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                               gotoNext
@@ -366,15 +334,12 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(135, "type", "button");
-            __builder.AddAttribute(136, "class", "btn btn-primary mt-5");
-            __builder.AddContent(137, "  Next  ");
+            __builder.AddAttribute(105, "type", "button");
+            __builder.AddAttribute(106, "class", "btn btn-primary mt-5");
+            __builder.AddContent(107, "  Next  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(138, "\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(139, "\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(140, "\n");
 #nullable restore
 #line 88 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
 }
@@ -382,7 +347,6 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddMarkupContent(141, "\n\n");
 #nullable restore
 #line 91 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
  if (step == 3)
@@ -391,29 +355,23 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(142, "    ");
-            __builder.OpenElement(143, "div");
-            __builder.AddAttribute(144, "class", "row");
-            __builder.AddMarkupContent(145, "\n        ");
-            __builder.OpenElement(146, "div");
-            __builder.AddAttribute(147, "class", "col-lg-12");
-            __builder.AddMarkupContent(148, "\n            ");
-            __builder.AddMarkupContent(149, "<h4 class=\"mt-5 mb-2\">ระดับที่ 5</h4>\n            ");
-            __builder.OpenElement(150, "table");
-            __builder.AddAttribute(151, "class", "table table-bordered");
-            __builder.AddMarkupContent(152, "\n                ");
-            __builder.AddMarkupContent(153, "<thead>\n                    <tr>\n                        <th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th>\n                    </tr>\n                </thead>\n                ");
-            __builder.OpenElement(154, "tbody");
-            __builder.AddMarkupContent(155, "\n                    ");
-            __builder.OpenElement(156, "tr");
-            __builder.AddMarkupContent(157, "\n                        ");
-            __builder.AddMarkupContent(158, "<td>\n                            1. มีความรู้ ความเข้าใจในระบบการให้บริการของทอท. ข้อมูลความต้องการ ความคาดหวัง ของผู้รับบริการประเภทต่างๆ\n                        </td>\n                        ");
-            __builder.OpenElement(159, "td");
-            __builder.OpenElement(160, "label");
-            __builder.OpenElement(161, "input");
-            __builder.AddAttribute(162, "type", "checkbox");
-            __builder.AddAttribute(163, "value", "1");
-            __builder.AddAttribute(164, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.OpenElement(108, "div");
+            __builder.AddAttribute(109, "class", "row");
+            __builder.OpenElement(110, "div");
+            __builder.AddAttribute(111, "class", "col-lg-12");
+            __builder.AddMarkupContent(112, "<h4 class=\"mt-5 mb-2\">ระดับที่ 5</h4>\n            ");
+            __builder.OpenElement(113, "table");
+            __builder.AddAttribute(114, "class", "table table-bordered");
+            __builder.AddMarkupContent(115, "<thead><tr><th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th></tr></thead>\n                ");
+            __builder.OpenElement(116, "tbody");
+            __builder.OpenElement(117, "tr");
+            __builder.AddMarkupContent(118, "<td>\n                            1. มีความรู้ ความเข้าใจในระบบการให้บริการของทอท. ข้อมูลความต้องการ ความคาดหวัง ของผู้รับบริการประเภทต่างๆ\n                        </td>\n                        ");
+            __builder.OpenElement(119, "td");
+            __builder.OpenElement(120, "label");
+            __builder.OpenElement(121, "input");
+            __builder.AddAttribute(122, "type", "checkbox");
+            __builder.AddAttribute(123, "value", "1");
+            __builder.AddAttribute(124, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 108 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level5.c1
@@ -422,24 +380,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(165, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c1 = __value, serviceExcellence.level5.c1));
+            __builder.AddAttribute(125, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c1 = __value, serviceExcellence.level5.c1));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(166, " ใช่");
+            __builder.AddMarkupContent(126, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(167, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(168, "\n                    ");
-            __builder.OpenElement(169, "tr");
-            __builder.AddMarkupContent(170, "\n                        ");
-            __builder.AddMarkupContent(171, "<td>\n                            2. ใช้ฐานข้อมูลความต้องการของผู้รับบริการแต่ละกลุ่ม  มาออกแบบ พัฒนาระบบการให้บริการ\n                        </td>\n                        ");
-            __builder.OpenElement(172, "td");
-            __builder.OpenElement(173, "label");
-            __builder.OpenElement(174, "input");
-            __builder.AddAttribute(175, "type", "checkbox");
-            __builder.AddAttribute(176, "value", "1");
-            __builder.AddAttribute(177, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(127, "\n                    ");
+            __builder.OpenElement(128, "tr");
+            __builder.AddMarkupContent(129, "<td>\n                            2. ใช้ฐานข้อมูลความต้องการของผู้รับบริการแต่ละกลุ่ม  มาออกแบบ พัฒนาระบบการให้บริการ\n                        </td>\n                        ");
+            __builder.OpenElement(130, "td");
+            __builder.OpenElement(131, "label");
+            __builder.OpenElement(132, "input");
+            __builder.AddAttribute(133, "type", "checkbox");
+            __builder.AddAttribute(134, "value", "1");
+            __builder.AddAttribute(135, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 114 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level5.c2
@@ -448,24 +404,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(178, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c2 = __value, serviceExcellence.level5.c2));
+            __builder.AddAttribute(136, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c2 = __value, serviceExcellence.level5.c2));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(179, " ใช่");
+            __builder.AddMarkupContent(137, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(180, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(181, "\n                    ");
-            __builder.OpenElement(182, "tr");
-            __builder.AddMarkupContent(183, "\n                        ");
-            __builder.AddMarkupContent(184, "<td>\n                            3. สามารถให้คำแนะนำการบริการที่เป็นเลิศกับหน่วยงานที่เกี่ยวข้อง\n                        </td>\n                        ");
-            __builder.OpenElement(185, "td");
-            __builder.OpenElement(186, "label");
-            __builder.OpenElement(187, "input");
-            __builder.AddAttribute(188, "type", "checkbox");
-            __builder.AddAttribute(189, "value", "1");
-            __builder.AddAttribute(190, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(138, "\n                    ");
+            __builder.OpenElement(139, "tr");
+            __builder.AddMarkupContent(140, "<td>\n                            3. สามารถให้คำแนะนำการบริการที่เป็นเลิศกับหน่วยงานที่เกี่ยวข้อง\n                        </td>\n                        ");
+            __builder.OpenElement(141, "td");
+            __builder.OpenElement(142, "label");
+            __builder.OpenElement(143, "input");
+            __builder.AddAttribute(144, "type", "checkbox");
+            __builder.AddAttribute(145, "value", "1");
+            __builder.AddAttribute(146, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 120 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level5.c3
@@ -474,24 +428,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(191, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c3 = __value, serviceExcellence.level5.c3));
+            __builder.AddAttribute(147, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c3 = __value, serviceExcellence.level5.c3));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(192, " ใช่");
+            __builder.AddMarkupContent(148, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(193, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(194, "\n                    ");
-            __builder.OpenElement(195, "tr");
-            __builder.AddMarkupContent(196, "\n                        ");
-            __builder.AddMarkupContent(197, "<td>\n                            4. ผลักดันและร่วมออกแบบระบบการให้บริการที่สร้างสรรค์ โดยใช้เทคโนโลยีใหม่ๆ และดิจิทัลเพื่อสร้างประสบการณ์ใหม่ๆเทียบเท่าระดับสากลให้นำมาปฏิบัติได้\n                        </td>\n                        ");
-            __builder.OpenElement(198, "td");
-            __builder.OpenElement(199, "label");
-            __builder.OpenElement(200, "input");
-            __builder.AddAttribute(201, "type", "checkbox");
-            __builder.AddAttribute(202, "value", "1");
-            __builder.AddAttribute(203, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(149, "\n                    ");
+            __builder.OpenElement(150, "tr");
+            __builder.AddMarkupContent(151, "<td>\n                            4. ผลักดันและร่วมออกแบบระบบการให้บริการที่สร้างสรรค์ โดยใช้เทคโนโลยีใหม่ๆ และดิจิทัลเพื่อสร้างประสบการณ์ใหม่ๆเทียบเท่าระดับสากลให้นำมาปฏิบัติได้\n                        </td>\n                        ");
+            __builder.OpenElement(152, "td");
+            __builder.OpenElement(153, "label");
+            __builder.OpenElement(154, "input");
+            __builder.AddAttribute(155, "type", "checkbox");
+            __builder.AddAttribute(156, "value", "1");
+            __builder.AddAttribute(157, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 126 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level5.c4
@@ -500,24 +452,22 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(204, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c4 = __value, serviceExcellence.level5.c4));
+            __builder.AddAttribute(158, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c4 = __value, serviceExcellence.level5.c4));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(205, " ใช่");
+            __builder.AddMarkupContent(159, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(206, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(207, "\n                    ");
-            __builder.OpenElement(208, "tr");
-            __builder.AddMarkupContent(209, "\n                        ");
-            __builder.AddMarkupContent(210, "<td>\n                            5. เพิ่มความพึงพอใจให้ผู้รับบริการ มีผลการประเมินความพึงพอใจจากผู้รับบริการ\n                        </td>\n                        ");
-            __builder.OpenElement(211, "td");
-            __builder.OpenElement(212, "label");
-            __builder.OpenElement(213, "input");
-            __builder.AddAttribute(214, "type", "checkbox");
-            __builder.AddAttribute(215, "value", "1");
-            __builder.AddAttribute(216, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(160, "\n                    ");
+            __builder.OpenElement(161, "tr");
+            __builder.AddMarkupContent(162, "<td>\n                            5. เพิ่มความพึงพอใจให้ผู้รับบริการ มีผลการประเมินความพึงพอใจจากผู้รับบริการ\n                        </td>\n                        ");
+            __builder.OpenElement(163, "td");
+            __builder.OpenElement(164, "label");
+            __builder.OpenElement(165, "input");
+            __builder.AddAttribute(166, "type", "checkbox");
+            __builder.AddAttribute(167, "value", "1");
+            __builder.AddAttribute(168, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 132 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                                                                            serviceExcellence.level5.c5
@@ -526,21 +476,18 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(217, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c5 = __value, serviceExcellence.level5.c5));
+            __builder.AddAttribute(169, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => serviceExcellence.level5.c5 = __value, serviceExcellence.level5.c5));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(218, " ใช่");
+            __builder.AddMarkupContent(170, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(219, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(220, "\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(221, "\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(222, "\n            ");
-            __builder.OpenElement(223, "button");
-            __builder.AddAttribute(224, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(171, "\n            ");
+            __builder.OpenElement(172, "button");
+            __builder.AddAttribute(173, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 136 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                               gotoBack
@@ -549,13 +496,13 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(225, "type", "button");
-            __builder.AddAttribute(226, "class", "btn btn-default mt-5");
-            __builder.AddContent(227, "  Back  ");
+            __builder.AddAttribute(174, "type", "button");
+            __builder.AddAttribute(175, "class", "btn btn-default mt-5");
+            __builder.AddContent(176, "  Back  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(228, "\n            ");
-            __builder.OpenElement(229, "button");
-            __builder.AddAttribute(230, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(177, "\n            ");
+            __builder.OpenElement(178, "button");
+            __builder.AddAttribute(179, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 137 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
                               gotoNext
@@ -564,15 +511,12 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(231, "type", "button");
-            __builder.AddAttribute(232, "class", "btn btn-primary mt-5");
-            __builder.AddContent(233, "  Next  ");
+            __builder.AddAttribute(180, "type", "button");
+            __builder.AddAttribute(181, "class", "btn btn-primary mt-5");
+            __builder.AddContent(182, "  Next  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(234, "\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(235, "\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(236, "\n");
 #nullable restore
 #line 140 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/ServiceExcellencePage.razor"
 }

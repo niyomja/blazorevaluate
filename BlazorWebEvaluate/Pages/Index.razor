@@ -1,9 +1,10 @@
 ﻿@page "/"
 @inject NavigationManager NavigationManager
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+@inject HttpClient Http
 
+@if(validated){
 <h3>ข้อมูลผู้รับการประเมิน</h3>
-
 <div class="row">
     <div class="col-lg-12">
         <div class="form-group">
@@ -20,27 +21,90 @@
                 }
             </select>
         </div>
-        <button @onclick="gotoNext" type="button" class="btn btn-primary">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        <button @onclick="gotoBack" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+        <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
     </div>
 </div>
+}else{
+<h3>ข้อมูลผู้ประเมิน</h3>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group">
+            <label for="assessor.full_name">ผู้ประเมิน</label>
+            <input @bind="assessor.full_name" type="text" id="assessor.full_name" class="form-control" placeholder="ป้อนชื่อ-สกุล ผู้ประเมิน" required="required" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="assessor.secret_code">Secret Code</label>
+            <input @bind="assessor.secret_code" type="text" id="assessor.secret_code" class="form-control" placeholder="ป้อนรหัสเพื่อเรียกดูข้อมูลภายหลัง" required="required">
+        </div>
+        <button @onclick="setAssessor" type="button" class="btn btn-primary mt-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+       @if(!String.IsNullOrEmpty(assessor.full_name) && !String.IsNullOrEmpty(assessor.secret_code)){
+        <button @onclick="gotoReport" type="button" class="btn btn-default mt-5">&nbsp;&nbsp;Summary&nbsp;&nbsp;</button>
+       }
+    </div>
+</div>
+}
 
 @code {
-    public Personal personal { get; set; }
+    private bool validated;
+    private Assessor assessor;
+    private Personal personal;
 
     protected override async Task OnInitializedAsync()
     {
+        assessor = new Assessor();
+        assessor.id =  await sessionStorage.GetItemAsync<string>("assessor.id");
+        assessor.full_name =  await sessionStorage.GetItemAsync<string>("assessor.full_name");
+        assessor.secret_code = await sessionStorage.GetItemAsync<string>("assessor.secret_code");
+
         personal = new Personal();
         personal.full_name =  await sessionStorage.GetItemAsync<string>("full_name");
         personal.level = await sessionStorage.GetItemAsync<string>("level");
+
+        if(String.IsNullOrEmpty(assessor.full_name) && String.IsNullOrEmpty(assessor.secret_code)){
+            await sessionStorage.ClearAsync();
+            validated = false;
+        }
+        
         await base.OnParametersSetAsync();
     }
-
+    private async Task setAssessor(){
+        if(!String.IsNullOrEmpty(assessor.full_name) && !String.IsNullOrEmpty(assessor.secret_code)){
+            var url = "/plesk-site-preview/eevaluations.com/ajax/getAssessor.php?full_name=" + assessor.full_name + "&secret_code="+ assessor.secret_code;
+            assessor = await Http.GetFromJsonAsync<Assessor>(url);
+            if(assessor !=null &&  int.Parse(assessor.id) > 0){
+                await sessionStorage.SetItemAsync("assessor.id", assessor.id);
+                await sessionStorage.SetItemAsync("assessor.full_name", assessor.full_name);
+                await sessionStorage.SetItemAsync("assessor.secret_code", assessor.secret_code);
+                validated = true;
+                StateHasChanged();
+            }
+        }
+    }
    private async Task gotoNext()
     {
         if(!String.IsNullOrEmpty(personal.full_name) && !String.IsNullOrEmpty(personal.level)){
             await sessionStorage.SetItemAsync("full_name", personal.full_name);
             await sessionStorage.SetItemAsync("level", personal.level);
+            StateHasChanged();
             NavigationManager.NavigateTo("BusinessAcumen");
+        }
+    }
+    private void gotoBack(){
+        validated = false;
+    }
+    private async Task gotoReport(){
+        if(!String.IsNullOrEmpty(assessor.full_name) && !String.IsNullOrEmpty(assessor.secret_code)){
+            var url = "/plesk-site-preview/eevaluations.com/ajax/getAssessor.php?full_name=" + assessor.full_name + "&secret_code="+ assessor.secret_code;
+            assessor = await Http.GetFromJsonAsync<Assessor>(url);
+            if(assessor !=null &&  int.Parse(assessor.id) > 0){
+                await sessionStorage.SetItemAsync("assessor.id", assessor.id);
+                await sessionStorage.SetItemAsync("assessor.full_name", assessor.full_name);
+                await sessionStorage.SetItemAsync("assessor.secret_code", assessor.secret_code);
+                validated = true;
+                StateHasChanged();
+                NavigationManager.NavigateTo("Summary");
+            }
         }
     }
 }

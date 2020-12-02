@@ -21,7 +21,7 @@ if ($json_data) {
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // prepare sql and bind parameters
-        $stmt = $conn->prepare("INSERT INTO `dev_evaluates` 
+        $stmt = $conn->prepare("INSERT INTO `pdo_evaluates` 
         (
         `full_name`,
         `top_level`,
@@ -91,7 +91,8 @@ if ($json_data) {
         `digitalliteracy_level5_c1`,
         `digitalliteracy_level5_c2`,
         `digitalliteracy_level5_c3`,
-        `digitalliteracy_level5_c4`)
+        `digitalliteracy_level5_c4`,
+        `person_id`)
         VALUES(
         :full_name,
         :top_level,
@@ -161,7 +162,8 @@ if ($json_data) {
         :digitalliteracy_level5_c1,
         :digitalliteracy_level5_c2,
         :digitalliteracy_level5_c3,
-        :digitalliteracy_level5_c4)");
+        :digitalliteracy_level5_c4,
+        :person_id)");
 
         $stmt->bindParam(':full_name', $data->full_name);
         $stmt->bindParam(':top_level', $data->level);
@@ -241,6 +243,8 @@ if ($json_data) {
         $stmt->bindParam(":digitalliteracy_level5_c2", $digitalliteracy_level5_c2);
         $stmt->bindParam(":digitalliteracy_level5_c3", $digitalliteracy_level5_c3);
         $stmt->bindParam(":digitalliteracy_level5_c4", $digitalliteracy_level5_c4);
+        //person_id
+        $stmt->bindParam(":person_id", $person_id);
 
 
         // insert a row
@@ -318,6 +322,8 @@ if ($json_data) {
         $digitalliteracy_level5_c2 = $data->digitalLiteracy->level5->c2;
         $digitalliteracy_level5_c3 = $data->digitalLiteracy->level5->c3;
         $digitalliteracy_level5_c4 = $data->digitalLiteracy->level5->c4;
+
+        $person_id = intval($data->assessor->id);
 
         $stmt->execute();
 

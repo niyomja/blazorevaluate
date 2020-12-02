@@ -36,5 +36,6 @@ namespace BlazorWebEvaluate.Data
         public ServiceExcellence serviceExcellence { get; set; } = new ServiceExcellence();
         public SafetyAndSecurity safetyAndSecurity { get; set;} = new SafetyAndSecurity();
         public DigitalLiteracy digitalLiteracy { get; set; } = new DigitalLiteracy();
+        public Assessor assessor { get;set; } = new Assessor();
     }
 }

@@ -88,19 +88,37 @@ using BlazorWebEvaluate.Data;
             __builder.AddMarkupContent(0, "<h3>Summary</h3>\n\n");
             __builder.OpenElement(1, "div");
             __builder.AddAttribute(2, "class", "row");
-            __builder.AddMarkupContent(3, "\n    ");
-            __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "col-lg-12");
-            __builder.AddMarkupContent(6, "\n        ");
-            __builder.AddMarkupContent(7, "<h4 class=\"mt-5 mb-2\">ตารางสรุปผลการประเมิน</h4>\n\n        ");
-            __builder.OpenElement(8, "div");
-            __builder.AddAttribute(9, "class", "table-responsive");
-            __builder.AddMarkupContent(10, "\n            ");
-            __builder.OpenElement(11, "table");
-            __builder.AddAttribute(12, "class", "table table-bordered");
-            __builder.AddAttribute(13, "style", "width:100%");
-            __builder.AddMarkupContent(14, "\n                ");
-            __builder.AddMarkupContent(15, "<thead>\n                    <tr>\n                        <th colspan=\"4\"><img src=\"/img/logo.png\"></th>\n                        <th colspan=\"2\" class=\"text-center\">เชี่ยวชาญธุรกิจ (Business Acumen)</th>\n                        <th colspan=\"2\" class=\"text-center\">คิดสร้างสรรค์ (Initiative)</th>\n                        <th colspan=\"2\" class=\"text-center\">ประสานสัมพันธ์ (Collaboration)</th>\n                        <th colspan=\"2\" class=\"text-center\">มุ่งมั่นบริการ (Service Excellence)</th>\n                        <th colspan=\"2\" class=\"text-center\">มั่นคงปลอดภัย (Safety and Security)</th>\n                        <th colspan=\"2\" class=\"text-center\">ประยุกต์ใช้ดิจิทัล (Digital Literacy)</th>\n                    </tr>\n                    <tr>\n                        <th>No.</th>\n                        <th>ชื่อ สกุล</th>\n                        <th>Level</th>\n                        <th>ค่าคาดหวัง</th>\n                        <th>คะแนนประเมิน</th>\n                        <th>ผลการประเมิน</th>\n                        <th>คะแนนประเมิน</th>\n                        <th>ผลการประเมิน</th>\n                        <th>คะแนนประเมิน</th>\n                        <th>ผลการประเมิน</th>\n                        <th>คะแนนประเมิน</th>\n                        <th>ผลการประเมิน</th>\n                        <th>คะแนนประเมิน</th>\n                        <th>ผลการประเมิน</th>\n                        <th>คะแนนประเมิน</th>\n                        <th>ผลการประเมิน</th>\n                    </tr>\n                </thead>\n");
+            __builder.OpenElement(3, "div");
+            __builder.AddAttribute(4, "class", "col-lg-12");
+            __builder.AddMarkupContent(5, "<h4 class=\"mt-5 mb-2\">ตารางสรุปผลการประเมิน</h4>\n\n        ");
+            __builder.OpenElement(6, "div");
+            __builder.AddAttribute(7, "class", "table-responsive");
+            __builder.OpenElement(8, "table");
+            __builder.AddAttribute(9, "class", "table table-bordered");
+            __builder.AddAttribute(10, "style", "width:100%");
+            __builder.AddMarkupContent(11, @"<thead><tr><th colspan=""4""><img src=""/img/logo.png""></th>
+                        <th colspan=""2"" class=""text-center"">เชี่ยวชาญธุรกิจ (Business Acumen)</th>
+                        <th colspan=""2"" class=""text-center"">คิดสร้างสรรค์ (Initiative)</th>
+                        <th colspan=""2"" class=""text-center"">ประสานสัมพันธ์ (Collaboration)</th>
+                        <th colspan=""2"" class=""text-center"">มุ่งมั่นบริการ (Service Excellence)</th>
+                        <th colspan=""2"" class=""text-center"">มั่นคงปลอดภัย (Safety and Security)</th>
+                        <th colspan=""2"" class=""text-center"">ประยุกต์ใช้ดิจิทัล (Digital Literacy)</th></tr>
+                    <tr><th>No.</th>
+                        <th>ชื่อ สกุล</th>
+                        <th>Level</th>
+                        <th>ค่าคาดหวัง</th>
+                        <th>คะแนนประเมิน</th>
+                        <th>ผลการประเมิน</th>
+                        <th>คะแนนประเมิน</th>
+                        <th>ผลการประเมิน</th>
+                        <th>คะแนนประเมิน</th>
+                        <th>ผลการประเมิน</th>
+                        <th>คะแนนประเมิน</th>
+                        <th>ผลการประเมิน</th>
+                        <th>คะแนนประเมิน</th>
+                        <th>ผลการประเมิน</th>
+                        <th>คะแนนประเมิน</th>
+                        <th>ผลการประเมิน</th></tr></thead>");
 #nullable restore
 #line 43 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                  if (evaluate != null)
@@ -109,14 +127,11 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(16, "                    ");
-            __builder.OpenElement(17, "tbody");
-            __builder.AddMarkupContent(18, "\n                        ");
-            __builder.OpenElement(19, "tr");
-            __builder.AddMarkupContent(20, "\n                            ");
-            __builder.AddMarkupContent(21, "<td class=\"text-center\">1.</td>\n                            ");
-            __builder.OpenElement(22, "td");
-            __builder.AddContent(23, 
+            __builder.OpenElement(12, "tbody");
+            __builder.OpenElement(13, "tr");
+            __builder.AddMarkupContent(14, "<td class=\"text-center\">1.</td>\n                            ");
+            __builder.OpenElement(15, "td");
+            __builder.AddContent(16, 
 #nullable restore
 #line 48 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                   evaluate.full_name
@@ -126,10 +141,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(24, "\n                            ");
-            __builder.OpenElement(25, "td");
-            __builder.AddAttribute(26, "class", "text-center");
-            __builder.AddContent(27, 
+            __builder.AddMarkupContent(17, "\n                            ");
+            __builder.OpenElement(18, "td");
+            __builder.AddAttribute(19, "class", "text-center");
+            __builder.AddContent(20, 
 #nullable restore
 #line 49 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.level
@@ -139,10 +154,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(28, "\n                            ");
-            __builder.OpenElement(29, "td");
-            __builder.AddAttribute(30, "class", "text-center");
-            __builder.AddContent(31, 
+            __builder.AddMarkupContent(21, "\n                            ");
+            __builder.OpenElement(22, "td");
+            __builder.AddAttribute(23, "class", "text-center");
+            __builder.AddContent(24, 
 #nullable restore
 #line 50 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.Max().ToString()
@@ -152,10 +167,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(32, "\n                            ");
-            __builder.OpenElement(33, "td");
-            __builder.AddAttribute(34, "class", "text-center");
-            __builder.AddContent(35, 
+            __builder.AddMarkupContent(25, "\n                            ");
+            __builder.OpenElement(26, "td");
+            __builder.AddAttribute(27, "class", "text-center");
+            __builder.AddContent(28, 
 #nullable restore
 #line 51 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.businessAcu.Scroll().ToString()
@@ -165,10 +180,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(36, "\n                            ");
-            __builder.OpenElement(37, "td");
-            __builder.AddAttribute(38, "class", "text-center");
-            __builder.AddContent(39, 
+            __builder.AddMarkupContent(29, "\n                            ");
+            __builder.OpenElement(30, "td");
+            __builder.AddAttribute(31, "class", "text-center");
+            __builder.AddContent(32, 
 #nullable restore
 #line 52 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       (evaluate.businessAcu.Scroll() - evaluate.Max()).ToString()
@@ -178,10 +193,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(40, "\n                            ");
-            __builder.OpenElement(41, "td");
-            __builder.AddAttribute(42, "class", "text-center");
-            __builder.AddContent(43, 
+            __builder.AddMarkupContent(33, "\n                            ");
+            __builder.OpenElement(34, "td");
+            __builder.AddAttribute(35, "class", "text-center");
+            __builder.AddContent(36, 
 #nullable restore
 #line 53 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.initiative.Scroll().ToString()
@@ -191,10 +206,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(44, "\n                            ");
-            __builder.OpenElement(45, "td");
-            __builder.AddAttribute(46, "class", "text-center");
-            __builder.AddContent(47, 
+            __builder.AddMarkupContent(37, "\n                            ");
+            __builder.OpenElement(38, "td");
+            __builder.AddAttribute(39, "class", "text-center");
+            __builder.AddContent(40, 
 #nullable restore
 #line 54 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       (evaluate.initiative.Scroll() - evaluate.Max()).ToString()
@@ -204,10 +219,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(48, "\n                            ");
-            __builder.OpenElement(49, "td");
-            __builder.AddAttribute(50, "class", "text-center");
-            __builder.AddContent(51, 
+            __builder.AddMarkupContent(41, "\n                            ");
+            __builder.OpenElement(42, "td");
+            __builder.AddAttribute(43, "class", "text-center");
+            __builder.AddContent(44, 
 #nullable restore
 #line 55 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.collaboration.Scroll().ToString()
@@ -217,10 +232,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(52, "\n                            ");
-            __builder.OpenElement(53, "td");
-            __builder.AddAttribute(54, "class", "text-center");
-            __builder.AddContent(55, 
+            __builder.AddMarkupContent(45, "\n                            ");
+            __builder.OpenElement(46, "td");
+            __builder.AddAttribute(47, "class", "text-center");
+            __builder.AddContent(48, 
 #nullable restore
 #line 56 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       (evaluate.collaboration.Scroll() - evaluate.Max()).ToString()
@@ -230,10 +245,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(56, "\n                            ");
-            __builder.OpenElement(57, "td");
-            __builder.AddAttribute(58, "class", "text-center");
-            __builder.AddContent(59, 
+            __builder.AddMarkupContent(49, "\n                            ");
+            __builder.OpenElement(50, "td");
+            __builder.AddAttribute(51, "class", "text-center");
+            __builder.AddContent(52, 
 #nullable restore
 #line 57 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.serviceExcellence.Scroll().ToString()
@@ -243,10 +258,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(60, "\n                            ");
-            __builder.OpenElement(61, "td");
-            __builder.AddAttribute(62, "class", "text-center");
-            __builder.AddContent(63, 
+            __builder.AddMarkupContent(53, "\n                            ");
+            __builder.OpenElement(54, "td");
+            __builder.AddAttribute(55, "class", "text-center");
+            __builder.AddContent(56, 
 #nullable restore
 #line 58 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       (evaluate.serviceExcellence.Scroll() - evaluate.Max()).ToString()
@@ -256,10 +271,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(64, "\n                            ");
-            __builder.OpenElement(65, "td");
-            __builder.AddAttribute(66, "class", "text-center");
-            __builder.AddContent(67, 
+            __builder.AddMarkupContent(57, "\n                            ");
+            __builder.OpenElement(58, "td");
+            __builder.AddAttribute(59, "class", "text-center");
+            __builder.AddContent(60, 
 #nullable restore
 #line 59 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.safetyAndSecurity.Scroll().ToString()
@@ -269,10 +284,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(68, "\n                            ");
-            __builder.OpenElement(69, "td");
-            __builder.AddAttribute(70, "class", "text-center");
-            __builder.AddContent(71, 
+            __builder.AddMarkupContent(61, "\n                            ");
+            __builder.OpenElement(62, "td");
+            __builder.AddAttribute(63, "class", "text-center");
+            __builder.AddContent(64, 
 #nullable restore
 #line 60 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       (evaluate.safetyAndSecurity.Scroll() - evaluate.Max()).ToString()
@@ -282,10 +297,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(72, "\n                            ");
-            __builder.OpenElement(73, "td");
-            __builder.AddAttribute(74, "class", "text-center");
-            __builder.AddContent(75, 
+            __builder.AddMarkupContent(65, "\n                            ");
+            __builder.OpenElement(66, "td");
+            __builder.AddAttribute(67, "class", "text-center");
+            __builder.AddContent(68, 
 #nullable restore
 #line 61 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       evaluate.digitalLiteracy.Scroll().ToString()
@@ -295,10 +310,10 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(76, "\n                            ");
-            __builder.OpenElement(77, "td");
-            __builder.AddAttribute(78, "class", "text-center");
-            __builder.AddContent(79, 
+            __builder.AddMarkupContent(69, "\n                            ");
+            __builder.OpenElement(70, "td");
+            __builder.AddAttribute(71, "class", "text-center");
+            __builder.AddContent(72, 
 #nullable restore
 #line 62 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                                                       (evaluate.digitalLiteracy.Scroll() - evaluate.Max()).ToString()
@@ -308,11 +323,8 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(80, "\n                        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(81, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(82, "\n");
 #nullable restore
 #line 65 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                 }
@@ -320,13 +332,11 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(83, "            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(84, "\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(85, "\n\n        ");
-            __builder.OpenElement(86, "button");
-            __builder.AddAttribute(87, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(73, "\n\n        ");
+            __builder.OpenElement(74, "button");
+            __builder.AddAttribute(75, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 69 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/SummaryPage.razor"
                           gotoBack
@@ -335,13 +345,11 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(88, "type", "button");
-            __builder.AddAttribute(89, "class", "btn btn-success mt-5");
-            __builder.AddContent(90, "  Home  ");
+            __builder.AddAttribute(76, "type", "button");
+            __builder.AddAttribute(77, "class", "btn btn-success mt-5");
+            __builder.AddContent(78, "  Home  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(91, "\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(92, "\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998

@@ -88,22 +88,19 @@ using BlazorWebEvaluate.Data;
             __builder.AddMarkupContent(0, "<h3>Personal Information.</h3>\n\n");
             __builder.OpenElement(1, "div");
             __builder.AddAttribute(2, "class", "row");
-            __builder.AddMarkupContent(3, "\n    ");
-            __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "col-lg-12");
-            __builder.AddMarkupContent(6, "\n        ");
-            __builder.OpenElement(7, "div");
-            __builder.AddAttribute(8, "class", "form-group");
-            __builder.AddMarkupContent(9, "\n            ");
-            __builder.AddMarkupContent(10, "<label for=\"fullname\">Name - Surename</label>\n            ");
-            __builder.OpenElement(11, "input");
-            __builder.AddAttribute(12, "type", "text");
-            __builder.AddAttribute(13, "class", "form-control");
-            __builder.AddAttribute(14, "id", "fullname");
-            __builder.AddAttribute(15, "placeholder", "Enter you name and surename");
-            __builder.AddAttribute(16, "required", "required");
-            __builder.AddAttribute(17, "autofocus", true);
-            __builder.AddAttribute(18, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.OpenElement(3, "div");
+            __builder.AddAttribute(4, "class", "col-lg-12");
+            __builder.OpenElement(5, "div");
+            __builder.AddAttribute(6, "class", "form-group");
+            __builder.AddMarkupContent(7, "<label for=\"fullname\">Name - Surename</label>\n            ");
+            __builder.OpenElement(8, "input");
+            __builder.AddAttribute(9, "type", "text");
+            __builder.AddAttribute(10, "class", "form-control");
+            __builder.AddAttribute(11, "id", "fullname");
+            __builder.AddAttribute(12, "placeholder", "Enter you name and surename");
+            __builder.AddAttribute(13, "required", "required");
+            __builder.AddAttribute(14, "autofocus", true);
+            __builder.AddAttribute(15, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 12 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/Index.razor"
                           personal.full_name
@@ -112,21 +109,19 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(19, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => personal.full_name = __value, personal.full_name));
+            __builder.AddAttribute(16, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => personal.full_name = __value, personal.full_name));
             __builder.SetUpdatesAttributeName("value");
             __builder.CloseElement();
-            __builder.AddMarkupContent(20, "\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(21, "\n        ");
-            __builder.OpenElement(22, "div");
-            __builder.AddAttribute(23, "class", "form-group");
-            __builder.AddMarkupContent(24, "\n            ");
-            __builder.AddMarkupContent(25, "<label for=\"level\">Level</label>\n            ");
-            __builder.OpenElement(26, "select");
-            __builder.AddAttribute(27, "class", "form-control");
-            __builder.AddAttribute(28, "id", "level");
-            __builder.AddAttribute(29, "required", true);
-            __builder.AddAttribute(30, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(17, "\n        ");
+            __builder.OpenElement(18, "div");
+            __builder.AddAttribute(19, "class", "form-group");
+            __builder.AddMarkupContent(20, "<label for=\"level\">Level</label>\n            ");
+            __builder.OpenElement(21, "select");
+            __builder.AddAttribute(22, "class", "form-control");
+            __builder.AddAttribute(23, "id", "level");
+            __builder.AddAttribute(24, "required", true);
+            __builder.AddAttribute(25, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 16 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/Index.razor"
                            personal.level
@@ -135,13 +130,11 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(31, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => personal.level = __value, personal.level));
+            __builder.AddAttribute(26, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => personal.level = __value, personal.level));
             __builder.SetUpdatesAttributeName("value");
-            __builder.AddMarkupContent(32, "\n                ");
-            __builder.OpenElement(33, "option");
-            __builder.AddContent(34, " --- Choose --- ");
+            __builder.OpenElement(27, "option");
+            __builder.AddContent(28, " --- Choose --- ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(35, "\n");
 #nullable restore
 #line 18 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/Index.razor"
                  for (int i = 1; i <= 11; i++)
@@ -150,9 +143,8 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(36, "                    ");
-            __builder.OpenElement(37, "option");
-            __builder.AddAttribute(38, "value", 
+            __builder.OpenElement(29, "option");
+            __builder.AddAttribute(30, "value", 
 #nullable restore
 #line 20 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/Index.razor"
                                      "L"+i
@@ -161,7 +153,7 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             );
-            __builder.AddContent(39, 
+            __builder.AddContent(31, 
 #nullable restore
 #line 20 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/Index.razor"
                                                "L"+i
@@ -171,7 +163,6 @@ using BlazorWebEvaluate.Data;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(40, "\n");
 #nullable restore
 #line 21 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/Index.razor"
                 }
@@ -179,13 +170,11 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(41, "            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(42, "\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(43, "\n        ");
-            __builder.OpenElement(44, "button");
-            __builder.AddAttribute(45, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(32, "\n        ");
+            __builder.OpenElement(33, "button");
+            __builder.AddAttribute(34, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 24 "/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/Pages/Index.razor"
                           gotoNext
@@ -194,13 +183,11 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(46, "type", "button");
-            __builder.AddAttribute(47, "class", "btn btn-primary");
-            __builder.AddContent(48, "  Next  ");
+            __builder.AddAttribute(35, "type", "button");
+            __builder.AddAttribute(36, "class", "btn btn-primary");
+            __builder.AddContent(37, "  Next  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(49, "\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(50, "\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998

@@ -89,8 +89,7 @@ using BlazorWebEvaluate.Data;
             __builder.AddMarkupContent(1, "<h2 class=\"text-danger\">An error occurred while processing your request.</h2>\n\n");
             __builder.AddMarkupContent(2, "<h3>Development Mode</h3>\n");
             __builder.AddMarkupContent(3, "<p>\n    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.\n</p>\n");
-            __builder.AddMarkupContent(4, @"<p>
-    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+            __builder.AddMarkupContent(4, @"<p><strong>The Development environment shouldn't be enabled for deployed applications.</strong>
     It can result in displaying sensitive information from exceptions to end users.
     For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
     and restarting the app.

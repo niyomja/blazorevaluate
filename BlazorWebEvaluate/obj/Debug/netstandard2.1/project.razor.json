@@ -8,35 +8,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 884930264,
+        "HashCode": -979537009,
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.App",
+        "Name": "BlazorWebEvaluate.Pages.Index",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.App"
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
         }
       },
       {
-        "HashCode": -1148755723,
+        "HashCode": 683866464,
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.App",
+        "Name": "BlazorWebEvaluate.Pages.Index",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.App"
+            "TagName": "BlazorWebEvaluate.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.App",
+          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -173,39 +173,6 @@
         }
       },
       {
-        "HashCode": -979537009,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 683866464,
-        "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.Index",
-        "AssemblyName": "BlazorWebEvaluate",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWebEvaluate.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 903710411,
         "Kind": "Components.Component",
         "Name": "BlazorWebEvaluate.Pages.Initiative",
@@ -305,35 +272,35 @@
         }
       },
       {
-        "HashCode": 228395362,
+        "HashCode": 884930264,
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.SummaryPage",
+        "Name": "BlazorWebEvaluate.App",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SummaryPage"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage"
+          "Common.TypeName": "BlazorWebEvaluate.App"
         }
       },
       {
-        "HashCode": -38995430,
+        "HashCode": -1148755723,
         "Kind": "Components.Component",
-        "Name": "BlazorWebEvaluate.Pages.SummaryPage",
+        "Name": "BlazorWebEvaluate.App",
         "AssemblyName": "BlazorWebEvaluate",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWebEvaluate.Pages.SummaryPage"
+            "TagName": "BlazorWebEvaluate.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWebEvaluate.Pages.SummaryPage",
+          "Common.TypeName": "BlazorWebEvaluate.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

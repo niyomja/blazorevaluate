@@ -8,7 +8,9 @@
 <div class="row">
     <div class="col-lg-12">
         <h4 class="mt-5 mb-2">ตารางสรุปผลการประเมิน</h4>
-
+        @if(assessor != null && !String.IsNullOrEmpty(assessor.full_name)){
+            <span class="mt-2 mb-2">ผู้ประเมิน @(assessor.full_name)</span>
+        }
         <div class="table-responsive">
             <table class="table table-bordered" style="width:100%">
                 <thead>
@@ -42,32 +44,32 @@
                 </thead>
             @if(evaluateList !=null){
                 <tbody>
-                @if(evaluateList.Count > 0){
-                    @foreach (var eval in evaluateList)
+                @if(evaluateList.Count() > 0){
+                    @for (int i=0;i<evaluateList.Count();i++)
                     {
                     <tr>
-                        <td class="text-center">@(index + 1).</td>
-                        <td>@(eval.full_name)</td>
-                        <td class="text-center">@(eval.top_level)</td>
-                        <td class="text-center">@(eval.Max())</td>
+                        <td class="text-center">@(1 + i).</td>
+                        <td>@(evaluateList[i].full_name)</td>
+                        <td class="text-center">@(evaluateList[i].top_level)</td>
+                        <td class="text-center">@(evaluateList[i].Max())</td>
                         
-                        <td class="text-center">@(eval.businessAcu_Scroll())</td>
-                        <td class="text-center">@(eval.businessAcu_Scroll() - eval.Max())</td>
+                        <td class="text-center">@(evaluateList[i].businessAcu_Scroll())</td>
+                        <td class="text-center">@((evaluateList[i].businessAcu_Scroll() - evaluateList[i].Max()))</td>
                         
-                        <td class="text-center">@(eval.initiative_Scroll())</td>
-                        <td class="text-center"> @(eval.initiative_Scroll() - eval.Max()) </td>
+                        <td class="text-center">@(evaluateList[i].initiative_Scroll())</td>
+                        <td class="text-center"> @((evaluateList[i].initiative_Scroll() - evaluateList[i].Max())) </td>
 
-                        <td class="text-center"> @(eval.collaboration_Scroll()) </td>
-                        <td class="text-center"> @(eval.collaboration_Scroll() - eval.Max()) </td>
+                        <td class="text-center"> @(evaluateList[i].collaboration_Scroll()) </td>
+                        <td class="text-center"> @((evaluateList[i].collaboration_Scroll() - evaluateList[i].Max())) </td>
 
-                        <td class="text-center"> @(eval.serviceExcellence_Scroll()) </td>
-                        <td class="text-center"> @(eval.serviceExcellence_Scroll() - eval.Max()) </td>
+                        <td class="text-center"> @(evaluateList[i].serviceExcellence_Scroll()) </td>
+                        <td class="text-center"> @((evaluateList[i].serviceExcellence_Scroll() - evaluateList[i].Max())) </td>
 
-                        <td class="text-center"> @(eval.safetyAndSecurity_Scroll()) </td>
-                        <td class="text-center"> @(eval.safetyAndSecurity_Scroll() - eval.Max()) </td>
+                        <td class="text-center"> @(evaluateList[i].safetyAndSecurity_Scroll()) </td>
+                        <td class="text-center"> @((evaluateList[i].safetyAndSecurity_Scroll() - evaluateList[i].Max())) </td>
 
-                        <td class="text-center"> @(eval.digitalLiteracy_Scroll()) </td>
-                        <td class="text-center"> @(eval.digitalLiteracy_Scroll() -  eval.Max()) </td>
+                        <td class="text-center"> @(evaluateList[i].digitalLiteracy_Scroll()) </td>
+                        <td class="text-center"> @((evaluateList[i].digitalLiteracy_Scroll() -  evaluateList[i].Max())) </td>
                     </tr>
                     }
                 }else{
@@ -97,7 +99,7 @@
 </div>
 
 @code {
-    private int index = 0;
+    private Assessor assessor;
     private Evaluate evaluate;
     private List<EvaluateData> evaluateList;
     protected override async Task OnInitializedAsync()
@@ -227,15 +229,29 @@
         evaluate.digitalLiteracy.level5.c3 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c3");
         evaluate.digitalLiteracy.level5.c4 = await sessionStorage.GetItemAsync<bool>("digitalLiteracy.level5.c4");
 
+        assessor = new Assessor();
+        assessor.id =  await sessionStorage.GetItemAsync<string>("assessor.id");
+        assessor.full_name =  await sessionStorage.GetItemAsync<string>("assessor.full_name");
+        assessor.secret_code = await sessionStorage.GetItemAsync<string>("assessor.secret_code");
         
+        evaluate.assessor = assessor;
+
         if(!String.IsNullOrEmpty(evaluate.full_name)){
+
             var response = await Http.PostAsJsonAsync<Evaluate>("/plesk-site-preview/eevaluations.com/ajax/postdata.php", evaluate);
 
             if(response.IsSuccessStatusCode){
                 await sessionStorage.ClearAsync();
+
+                await sessionStorage.SetItemAsync("assessor.id", assessor.id);
+                await sessionStorage.SetItemAsync("assessor.full_name", assessor.full_name);
+                await sessionStorage.SetItemAsync("assessor.secret_code", assessor.secret_code);
             }
         }
-        evaluateList = await Http.GetFromJsonAsync<List<EvaluateData>>("/plesk-site-preview/eevaluations.com/ajax/getdata.php");
+
+        string url = "/plesk-site-preview/eevaluations.com/ajax/getdata.php?person_id=" + assessor.id; 
+        
+        evaluateList = await Http.GetFromJsonAsync<List<EvaluateData>>(url);
 
         await base.OnParametersSetAsync();
     }

@@ -187,3 +187,4 @@ D:/Repositories/blazorevaluate/BlazorServerAppEvaluate/bin/Debug/netcoreapp3.0/P
 /Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/obj/Debug/netcoreapp3.0/BlazorServerAppEvaluate.dll
 /Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/obj/Debug/netcoreapp3.0/BlazorServerAppEvaluate.pdb
 /Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/obj/Debug/netcoreapp3.0/BlazorServerAppEvaluate.genruntimeconfig.cache
+/Users/niyom/Repository/blazorevaluate/BlazorServerAppEvaluate/obj/Debug/netcoreapp3.0/BlazorServerAppEvaluate.RazorComponent.output.cache

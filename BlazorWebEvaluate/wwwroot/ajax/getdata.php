@@ -8,7 +8,14 @@ include('inc.ini.php');
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT * FROM `dev_evaluates` ORDER BY `full_name` ASC");
+
+    if (isset($_GET['person_id'])) {
+        $stmt = $conn->prepare("SELECT * FROM `pdo_evaluates` WHERE person_id=:person_id ORDER BY `full_name` ASC");
+        $stmt->bindParam(":person_id", $person_id);
+        $person_id = $_GET['person_id'];
+    }else{
+        $stmt = $conn->prepare("SELECT * FROM `pdo_evaluates` WHERE person_id=0 ORDER BY `full_name` ASC");
+    }
     $stmt->execute();
   
     // set the resulting array to associative
@@ -16,38 +23,9 @@ try {
 
     $data = $stmt->fetchAll();
     
-    print(json_encode($data, JSON_NUMERIC_CHECK));
+    echo json_encode($data, JSON_NUMERIC_CHECK);
+
+    $conn = null;
 } catch (PDOException $e) {
     echo json_encode([]);
-}
-$conn = null;
-
-
-function cast_query_results($result): array
-{
-    if ($result === false)
-      return null;
-
-    $data = array();
-    $fields = $result->fetch_fields();
-    while ($row = $result->fetch_assoc()) {
-      foreach ($fields as $field) {
-        $fieldName = $field->name;
-        $fieldValue = $row[$fieldName];
-        if (!is_null($fieldValue))
-            switch ($field->type) {
-              case 3:
-                $row[$fieldName] = (int)$fieldValue;
-                break;
-              case 4:
-                $row[$fieldName] = (float)$fieldValue;
-                break;
-              // Add other type conversions as desired.
-              // Strings are already strings, so don't need to be touched.
-            }
-      }
-      array_push($data, $row);
-    }
-
-    return $data;
 }
