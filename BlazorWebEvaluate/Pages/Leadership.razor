@@ -1,0 +1,216 @@
+﻿@page "/Leadership"
+@inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+<h3><b>ส่วนที่ 1</b> มีภาวะผู้นำ (Leadership)</h3>
+
+<p>
+    มีความสามารถในการสื่อสารถ่ายทอดภาพวิสัยทัศน์และเชื่อมโยงการทำงานร่วมกัน (Shared Vision) สามารถกระตุ้นทีมงานให้เกิดความมุ่งมั่นตั้งใจร่วมมือสนับสนุนกัน และสร้างบรรยากาศการทำงานให้เกิดแรงบันดาลใจมุ่งสู่เป้าหมายความเป็นเลิศ มีไหวพริบบริหารจัดการให้เกิดผลประโยชน์ร่วมกันทุกฝ่าย พร้อมทั้งพัฒนาผู้สืบทอดตำแหน่งผู้นำให้ดำรงตนตามหลักคุณธรรมและจริยธรรม (Integrity)
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <span>
+                สื่อสารถ่ายทอดวิสัยทัศน์และค่านิยมร่วมกัน (Selling the Vision)
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. เข้าใจและอธิบายภาพความสำเร็จวิสัยทัศน์และค่านิยมขององค์กรได้อย่างชัดเจน</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. สื่อสารถ่ายทอดวิสัยทัศน์และค่านิยมร่วมกัน (Shared Vision and Core Values) ขององค์กรให้ทีมงานและผู้เกี่ยวข้องได้อย่างเป็นรูปธรรม</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>3. ทีมงานและผู้เกี่ยวข้องเข้าใจภาพความสำเร็จวิสัยทัศน์และค่านิยมขององค์กรร่วมกัน</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level1.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <span>
+                สร้างแรงบันดาลใจสู่ความเป็นเลิศ (Inspiring Excellence)
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. เข้าใจและกำหนดปัจจัยจูงใจของทีมงานและผู้เกี่ยวข้องให้เกิดแรงจูงใจไปสู่เป้าหมายขององค์กร</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. สร้างบรรยากาศการทำงานจูงใจและกระตุ้นนำทีมงานให้เกิดความมุ่งมั่นร่วมมือสนับสนุนไปสู่เป้าหมายเดียวกัน</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>3. ทีมงานและผู้เกี่ยวข้องยอมรับฟังความคิดเห็นที่แตกต่าง เกิดแรงบันดาลใจมุ่งสู่เป้าหมายความเป็นเลิศ</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level3.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <span>
+                พัฒนาผู้สืบทอดตำแหน่ง (Growing Talent)
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. กำหนดแนวทางบริหารจัดการให้องค์กรและกลุ่มผู้มีส่วนได้ส่วนเสียจากภายนอกให้เกิดผลประโยชน์ร่วมกันโดยไม่เกิดผลกระทบเสียหายต่อองค์กรและผู้เกี่ยวข้อง</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. มีไหวพริบบริหารจัดการได้ตามสถานการณ์แวดล้อมที่เปลี่ยนแปลงไปได้อย่างทันท่วงที</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>3. ดำเนินการพัฒนาผู้สืบทอดตำแหน่งโดยการเป็นแบบอย่าง การสอนงานและให้คำปรึกษา</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>4. ผู้สืบทอดตำแหน่งมีความรู้ ทักษะและคุณสมบัติดำรงตนตามคุณธรรมและจริยธรรมได้เหมาะสมกับตำแหน่งที่วางไว้</td>
+                        <td><label><input type="checkbox" value="1" @bind="leadership.level5.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+    public LeadershipData leadership;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        leadership = new LeadershipData();
+        leadership.level1 = new Level();
+        leadership.level3 = new Level();
+        leadership.level5 = new Level();
+
+        leadership.level1.c1 = await sessionStorage.GetItemAsync<bool>("level1.c1");
+        leadership.level1.c2 = await sessionStorage.GetItemAsync<bool>("level1.c2");
+        leadership.level1.c3 = await sessionStorage.GetItemAsync<bool>("level1.c3");
+
+        leadership.level3.c1 = await sessionStorage.GetItemAsync<bool>("level3.c1");
+        leadership.level3.c2 = await sessionStorage.GetItemAsync<bool>("level3.c2");
+        leadership.level3.c3 = await sessionStorage.GetItemAsync<bool>("level3.c3");
+
+        leadership.level5.c1 = await sessionStorage.GetItemAsync<bool>("level5.c1");
+        leadership.level5.c2 = await sessionStorage.GetItemAsync<bool>("level5.c2");
+        leadership.level5.c3 = await sessionStorage.GetItemAsync<bool>("level5.c3");
+        leadership.level5.c4 = await sessionStorage.GetItemAsync<bool>("level5.c4");
+
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (leadership.level1.c1 == true && leadership.level1.c2 == true && leadership.level1.c3 == true)
+                    {
+                        if (leadership.level3 == null)
+                        {
+                            leadership.level3 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("level1.c1", leadership.level1.c1);
+                        sessionStorage.SetItemAsync("level1.c2", leadership.level1.c2);
+                        sessionStorage.SetItemAsync("level1.c3", leadership.level1.c3);
+                        step++;
+                    }
+                    else
+                    {
+                        NavigationManager.NavigateTo("Business-Management");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (leadership.level3.c1 == true && leadership.level3.c2 == true && leadership.level3.c3 == true)
+                    {
+                        if (leadership.level5 == null)
+                        {
+                            leadership.level5 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("level3.c1", leadership.level3.c1);
+                        sessionStorage.SetItemAsync("level3.c2", leadership.level3.c2);
+                        sessionStorage.SetItemAsync("level3.c3", leadership.level3.c3);
+                        step++;
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("level3.c1", leadership.level3.c1);
+                        sessionStorage.SetItemAsync("level3.c2", leadership.level3.c2);
+                        sessionStorage.SetItemAsync("level3.c3", leadership.level3.c3);
+
+                        NavigationManager.NavigateTo("Business-Management");
+                    }
+                }; break;
+            case 3:
+                {
+                    sessionStorage.SetItemAsync("level5.c1", leadership.level5.c1);
+                    sessionStorage.SetItemAsync("level5.c2", leadership.level5.c2);
+                    sessionStorage.SetItemAsync("level5.c3", leadership.level5.c3);
+                    sessionStorage.SetItemAsync("level5.c4", leadership.level5.c4);
+
+                    NavigationManager.NavigateTo("Business-Management");
+                }; break;
+        }
+    }
+}

@@ -1,0 +1,260 @@
+﻿@page "/CSR-for-Sustainable"
+@inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+<h3><b>ส่วนที่ 4</b>  ความรับผิดชอบของสังคมต่อกิจการ (CSR for Sustainable)</h3>
+<p>
+    มีความตระหนักและรอบรู้ในเรื่องความแตกต่างหลากหลายทางคุณค่า วัฒนธรรม จารีต กฎระเบียบของสังคม และแนวทางปฏิบัติที่มีผลกระทบต่อสังคมและสิ่งแวดล้อม ส่งเสริมและสนับสนุนผู้ที่เกี่ยวข้องให้ตระหนักถึงการดำเนินงานที่มีความรับผิดชอบต่อสังคม โดยมีแผนการดำเนินการงานด้าน CSR ที่สอดรับกับแผนการดำเนินธุรกิจขององค์การ สามารถใช้ทรัพยากรที่มีอยู่เพื่อสร้างเครือข่ายความร่วมมือกับผู้มีส่วนได้ส่วนเสียทั้งภายในและภายนอกองค์การได้อย่างคุ้มค่า ตลอดจน สามารถสร้างเสริมภาพลักษณ์ขององค์การในการดำเนินธุรกิจอย่างยั่งยืน
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <span>
+                มีความรู้เรื่อง CSR และ ปัจจัยที่ก่อให้เกิดความยั่งยืนขององค์กร
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. มีความรู้ความเข้าใจในความรับผิดชอบต่อสังคมของกิจการ (CSR)
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. มีความรู้ความเข้าใจในความแตกต่างหลากหลายทางวัฒนธรรม จารีต กฎระเบียบของสังคม และมีแนวทางปฏิบัติอย่างเหมาะสม
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สามารถสื่อสารให้เกิดความตระหนักรู้เรื่อง CSR ภายในองค์การ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level1.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. ร่วมสนับสนุนกิจกรรม CSR ในองค์การได้อย่างมีประสิทธิภาพ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level1.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <span>
+                กำหนดแผนการดำเนินงาน CSR
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. กำหนดแนวทางเชื่อมโยงการทำแผนงาน CSR กับเกณฑ์ทรัพยากรทั้งภายใน (Corporate Driven CSR) และภายนอก (Social -Driven CSR)
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. จัดทำแผนงาน CSR ให้เหมาะสมกับเกณฑ์ทรัพยากรทั้งภายใน (Corporate Driven CSR) และภายนอก (Social -Driven CSR)
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. มีแผนการบริหารจัดการ CSR (CSR Management System) ที่เหมาะสมสอดคล้องกับแนวทางการดำเนินธุรกิจขององค์การ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level3.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. จัดทำรายงาน CSR report ที่แสดงผลการดำเนินงานด้าน CSR ของหน่วยงาน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level3.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <span>
+                สร้างภาพลักษณ์องค์การที่ยั่งยืนและได้รับความไว้วางใจจากผู้มีส่วนได้ส่วนเสีย
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. วางกลยุทธ์การบริหารจัดการกิจกรรม CSR ทั้งภายในและภายนอกองค์กร เพื่อสร้างและรักษาภาพลักษณ์องค์การที่ยั่งยืน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. สามารถสื่อสารกับผู้มีส่วนได้ส่วนเสียทั้งภายในและภายนอก สร้างสัมพันธ์อันดีอย่างต่อเนื่อง เพื่อการประสานสัมพันธ์กับผู้มีส่วนได้ส่วนเสียทั้งภายในและภายนอกองค์กร
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สามารถสร้างสรรค์กลยุทธ์ใหม่ๆ ทาง CSR ที่สามารถบูรณาการ (Integrate) กับกลยุทธ์ทางธุรกิจ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. องค์กรได้รับความไว้วางใจและความเชื่อถือจากผู้มีส่วนได้ส่วนเสียทั้งภายในและภายนอก ว่าเป็นองค์กรที่ดำเนินธุรกิจด้วยความรับผิดชอบต่อสังคม
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="cSRforSustainable.level5.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-success mt-5 mb-5">&nbsp;&nbsp;Finish&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    public CSRforSustainableData cSRforSustainable;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cSRforSustainable = new CSRforSustainableData();
+        cSRforSustainable.level1 = new Level();
+        cSRforSustainable.level3 = new Level();
+        cSRforSustainable.level5 = new Level();
+
+        cSRforSustainable.level1.c1 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level1.c1");
+        cSRforSustainable.level1.c2 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level1.c2");
+        cSRforSustainable.level1.c3 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level1.c3");
+        cSRforSustainable.level1.c4 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level1.c4");
+
+        cSRforSustainable.level3.c1 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level3.c1");
+        cSRforSustainable.level3.c2 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level3.c2");
+        cSRforSustainable.level3.c3 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level3.c3");
+        cSRforSustainable.level3.c4 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level3.c4");
+
+        cSRforSustainable.level5.c1 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level5.c1");
+        cSRforSustainable.level5.c2 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level5.c2");
+        cSRforSustainable.level5.c3 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level5.c3");
+        cSRforSustainable.level5.c4 = await sessionStorage.GetItemAsync<bool>("cSRforSustainable.level5.c4");
+
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("Change-Catalyst");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (cSRforSustainable.level1.c1 == true && cSRforSustainable.level1.c2 == true && cSRforSustainable.level1.c3 == true && cSRforSustainable.level1.c4 == true)
+                    {
+                        if (cSRforSustainable.level3 == null)
+                        {
+                            cSRforSustainable.level3 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c1", cSRforSustainable.level1.c1);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c2", cSRforSustainable.level1.c2);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c3", cSRforSustainable.level1.c3);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c4", cSRforSustainable.level1.c4);
+                        step++;
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c1", cSRforSustainable.level1.c1);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c2", cSRforSustainable.level1.c2);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c3", cSRforSustainable.level1.c3);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level1.c4", cSRforSustainable.level1.c4);
+
+                        NavigationManager.NavigateTo("Summary");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (cSRforSustainable.level3.c1 == true && cSRforSustainable.level3.c2 == true && cSRforSustainable.level3.c3 == true && cSRforSustainable.level3.c4 == true)
+                    {
+                        if (cSRforSustainable.level5 == null)
+                        {
+                            cSRforSustainable.level5 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c1", cSRforSustainable.level3.c1);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c2", cSRforSustainable.level3.c2);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c3", cSRforSustainable.level3.c3);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c4", cSRforSustainable.level3.c4);
+                        step++;
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c1", cSRforSustainable.level3.c1);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c2", cSRforSustainable.level3.c2);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c3", cSRforSustainable.level3.c3);
+                        sessionStorage.SetItemAsync("cSRforSustainable.level3.c4", cSRforSustainable.level3.c4);
+
+                        NavigationManager.NavigateTo("Summary");
+                    }
+                }; break;
+            case 3:
+                {
+                    sessionStorage.SetItemAsync("cSRforSustainable.level5.c1", cSRforSustainable.level5.c1);
+                    sessionStorage.SetItemAsync("cSRforSustainable.level5.c2", cSRforSustainable.level5.c2);
+                    sessionStorage.SetItemAsync("cSRforSustainable.level5.c3", cSRforSustainable.level5.c3);
+                    sessionStorage.SetItemAsync("cSRforSustainable.level5.c4", cSRforSustainable.level5.c4);
+
+                    NavigationManager.NavigateTo("Summary");
+                }; break;
+        }
+    }
+}

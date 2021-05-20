@@ -91,67 +91,87 @@ using BlazorWebEvaluate.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 48 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/Index.razor"
+#line 64 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/Index.razor"
        
     private bool validated;
     private Assessor assessor;
     private Personal personal;
+    private bool not_found = false;
 
     protected override async Task OnInitializedAsync()
     {
         assessor = new Assessor();
-        assessor.id =  await sessionStorage.GetItemAsync<string>("assessor.id");
+        assessor.code =  await sessionStorage.GetItemAsync<string>("assessor.code");
         assessor.full_name =  await sessionStorage.GetItemAsync<string>("assessor.full_name");
-        assessor.secret_code = await sessionStorage.GetItemAsync<string>("assessor.secret_code");
+        assessor.division = await sessionStorage.GetItemAsync<string>("assessor.division");
+        assessor.level = await sessionStorage.GetItemAsync<string>("assessor.level");
 
         personal = new Personal();
         personal.full_name =  await sessionStorage.GetItemAsync<string>("full_name");
         personal.level = await sessionStorage.GetItemAsync<string>("level");
 
-        if(String.IsNullOrEmpty(assessor.full_name) && String.IsNullOrEmpty(assessor.secret_code)){
+        if(String.IsNullOrEmpty(assessor.code)){
             await sessionStorage.ClearAsync();
             validated = false;
         }
-        
+
         await base.OnParametersSetAsync();
     }
-    private async Task setAssessor(){
-        if(!String.IsNullOrEmpty(assessor.full_name) && !String.IsNullOrEmpty(assessor.secret_code)){
-            var url = "/plesk-site-preview/eevaluations.com/ajax/getAssessor.php?full_name=" + assessor.full_name + "&secret_code="+ assessor.secret_code;
+    private async Task OnReset() {
+        assessor = new Assessor();
+        await sessionStorage.ClearAsync();
+        validated = false;
+    }
+    private async Task OnCodeChange(ChangeEventArgs args) {
+        try
+        {
+            assessor.code = args.Value.ToString();
+            var url = "/ajax/getAssessor.php?code=" + assessor.code;
             assessor = await Http.GetFromJsonAsync<Assessor>(url);
-            if(assessor !=null &&  int.Parse(assessor.id) > 0){
-                await sessionStorage.SetItemAsync("assessor.id", assessor.id);
+            not_found = false;
+            await Task.CompletedTask;
+        }
+        catch {
+            assessor = new Assessor();
+            not_found = true;
+            await Task.CompletedTask;
+        }
+    }
+
+    private async Task setAssessor(){
+        if(!String.IsNullOrEmpty(assessor.full_name) && !String.IsNullOrEmpty(assessor.code)){
+            if(assessor !=null){
+                await sessionStorage.SetItemAsync("assessor.code", assessor.code);
                 await sessionStorage.SetItemAsync("assessor.full_name", assessor.full_name);
-                await sessionStorage.SetItemAsync("assessor.secret_code", assessor.secret_code);
+                await sessionStorage.SetItemAsync("assessor.division", assessor.division);
+                await sessionStorage.SetItemAsync("assessor.level", assessor.level);
                 validated = true;
                 StateHasChanged();
             }
         }
     }
-   private async Task gotoNext()
+    private async Task gotoNext()
     {
         if(!String.IsNullOrEmpty(personal.full_name) && !String.IsNullOrEmpty(personal.level)){
             await sessionStorage.SetItemAsync("full_name", personal.full_name);
             await sessionStorage.SetItemAsync("level", personal.level);
             StateHasChanged();
-            NavigationManager.NavigateTo("BusinessAcumen");
+            NavigationManager.NavigateTo("Leadership");
         }
     }
     private void gotoBack(){
         validated = false;
     }
     private async Task gotoReport(){
-        if(!String.IsNullOrEmpty(assessor.full_name) && !String.IsNullOrEmpty(assessor.secret_code)){
-            var url = "/plesk-site-preview/eevaluations.com/ajax/getAssessor.php?full_name=" + assessor.full_name + "&secret_code="+ assessor.secret_code;
-            assessor = await Http.GetFromJsonAsync<Assessor>(url);
-            if(assessor !=null &&  int.Parse(assessor.id) > 0){
-                await sessionStorage.SetItemAsync("assessor.id", assessor.id);
-                await sessionStorage.SetItemAsync("assessor.full_name", assessor.full_name);
-                await sessionStorage.SetItemAsync("assessor.secret_code", assessor.secret_code);
-                validated = true;
-                StateHasChanged();
-                NavigationManager.NavigateTo("Summary");
-            }
+        if (assessor != null)
+        {
+            await sessionStorage.SetItemAsync("assessor.code", assessor.code);
+            await sessionStorage.SetItemAsync("assessor.full_name", assessor.full_name);
+            await sessionStorage.SetItemAsync("assessor.division", assessor.division);
+            await sessionStorage.SetItemAsync("assessor.level", assessor.level);
+            validated = true;
+            StateHasChanged();
+            NavigationManager.NavigateTo("Summary");
         }
     }
 

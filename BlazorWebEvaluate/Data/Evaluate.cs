@@ -3,6 +3,7 @@ namespace BlazorWebEvaluate.Data
 {
     public class Evaluate
     {
+        public Assessor assessor { get; set; } = new Assessor();
         public string full_name { get; set; }
         public string level { get; set; }
 
@@ -28,14 +29,9 @@ namespace BlazorWebEvaluate.Data
             return top;
         }
 
-        public BusinessAcu businessAcu { get; set; } = new BusinessAcu();
-        public InitiativeData initiative { get; set; } = new InitiativeData();
-
-        public Collaboration collaboration { get; set; } = new Collaboration();
-
-        public ServiceExcellence serviceExcellence { get; set; } = new ServiceExcellence();
-        public SafetyAndSecurity safetyAndSecurity { get; set;} = new SafetyAndSecurity();
-        public DigitalLiteracy digitalLiteracy { get; set; } = new DigitalLiteracy();
-        public Assessor assessor { get;set; } = new Assessor();
+        public LeadershipData leadership { get; set; } = new LeadershipData();
+        public BusinessManagementData businessManagement { get; set; } = new BusinessManagementData();
+        public ChangeCatalystData changeCatalyst { get; set; } = new ChangeCatalystData();
+        public CSRforSustainableData cSRforSustainable { get; set; } = new CSRforSustainableData();
     }
 }

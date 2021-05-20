@@ -85,10 +85,12 @@ using BlazorWebEvaluate.Data;
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
-            __builder.AddMarkupContent(0, "<h3><b>ส่วนที่ 6</b> ประยุกต์ใช้ดิจิทัล (Digital Literacy)\n</h3>\n\n");
+            __builder.AddMarkupContent(0, "<h3>\n    <b>ส่วนที่ 6</b> ประยุกต์ใช้ดิจิทัล (Digital Literacy)\n</h3>\n\n");
             __builder.AddMarkupContent(1, @"<p>
     ความรอบรู้นำข้อมูลสารสนเทศ เลือกใช้เครื่องมือ อุปกรณ์เทคโนโลยีดิจิทัล มาวิเคราะห์ตัดสินใจและประยุกต์ใช้ให้เกิดประโยชน์สูงสุดคุ้มค่า ในการกำกับและอำนวยความสะดวกร่วมกับเครือข่ายพันธมิตรให้เกิดบริการที่เหนือความคาดหวัง โดยพัฒนากระบวนการ ระบบงานและเชื่อมโยงข้อมูลให้สอดคล้องกันได้อย่างทันสมัยและเกิดนวัตกรรม มุ่งสู่การเป็นองค์กรสมรรถนะขั้นสูงที่มีความสะดวก รวดเร็ว ลดต้นทุน/ขั้นตอน/ข้อผิดพลาด โดยอิงตามมาตรฐานสากลด้านความปลอดภัยควบคู่กับหลักการธรรมาภิบาล โปร่งใส ตรวจสอบได้ และสร้างรายได้อย่างสมดุล
-</p>");
+</p>
+
+");
 #nullable restore
 #line 13 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
  if (step == 1)
@@ -97,23 +99,29 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.OpenElement(2, "div");
-            __builder.AddAttribute(3, "class", "row");
-            __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "col-lg-12");
-            __builder.AddMarkupContent(6, "<h4 class=\"mt-5 mb-2\">ระดับที่ 1</h4>\n            ");
-            __builder.OpenElement(7, "table");
-            __builder.AddAttribute(8, "class", "table table-bordered");
-            __builder.AddMarkupContent(9, "<thead><tr><th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th></tr></thead>\n                ");
-            __builder.OpenElement(10, "tbody");
-            __builder.OpenElement(11, "tr");
-            __builder.AddMarkupContent(12, "<td>\n                            1. อธิบายหลักการ วิธีการ ขั้นตอนใช้อุปกรณ์เทคโนโลยีและข้อมูลดิจิทัลที่กำหนด\n                        </td>\n                        ");
-            __builder.OpenElement(13, "td");
-            __builder.OpenElement(14, "label");
-            __builder.OpenElement(15, "input");
-            __builder.AddAttribute(16, "type", "checkbox");
-            __builder.AddAttribute(17, "value", "1");
-            __builder.AddAttribute(18, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddContent(2, "    ");
+            __builder.OpenElement(3, "div");
+            __builder.AddAttribute(4, "class", "row");
+            __builder.AddMarkupContent(5, "\n        ");
+            __builder.OpenElement(6, "div");
+            __builder.AddAttribute(7, "class", "col-lg-12");
+            __builder.AddMarkupContent(8, "\n            ");
+            __builder.AddMarkupContent(9, "<h4 class=\"mt-5 mb-2\">ระดับที่ 1</h4>\n            ");
+            __builder.OpenElement(10, "table");
+            __builder.AddAttribute(11, "class", "table table-bordered");
+            __builder.AddMarkupContent(12, "\n                ");
+            __builder.AddMarkupContent(13, "<thead>\n                    <tr>\n                        <th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th>\n                    </tr>\n                </thead>\n                ");
+            __builder.OpenElement(14, "tbody");
+            __builder.AddMarkupContent(15, "\n                    ");
+            __builder.OpenElement(16, "tr");
+            __builder.AddMarkupContent(17, "\n                        ");
+            __builder.AddMarkupContent(18, "<td>\n                            1. อธิบายหลักการ วิธีการ ขั้นตอนใช้อุปกรณ์เทคโนโลยีและข้อมูลดิจิทัลที่กำหนด\n                        </td>\n                        ");
+            __builder.OpenElement(19, "td");
+            __builder.OpenElement(20, "label");
+            __builder.OpenElement(21, "input");
+            __builder.AddAttribute(22, "type", "checkbox");
+            __builder.AddAttribute(23, "value", "1");
+            __builder.AddAttribute(24, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 30 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level1.c1
@@ -122,22 +130,24 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(19, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level1.c1 = __value, digitalLiteracy.level1.c1));
+            __builder.AddAttribute(25, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level1.c1 = __value, digitalLiteracy.level1.c1));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(20, " ใช่");
+            __builder.AddMarkupContent(26, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(27, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(21, "\n                    ");
-            __builder.OpenElement(22, "tr");
-            __builder.AddMarkupContent(23, "<td>\n                            2. เลือกใช้เครื่องมือ อุปกรณ์ เทคโนโลยีดิจิทัลหรือแอปพลิเคชันขั้นต้นที่ใช้งานได้ง่ายสอดคล้องกับมาตรฐานการทำงานและตามข้อตกลงการทำงานร่วมกับเครือข่ายพันธมิตร\n                        </td>\n                        ");
-            __builder.OpenElement(24, "td");
-            __builder.OpenElement(25, "label");
-            __builder.OpenElement(26, "input");
-            __builder.AddAttribute(27, "type", "checkbox");
-            __builder.AddAttribute(28, "value", "1");
-            __builder.AddAttribute(29, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(28, "\n                    ");
+            __builder.OpenElement(29, "tr");
+            __builder.AddMarkupContent(30, "\n                        ");
+            __builder.AddMarkupContent(31, "<td>\n                            2. เลือกใช้เครื่องมือ อุปกรณ์ เทคโนโลยีดิจิทัลหรือแอปพลิเคชันขั้นต้นที่ใช้งานได้ง่ายสอดคล้องกับมาตรฐานการทำงานและตามข้อตกลงการทำงานร่วมกับเครือข่ายพันธมิตร\n                        </td>\n                        ");
+            __builder.OpenElement(32, "td");
+            __builder.OpenElement(33, "label");
+            __builder.OpenElement(34, "input");
+            __builder.AddAttribute(35, "type", "checkbox");
+            __builder.AddAttribute(36, "value", "1");
+            __builder.AddAttribute(37, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 36 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level1.c2
@@ -146,22 +156,24 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(30, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level1.c2 = __value, digitalLiteracy.level1.c2));
+            __builder.AddAttribute(38, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level1.c2 = __value, digitalLiteracy.level1.c2));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(31, " ใช่");
+            __builder.AddMarkupContent(39, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(40, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(32, "\n                    ");
-            __builder.OpenElement(33, "tr");
-            __builder.AddMarkupContent(34, "<td>\n                            3. ประยุกต์ใช้เทคโนโลยีได้อย่างเหมาะสม ถูกต้อง ได้ตามเป้าหมาย  สะดวก รวดเร็ว ลดต้นทุน ขั้นตอนและข้อผิดพลาด\n                        </td>\n                        ");
-            __builder.OpenElement(35, "td");
-            __builder.OpenElement(36, "label");
-            __builder.OpenElement(37, "input");
-            __builder.AddAttribute(38, "type", "checkbox");
-            __builder.AddAttribute(39, "value", "1");
-            __builder.AddAttribute(40, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(41, "\n                    ");
+            __builder.OpenElement(42, "tr");
+            __builder.AddMarkupContent(43, "\n                        ");
+            __builder.AddMarkupContent(44, "<td>\n                            3. ประยุกต์ใช้เทคโนโลยีได้อย่างเหมาะสม ถูกต้อง ได้ตามเป้าหมาย  สะดวก รวดเร็ว ลดต้นทุน ขั้นตอนและข้อผิดพลาด\n                        </td>\n                        ");
+            __builder.OpenElement(45, "td");
+            __builder.OpenElement(46, "label");
+            __builder.OpenElement(47, "input");
+            __builder.AddAttribute(48, "type", "checkbox");
+            __builder.AddAttribute(49, "value", "1");
+            __builder.AddAttribute(50, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 42 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level1.c3
@@ -170,18 +182,21 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(41, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level1.c3 = __value, digitalLiteracy.level1.c3));
+            __builder.AddAttribute(51, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level1.c3 = __value, digitalLiteracy.level1.c3));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(42, " ใช่");
+            __builder.AddMarkupContent(52, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(53, "\n                    ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(54, "\n                ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(55, "\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(43, "\n            ");
-            __builder.OpenElement(44, "button");
-            __builder.AddAttribute(45, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(56, "\n            ");
+            __builder.OpenElement(57, "button");
+            __builder.AddAttribute(58, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 46 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                               gotoBack
@@ -190,13 +205,13 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(46, "type", "button");
-            __builder.AddAttribute(47, "class", "btn btn-default mt-5");
-            __builder.AddContent(48, "  Back  ");
+            __builder.AddAttribute(59, "type", "button");
+            __builder.AddAttribute(60, "class", "btn btn-default mt-5");
+            __builder.AddContent(61, "  Back  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(49, "\n            ");
-            __builder.OpenElement(50, "button");
-            __builder.AddAttribute(51, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(62, "\n            ");
+            __builder.OpenElement(63, "button");
+            __builder.AddAttribute(64, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 47 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                               gotoNext
@@ -205,12 +220,15 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(52, "type", "button");
-            __builder.AddAttribute(53, "class", "btn btn-primary mt-5");
-            __builder.AddContent(54, "  Next  ");
+            __builder.AddAttribute(65, "type", "button");
+            __builder.AddAttribute(66, "class", "btn btn-primary mt-5");
+            __builder.AddContent(67, "  Next  ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(68, "\n        ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(69, "\n    ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(70, "\n");
 #nullable restore
 #line 50 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
 }
@@ -218,6 +236,7 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
+            __builder.AddMarkupContent(71, "\n\n");
 #nullable restore
 #line 53 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
  if (step == 2)
@@ -226,23 +245,29 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.OpenElement(55, "div");
-            __builder.AddAttribute(56, "class", "row");
-            __builder.OpenElement(57, "div");
-            __builder.AddAttribute(58, "class", "col-lg-12");
-            __builder.AddMarkupContent(59, "<h4 class=\"mt-5 mb-2\">ระดับที่ 3</h4>\n            ");
-            __builder.OpenElement(60, "table");
-            __builder.AddAttribute(61, "class", "table table-bordered");
-            __builder.AddMarkupContent(62, "<thead><tr><th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th></tr></thead>\n                ");
-            __builder.OpenElement(63, "tbody");
-            __builder.OpenElement(64, "tr");
-            __builder.AddMarkupContent(65, "<td>\n                            1. ศึกษาแนวโน้มเทคโนโลยีสารสนเทศในอนาคตมาประยุกต์ใช้พัฒนาระบบการทำงานให้ทันต่อการเปลี่ยนแปลงที่เกิดขึ้น\n                        </td>\n                        ");
-            __builder.OpenElement(66, "td");
-            __builder.OpenElement(67, "label");
-            __builder.OpenElement(68, "input");
-            __builder.AddAttribute(69, "type", "checkbox");
-            __builder.AddAttribute(70, "value", "1");
-            __builder.AddAttribute(71, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddContent(72, "    ");
+            __builder.OpenElement(73, "div");
+            __builder.AddAttribute(74, "class", "row");
+            __builder.AddMarkupContent(75, "\n        ");
+            __builder.OpenElement(76, "div");
+            __builder.AddAttribute(77, "class", "col-lg-12");
+            __builder.AddMarkupContent(78, "\n            ");
+            __builder.AddMarkupContent(79, "<h4 class=\"mt-5 mb-2\">ระดับที่ 3</h4>\n            ");
+            __builder.OpenElement(80, "table");
+            __builder.AddAttribute(81, "class", "table table-bordered");
+            __builder.AddMarkupContent(82, "\n                ");
+            __builder.AddMarkupContent(83, "<thead>\n                    <tr>\n                        <th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th>\n                    </tr>\n                </thead>\n                ");
+            __builder.OpenElement(84, "tbody");
+            __builder.AddMarkupContent(85, "\n                    ");
+            __builder.OpenElement(86, "tr");
+            __builder.AddMarkupContent(87, "\n                        ");
+            __builder.AddMarkupContent(88, "<td>\n                            1. ศึกษาแนวโน้มเทคโนโลยีสารสนเทศในอนาคตมาประยุกต์ใช้พัฒนาระบบการทำงานให้ทันต่อการเปลี่ยนแปลงที่เกิดขึ้น\n                        </td>\n                        ");
+            __builder.OpenElement(89, "td");
+            __builder.OpenElement(90, "label");
+            __builder.OpenElement(91, "input");
+            __builder.AddAttribute(92, "type", "checkbox");
+            __builder.AddAttribute(93, "value", "1");
+            __builder.AddAttribute(94, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 70 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level3.c1
@@ -251,22 +276,24 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(72, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c1 = __value, digitalLiteracy.level3.c1));
+            __builder.AddAttribute(95, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c1 = __value, digitalLiteracy.level3.c1));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(73, " ใช่");
+            __builder.AddMarkupContent(96, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(97, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(74, "\n                    ");
-            __builder.OpenElement(75, "tr");
-            __builder.AddMarkupContent(76, "<td>\n                            2. วิเคราะห์ข้อมูลสารสนเทศที่เกี่ยวข้องเพื่อให้ได้ข้อมูลที่ถูกต้อง รวดเร็ว ทันสมัย และเป็นประโยชน์ต่อการตัดสินใจในการทำงาน\n                        </td>\n                        ");
-            __builder.OpenElement(77, "td");
-            __builder.OpenElement(78, "label");
-            __builder.OpenElement(79, "input");
-            __builder.AddAttribute(80, "type", "checkbox");
-            __builder.AddAttribute(81, "value", "1");
-            __builder.AddAttribute(82, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(98, "\n                    ");
+            __builder.OpenElement(99, "tr");
+            __builder.AddMarkupContent(100, "\n                        ");
+            __builder.AddMarkupContent(101, "<td>\n                            2. วิเคราะห์ข้อมูลสารสนเทศที่เกี่ยวข้องเพื่อให้ได้ข้อมูลที่ถูกต้อง รวดเร็ว ทันสมัย และเป็นประโยชน์ต่อการตัดสินใจในการทำงาน\n                        </td>\n                        ");
+            __builder.OpenElement(102, "td");
+            __builder.OpenElement(103, "label");
+            __builder.OpenElement(104, "input");
+            __builder.AddAttribute(105, "type", "checkbox");
+            __builder.AddAttribute(106, "value", "1");
+            __builder.AddAttribute(107, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 76 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level3.c2
@@ -275,22 +302,24 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(83, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c2 = __value, digitalLiteracy.level3.c2));
+            __builder.AddAttribute(108, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c2 = __value, digitalLiteracy.level3.c2));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(84, " ใช่");
+            __builder.AddMarkupContent(109, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(110, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(85, "\n                    ");
-            __builder.OpenElement(86, "tr");
-            __builder.AddMarkupContent(87, "<td>\n                            3. กำกับ ให้ข้อคิดเห็นและตรวจสอบการปฏิบัติตามกฎหมาย กรอบธรรมาภิบาล และหลักปฏิบัติที่ดีด้านดิจิทัลร่วมกับเครือข่ายพันธมิตรให้เกิดความโปร่งใส ตรวจสอบได้\n                        </td>\n                        ");
-            __builder.OpenElement(88, "td");
-            __builder.OpenElement(89, "label");
-            __builder.OpenElement(90, "input");
-            __builder.AddAttribute(91, "type", "checkbox");
-            __builder.AddAttribute(92, "value", "1");
-            __builder.AddAttribute(93, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(111, "\n                    ");
+            __builder.OpenElement(112, "tr");
+            __builder.AddMarkupContent(113, "\n                        ");
+            __builder.AddMarkupContent(114, "<td>\n                            3. กำกับ ให้ข้อคิดเห็นและตรวจสอบการปฏิบัติตามกฎหมาย กรอบธรรมาภิบาล และหลักปฏิบัติที่ดีด้านดิจิทัลร่วมกับเครือข่ายพันธมิตรให้เกิดความโปร่งใส ตรวจสอบได้\n                        </td>\n                        ");
+            __builder.OpenElement(115, "td");
+            __builder.OpenElement(116, "label");
+            __builder.OpenElement(117, "input");
+            __builder.AddAttribute(118, "type", "checkbox");
+            __builder.AddAttribute(119, "value", "1");
+            __builder.AddAttribute(120, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 82 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level3.c3
@@ -299,25 +328,27 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(94, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c3 = __value, digitalLiteracy.level3.c3));
+            __builder.AddAttribute(121, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c3 = __value, digitalLiteracy.level3.c3));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(95, " ใช่");
+            __builder.AddMarkupContent(122, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(123, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(96, "\n                    ");
-            __builder.OpenElement(97, "tr");
-            __builder.AddMarkupContent(98, @"<td>
+            __builder.AddMarkupContent(124, "\n                    ");
+            __builder.OpenElement(125, "tr");
+            __builder.AddMarkupContent(126, "\n                        ");
+            __builder.AddMarkupContent(127, @"<td>
                             4. ช้เทคโนโลยีสารสนเทศดิจิทัลที่ทันสมัยและใช้ทรัพยากรอย่างคุ้มค่ามาพัฒนาระบบงาน กระบวนงานร่วมกับเครือข่ายพันธมิตรให้เกิดความเชื่อมโยงสอดคล้องตามหลักมาตรฐานสากลด้านความปลอดภัย คุณภาพการให้บริการ ธรรมมาภิบาลโปร่งใส และตรวจสอบได้
                         </td>
                         ");
-            __builder.OpenElement(99, "td");
-            __builder.OpenElement(100, "label");
-            __builder.OpenElement(101, "input");
-            __builder.AddAttribute(102, "type", "checkbox");
-            __builder.AddAttribute(103, "value", "1");
-            __builder.AddAttribute(104, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.OpenElement(128, "td");
+            __builder.OpenElement(129, "label");
+            __builder.OpenElement(130, "input");
+            __builder.AddAttribute(131, "type", "checkbox");
+            __builder.AddAttribute(132, "value", "1");
+            __builder.AddAttribute(133, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 88 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level3.c4
@@ -326,18 +357,21 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(105, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c4 = __value, digitalLiteracy.level3.c4));
+            __builder.AddAttribute(134, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level3.c4 = __value, digitalLiteracy.level3.c4));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(106, " ใช่");
+            __builder.AddMarkupContent(135, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(136, "\n                    ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(137, "\n                ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(138, "\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(107, "\n            ");
-            __builder.OpenElement(108, "button");
-            __builder.AddAttribute(109, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(139, "\n            ");
+            __builder.OpenElement(140, "button");
+            __builder.AddAttribute(141, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 92 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                               gotoBack
@@ -346,13 +380,13 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(110, "type", "button");
-            __builder.AddAttribute(111, "class", "btn btn-default mt-5");
-            __builder.AddContent(112, "  Back  ");
+            __builder.AddAttribute(142, "type", "button");
+            __builder.AddAttribute(143, "class", "btn btn-default mt-5");
+            __builder.AddContent(144, "  Back  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(113, "\n            ");
-            __builder.OpenElement(114, "button");
-            __builder.AddAttribute(115, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(145, "\n            ");
+            __builder.OpenElement(146, "button");
+            __builder.AddAttribute(147, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 93 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                               gotoNext
@@ -361,12 +395,15 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(116, "type", "button");
-            __builder.AddAttribute(117, "class", "btn btn-primary mt-5");
-            __builder.AddContent(118, "  Next  ");
+            __builder.AddAttribute(148, "type", "button");
+            __builder.AddAttribute(149, "class", "btn btn-primary mt-5");
+            __builder.AddContent(150, "  Next  ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(151, "\n        ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(152, "\n    ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(153, "\n");
 #nullable restore
 #line 96 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
 }
@@ -374,6 +411,7 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
+            __builder.AddMarkupContent(154, "\n\n");
 #nullable restore
 #line 99 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
  if (step == 3)
@@ -382,23 +420,29 @@ using BlazorWebEvaluate.Data;
 #line default
 #line hidden
 #nullable disable
-            __builder.OpenElement(119, "div");
-            __builder.AddAttribute(120, "class", "row");
-            __builder.OpenElement(121, "div");
-            __builder.AddAttribute(122, "class", "col-lg-12");
-            __builder.AddMarkupContent(123, "<h4 class=\"mt-5 mb-2\">ระดับที่ 5</h4>\n            ");
-            __builder.OpenElement(124, "table");
-            __builder.AddAttribute(125, "class", "table table-bordered");
-            __builder.AddMarkupContent(126, "<thead><tr><th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th></tr></thead>\n                ");
-            __builder.OpenElement(127, "tbody");
-            __builder.OpenElement(128, "tr");
-            __builder.AddMarkupContent(129, "<td>\n                            1. รู้แนวโน้มเทคโนโลยีดิจิทัลในอนาคตมาประยุกต์ใช้ยกระดับธุรกิจให้ทันต่อการเปลี่ยนแปลง\n                        </td>\n                        ");
-            __builder.OpenElement(130, "td");
-            __builder.OpenElement(131, "label");
-            __builder.OpenElement(132, "input");
-            __builder.AddAttribute(133, "type", "checkbox");
-            __builder.AddAttribute(134, "value", "1");
-            __builder.AddAttribute(135, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddContent(155, "    ");
+            __builder.OpenElement(156, "div");
+            __builder.AddAttribute(157, "class", "row");
+            __builder.AddMarkupContent(158, "\n        ");
+            __builder.OpenElement(159, "div");
+            __builder.AddAttribute(160, "class", "col-lg-12");
+            __builder.AddMarkupContent(161, "\n            ");
+            __builder.AddMarkupContent(162, "<h4 class=\"mt-5 mb-2\">ระดับที่ 5</h4>\n            ");
+            __builder.OpenElement(163, "table");
+            __builder.AddAttribute(164, "class", "table table-bordered");
+            __builder.AddMarkupContent(165, "\n                ");
+            __builder.AddMarkupContent(166, "<thead>\n                    <tr>\n                        <th>หัวข้อ</th>\n                        <th nowarp=\"nowarp\" style=\"width:100px;\">คำตอบ</th>\n                    </tr>\n                </thead>\n                ");
+            __builder.OpenElement(167, "tbody");
+            __builder.AddMarkupContent(168, "\n                    ");
+            __builder.OpenElement(169, "tr");
+            __builder.AddMarkupContent(170, "\n                        ");
+            __builder.AddMarkupContent(171, "<td>\n                            1. รู้แนวโน้มเทคโนโลยีดิจิทัลในอนาคตมาประยุกต์ใช้ยกระดับธุรกิจให้ทันต่อการเปลี่ยนแปลง\n                        </td>\n                        ");
+            __builder.OpenElement(172, "td");
+            __builder.OpenElement(173, "label");
+            __builder.OpenElement(174, "input");
+            __builder.AddAttribute(175, "type", "checkbox");
+            __builder.AddAttribute(176, "value", "1");
+            __builder.AddAttribute(177, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 116 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level5.c1
@@ -407,22 +451,24 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(136, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c1 = __value, digitalLiteracy.level5.c1));
+            __builder.AddAttribute(178, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c1 = __value, digitalLiteracy.level5.c1));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(137, " ใช่");
+            __builder.AddMarkupContent(179, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(180, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(138, "\n                    ");
-            __builder.OpenElement(139, "tr");
-            __builder.AddMarkupContent(140, "<td>\n                            2. ให้คำปรึกษาถ่ายทอด เป็นแบบอย่างที่ดีในการทำงานแบบดิจิทัลให้กับผู้อื่น ทั้งในเรื่องความคิด ความเป็นผู้นำ และพฤติกรรม\n                        </td>\n                        ");
-            __builder.OpenElement(141, "td");
-            __builder.OpenElement(142, "label");
-            __builder.OpenElement(143, "input");
-            __builder.AddAttribute(144, "type", "checkbox");
-            __builder.AddAttribute(145, "value", "1");
-            __builder.AddAttribute(146, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(181, "\n                    ");
+            __builder.OpenElement(182, "tr");
+            __builder.AddMarkupContent(183, "\n                        ");
+            __builder.AddMarkupContent(184, "<td>\n                            2. ให้คำปรึกษาถ่ายทอด เป็นแบบอย่างที่ดีในการทำงานแบบดิจิทัลให้กับผู้อื่น ทั้งในเรื่องความคิด ความเป็นผู้นำ และพฤติกรรม\n                        </td>\n                        ");
+            __builder.OpenElement(185, "td");
+            __builder.OpenElement(186, "label");
+            __builder.OpenElement(187, "input");
+            __builder.AddAttribute(188, "type", "checkbox");
+            __builder.AddAttribute(189, "value", "1");
+            __builder.AddAttribute(190, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 122 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level5.c2
@@ -431,25 +477,27 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(147, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c2 = __value, digitalLiteracy.level5.c2));
+            __builder.AddAttribute(191, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c2 = __value, digitalLiteracy.level5.c2));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(148, " ใช่");
+            __builder.AddMarkupContent(192, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(193, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(149, "\n                    ");
-            __builder.OpenElement(150, "tr");
-            __builder.AddMarkupContent(151, @"<td>
+            __builder.AddMarkupContent(194, "\n                    ");
+            __builder.OpenElement(195, "tr");
+            __builder.AddMarkupContent(196, "\n                        ");
+            __builder.AddMarkupContent(197, @"<td>
                             3. กำหนดกรอบการให้บริการ แนวทางการออกแบบ การปฏิบัติการเชิงรุก และการเชื่อมโยงข้อมูลสำคัญ กระบวนการให้บริการระหว่างหน่วยงานและเครือข่ายพันธมิตรที่เกี่ยวข้องให้สอดคล้องกัน
                         </td>
                         ");
-            __builder.OpenElement(152, "td");
-            __builder.OpenElement(153, "label");
-            __builder.OpenElement(154, "input");
-            __builder.AddAttribute(155, "type", "checkbox");
-            __builder.AddAttribute(156, "value", "1");
-            __builder.AddAttribute(157, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.OpenElement(198, "td");
+            __builder.OpenElement(199, "label");
+            __builder.OpenElement(200, "input");
+            __builder.AddAttribute(201, "type", "checkbox");
+            __builder.AddAttribute(202, "value", "1");
+            __builder.AddAttribute(203, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 128 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level5.c3
@@ -458,22 +506,24 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(158, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c3 = __value, digitalLiteracy.level5.c3));
+            __builder.AddAttribute(204, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c3 = __value, digitalLiteracy.level5.c3));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(159, " ใช่");
+            __builder.AddMarkupContent(205, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(206, "\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(160, "\n                    ");
-            __builder.OpenElement(161, "tr");
-            __builder.AddMarkupContent(162, "<td>\n                            4. สร้างเครือข่ายพันธมิตรให้เกิดเป็นธุรกิจใหม่ที่สร้างรายได้เชิงพาณิชย์และผลประกอบการที่ดีขึ้นได้สำเร็จตามเป้าหมาย\n                        </td>\n                        ");
-            __builder.OpenElement(163, "td");
-            __builder.OpenElement(164, "label");
-            __builder.OpenElement(165, "input");
-            __builder.AddAttribute(166, "type", "checkbox");
-            __builder.AddAttribute(167, "value", "1");
-            __builder.AddAttribute(168, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(207, "\n                    ");
+            __builder.OpenElement(208, "tr");
+            __builder.AddMarkupContent(209, "\n                        ");
+            __builder.AddMarkupContent(210, "<td>\n                            4. สร้างเครือข่ายพันธมิตรให้เกิดเป็นธุรกิจใหม่ที่สร้างรายได้เชิงพาณิชย์และผลประกอบการที่ดีขึ้นได้สำเร็จตามเป้าหมาย\n                        </td>\n                        ");
+            __builder.OpenElement(211, "td");
+            __builder.OpenElement(212, "label");
+            __builder.OpenElement(213, "input");
+            __builder.AddAttribute(214, "type", "checkbox");
+            __builder.AddAttribute(215, "value", "1");
+            __builder.AddAttribute(216, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 134 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                                                                            digitalLiteracy.level5.c4
@@ -482,18 +532,21 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(169, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c4 = __value, digitalLiteracy.level5.c4));
+            __builder.AddAttribute(217, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => digitalLiteracy.level5.c4 = __value, digitalLiteracy.level5.c4));
             __builder.SetUpdatesAttributeName("checked");
             __builder.CloseElement();
-            __builder.AddMarkupContent(170, " ใช่");
+            __builder.AddMarkupContent(218, " ใช่");
             __builder.CloseElement();
             __builder.CloseElement();
+            __builder.AddMarkupContent(219, "\n                    ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(220, "\n                ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(221, "\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(171, "\n            ");
-            __builder.OpenElement(172, "button");
-            __builder.AddAttribute(173, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(222, "\n            ");
+            __builder.OpenElement(223, "button");
+            __builder.AddAttribute(224, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 138 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                               gotoBack
@@ -502,13 +555,13 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(174, "type", "button");
-            __builder.AddAttribute(175, "class", "btn btn-default mt-5");
-            __builder.AddContent(176, "  Back  ");
+            __builder.AddAttribute(225, "type", "button");
+            __builder.AddAttribute(226, "class", "btn btn-default mt-5");
+            __builder.AddContent(227, "  Back  ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(177, "\n            ");
-            __builder.OpenElement(178, "button");
-            __builder.AddAttribute(179, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(228, "\n            ");
+            __builder.OpenElement(229, "button");
+            __builder.AddAttribute(230, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 139 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
                               gotoNext
@@ -517,12 +570,15 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(180, "type", "button");
-            __builder.AddAttribute(181, "class", "btn btn-success mt-5");
-            __builder.AddContent(182, "  Finish  ");
+            __builder.AddAttribute(231, "type", "button");
+            __builder.AddAttribute(232, "class", "btn btn-success mt-5");
+            __builder.AddContent(233, "  Finish  ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(234, "\n        ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(235, "\n    ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(236, "\n");
 #nullable restore
 #line 142 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Pages/DigitalLiteracyPage.razor"
 }

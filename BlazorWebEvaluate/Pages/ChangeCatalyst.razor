@@ -1,0 +1,292 @@
+﻿@page "/Change-Catalyst"
+@inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+<h3>
+    <b>ส่วนที่ 3</b> สร้างสรรค์การเปลี่ยนแปลง (Change Catalyst)
+</h3>
+
+<p>
+    มีความสามารถในการเรียนรู้เพื่อเพิ่มทักษะและความรู้ใหม่ๆอย่างต่อเนื่อง มีความสามารถในการปรับตัวยืดหยุ่นต่อการเปลี่ยนแปลง สามารถปรับเปลี่ยนรูปแบบการทำงานภายใต้ภาวะความกดดัน  มีอิทธิพลต่อการปรับเปลี่ยนพฤติกรรมของผู้ใต้บังคับบัญชา สามารถมอบอำนาจในการทำงานให้บรรลุเป้าหมายตามข้อตกลงในการปฏิบัติงาน  และสามารถนำการเปลี่ยนแปลงตามเป้าหมายที่องค์การวางไว้
+</p>
+
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <span>
+                สนับสนุนกิจกรรมที่ส่งผลให้เกิดการเปลี่ยนแปลงตามเป้าหมายขององค์กร
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. สนับสนุนการเรียนรู้เพื่อเพิ่มทักษะและความรู้ใหม่ๆอย่างต่อเนื่อง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. ระบุถึงขั้นตอนการทำงานที่มีการเปลี่ยนแปลงให้ชัดเจน ชี้แจงให้แก่สมาชิกในทีมถึงโอกาสและประโยชน์ที่ได้จากผลสำเร็จ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สามารถอธิบายถึงความสัมพันธ์ของการเปลี่ยนแปลงที่มีต่อ วิสัยทัศน์   ภารกิจ   เป้าหมายขององค์กร
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level1.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. ส่งเสริมการเข้าร่วมกิจกรรมการเปลี่ยนแปลงตามกระบวนการหรือขั้นตอนที่แตกต่างจากเดิมที่หน่วยงานกำหนดสอดคล้องกับหน่วยงานอื่น
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level1.c4" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5. บอกได้ถึงผลลัพธ์ของการดำเนินงานหรือดำเนินกิจกรรมที่เปลี่ยนแปลง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level1.c5" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <span>
+                ปรับเปลี่ยนรูปแบบและวิธีการทำงานใหม่ที่สอดรับกับการเปลี่ยนแปลง
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. สามารถออกแบบวิธีการทำงานใหม่ ๆ อย่างได้ผล เพื่อรองรับการเปลี่ยนแปลง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. วิเคราะห์สถานการณ์ต่าง ๆ ได้อย่างดี   สร้างทางเลือกต่าง ๆ  ในการแก้ปัญหาได้อย่างเหมาะสม
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สามารถให้คำแนะนำแก่พนักงานในการวิเคราะห์แง่มุมต่าง ๆ และวางแนวทางในการแก้ไขปัญหาได้อย่างดี  เพื่อรองรับการเปลี่ยนแปลงที่เกิดขึ้น
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level3.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. สามารถกระตุ้นจูงใจให้ผู้อื่นและสมาชิกในทีมให้มีส่วนร่วม และลดการต่อต้านการเปลี่ยนแปลงได้เป็นอย่างดี
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level3.c4" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5. บอกได้ถึงผลลัพธ์จากกระบวนการที่เปลี่ยนแปลง  และบ่งชี้ได้ถึงปัญหาอุปสรรคจากการเปลี่ยนแปลงและเสนอแนะแนวทางแก้ไขได้เหมาะสมต่อการเปลี่ยนแปลง
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level3.c5" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <span>
+                ขับเคลื่อนการเปลี่ยนแปลงระดับองค์การ
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1. สามารถทำความเข้าใจบริบททั้งภายในและภายนอกองค์การ ปัญหาที่องค์การกำลังเผชิญ รวมทั้งจุดมุ่งหมายที่วางไว้ และการใช้ทรัพยากรที่มีอย่างชาญฉลาด
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. สื่อสารให้ทีมงานมีส่วนร่วมในการวางแผนและเตรียมความพร้อมต่อการเปลี่ยนแปลงที่จะเกิดขึ้นและสนับสนุนการเปลี่ยนแปลงที่เกิดขึ้นทั้งในสถานการณ์ปกติหรือมีความกดดัน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. สามารถอธิบายถึงเหตุผลของการมอบอำนาจ และวิเคราะห์ถึงผลสำเร็จที่จะได้รับอย่างสร้างสรรค์ทั้งในสถานการณ์ปกติหรือมีความกดดัน
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. กำหนดและบ่งชี้ได้ถึงวิธีวัดผลความสำเร็จและวิเคราะห์เพื่อประเมินผลความสำเร็จของการเปลี่ยนแปลงร่วมกับผู้บริหารและพนักงานระดับผู้นำ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level5.c4" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5. ผลักดันส่งเสริมการเปลี่ยนแปลงขององค์การที่ประกาศเป็นนโยบายได้ถึงระดับของความสำเร็จที่ต้องการ
+                        </td>
+                        <td><label><input type="checkbox" value="1" @bind="changeCatalyst.level5.c5" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    public ChangeCatalystData changeCatalyst;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        changeCatalyst = new ChangeCatalystData();
+        changeCatalyst.level1 = new Level();
+        changeCatalyst.level3 = new Level();
+        changeCatalyst.level5 = new Level();
+
+        changeCatalyst.level1.c1 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level1.c1");
+        changeCatalyst.level1.c2 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level1.c2");
+        changeCatalyst.level1.c3 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level1.c3");
+        changeCatalyst.level1.c4 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level1.c4");
+        changeCatalyst.level1.c5 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level1.c5");
+
+        changeCatalyst.level3.c1 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level3.c1");
+        changeCatalyst.level3.c2 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level3.c2");
+        changeCatalyst.level3.c3 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level3.c3");
+        changeCatalyst.level3.c4 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level3.c4");
+        changeCatalyst.level3.c5 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level3.c5");
+
+        changeCatalyst.level5.c1 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level5.c1");
+        changeCatalyst.level5.c2 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level5.c2");
+        changeCatalyst.level5.c3 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level5.c3");
+        changeCatalyst.level5.c4 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level5.c4");
+        changeCatalyst.level5.c5 = await sessionStorage.GetItemAsync<bool>("changeCatalyst.level5.c5");
+
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("Business-Management");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (changeCatalyst.level1.c1 == true && changeCatalyst.level1.c2 == true && changeCatalyst.level1.c3 == true && changeCatalyst.level1.c4 == true && changeCatalyst.level1.c5 == true)
+                    {
+                        if (changeCatalyst.level3 == null)
+                        {
+                            changeCatalyst.level3 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c1", changeCatalyst.level1.c1);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c2", changeCatalyst.level1.c2);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c3", changeCatalyst.level1.c3);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c4", changeCatalyst.level1.c4);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c5", changeCatalyst.level1.c5);
+                        step++;
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c1", changeCatalyst.level1.c1);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c2", changeCatalyst.level1.c2);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c3", changeCatalyst.level1.c3);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c4", changeCatalyst.level1.c4);
+                        sessionStorage.SetItemAsync("changeCatalyst.level1.c5", changeCatalyst.level1.c5);
+
+                        NavigationManager.NavigateTo("CSR-for-Sustainable");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (changeCatalyst.level3.c1 == true && changeCatalyst.level3.c2 == true && changeCatalyst.level3.c3 == true && changeCatalyst.level3.c4 == true && changeCatalyst.level3.c5 == true)
+                    {
+                        if (changeCatalyst.level5 == null)
+                        {
+                            changeCatalyst.level5 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c1", changeCatalyst.level3.c1);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c2", changeCatalyst.level3.c2);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c3", changeCatalyst.level3.c3);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c4", changeCatalyst.level3.c4);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c5", changeCatalyst.level3.c5);
+                        step++;
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c1", changeCatalyst.level3.c1);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c2", changeCatalyst.level3.c2);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c3", changeCatalyst.level3.c3);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c4", changeCatalyst.level3.c4);
+                        sessionStorage.SetItemAsync("changeCatalyst.level3.c5", changeCatalyst.level3.c5);
+
+                        NavigationManager.NavigateTo("CSR-for-Sustainable");
+                    }
+                }; break;
+            case 3:
+                {
+                    sessionStorage.SetItemAsync("changeCatalyst.level5.c1", changeCatalyst.level5.c1);
+                    sessionStorage.SetItemAsync("changeCatalyst.level5.c2", changeCatalyst.level5.c2);
+                    sessionStorage.SetItemAsync("changeCatalyst.level5.c3", changeCatalyst.level5.c3);
+                    sessionStorage.SetItemAsync("changeCatalyst.level5.c4", changeCatalyst.level5.c4);
+                    sessionStorage.SetItemAsync("changeCatalyst.level5.c5", changeCatalyst.level5.c5);
+
+                    NavigationManager.NavigateTo("CSR-for-Sustainable");
+                }; break;
+        }
+    }
+
+
+}

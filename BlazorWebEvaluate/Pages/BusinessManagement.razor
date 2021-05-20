@@ -1,0 +1,229 @@
+﻿@page "/Business-Management"
+@inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+<h3><b>ส่วนที่ 2</b> การบริหารจัดการธุรกิจยอดเยี่ยม (Business Management)</h3>
+
+<p>
+    มีความรอบรู้หลักการดำเนินธุรกิจและผลประกอบการขององค์การ สามารถบริหารจัดการท่าอากาศยาน ผู้มีส่วนได้ส่วนเสีย และคู่ค้าทางธุรกิจท่าอากาศยาน เข้าใจแนวโน้มการตลาดเทคโนโลยีความเคลื่อนไหวของคู่แข่งรวมถึงสามารถระบุโอกาสและข้อจำกัดในการดำเนินธุรกิจขององค์กร วิเคราะห์กลยุทธ แก้ไขพัฒนา การดำเนินงาน  การขับเคลื่อน ติดตามประเมินผล และบริหารจัดการความเสี่ยง เพื่อให้แผนงานได้ผลลัพธ์ตามวัตถุประสงค์
+</p>
+
+@if (step == 1)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 1</h4>
+            <span>
+                กำหนดผลลัพธ์ที่สอดคล้องกับองค์กร
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. อธิบายแนวโน้มของธุรกิจการบินในปัจจุบันและอนาคต ระบบนิเวศน์ โอกาส และข้อจำกัดในการดำเนินธุรกิจ</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level1.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. ระบุความเชื่อมโยงของภารกิจกับมาตรฐานการดำเนินธุรกิจของท่าอากาศยานได้</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level1.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>3. ระบุปัญหา ปัจจัยความสำเร็จและล้มเหลว กำหนดแนวทางป้องกันและแก้ไขปัญหาในหน่วยงานได้อย่างเหมาะสม</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level1.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>4. สามารถกำหนดผลลัพธ์ที่ต้องการ (Expected Result) ของงานและตัวชี้วัดความสำเร็จที่สัมพันธ์กับเป้าหมายองค์กรได้</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level1.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@if (step == 2)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 3</h4>
+            <span>
+                วางระบบและความสัมพันธ์ระหว่างกระบวนการในหน่วยงาน
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. อธิบายกระบวนการทำงานขององค์การและกระบวนการทำงานในความรับผิดชอบเป็นอย่างดี </td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level3.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. สามารถออกแบบระบบงาน พัฒนาระบบและกระบวนการทำงานของหน่วยงานให้มีประสิทธิภาพตอบสนองนโยบายและมาตรฐานการดำเนินธุรกิจขององค์การ</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level3.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>3. พัฒนาปรับปรุงกระบวนการทำงานให้มีประสิทธิภาพตอบสนองนโยบายมาตรฐานการปฏิบัติงานขององค์การ สามารถลำดับความสำคัญวิเคราะห์ข้อมูลทางเลือกความเสี่ยงและผลกระทบในการปฏิบัติงานในระดับหน่วยงานได้</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level3.c3" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@if (step == 3)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="mt-5 mb-2">ระดับที่ 5</h4>
+            <span>
+                กำหนดกลยุทธและสร้างผลลัพธ์
+            </span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th nowarp="nowarp" style="width:100px;">คำตอบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. อธิบายในทิศทางและกระบวนการธุรกิจ สามารถกำหนดนโยบายมาตรฐานการดำเนินธุรกิจตลอดจนในการปฏิบัติงานได้อย่างมีประสิทธิภาพเพื่อเพิ่มขีดความสามารถในการแข่งขันขององค์กร</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level5.c1" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>2. ลำดับความสำคัญวิเคราะห์ข้อมูลทางเลือกความเสี่ยงและประเมินผลกระทบในการปฏิบัติงานในองค์การได้</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level5.c2" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>3. ให้คำแนะนำและข้อเสนอแนะในการพัฒนาปรับปรุงกระบวนการทำงานในระดับองค์กรได้</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level5.c3" /> ใช่</label></td>
+                    </tr>
+                    <tr>
+                        <td>4. สามารถสร้างบรรยากาศให้ผู้ใต้บังคับบัญชาได้เห็นความสำคัญในการปรับปรุงพัฒนากระบวนการปฏิบัติงานให้มีประสิทธิภาพมากยิ่งขึ้น สามารถกำหนดพัฒนารูปแบบวิธีการปฏิบัติงานใหม่ๆที่เป็นประโยชน์ต่อการยกระดับมาตรฐานการดำเนินธุรกิจขององค์กรรวบรวมประยุกต์ใช้กระบวนการปฏิบัติงานที่เป็นเลิศรวมทั้งถ่ายทอดแผนงานเชิงกลยุทธ์ภายในองค์กรจนเกิดผลลัพธ์ที่ต้องการ</td>
+                        <td><label><input type="checkbox" value="1" @bind="businessManagement.level5.c4" /> ใช่</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button @onclick="gotoBack" type="button" class="btn btn-default mt-5 mb-5">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+            <button @onclick="gotoNext" type="button" class="btn btn-primary mt-5 mb-5">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    public BusinessManagementData businessManagement;
+    private int step = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        businessManagement = new BusinessManagementData();
+        businessManagement.level1 = new Level();
+        businessManagement.level3 = new Level();
+        businessManagement.level5 = new Level();
+
+        businessManagement.level1.c1 = await sessionStorage.GetItemAsync<bool>("businessManagement.level1.c1");
+        businessManagement.level1.c2 = await sessionStorage.GetItemAsync<bool>("businessManagement.level1.c2");
+        businessManagement.level1.c3 = await sessionStorage.GetItemAsync<bool>("businessManagement.level1.c3");
+        businessManagement.level1.c4 = await sessionStorage.GetItemAsync<bool>("businessManagement.level1.c4");
+
+        businessManagement.level3.c1 = await sessionStorage.GetItemAsync<bool>("businessManagement.level3.c1");
+        businessManagement.level3.c2 = await sessionStorage.GetItemAsync<bool>("businessManagement.level3.c2");
+        businessManagement.level3.c3 = await sessionStorage.GetItemAsync<bool>("businessManagement.level3.c3");
+
+        businessManagement.level5.c1 = await sessionStorage.GetItemAsync<bool>("businessManagement.level5.c1");
+        businessManagement.level5.c2 = await sessionStorage.GetItemAsync<bool>("businessManagement.level5.c2");
+        businessManagement.level5.c3 = await sessionStorage.GetItemAsync<bool>("businessManagement.level5.c3");
+        businessManagement.level5.c4 = await sessionStorage.GetItemAsync<bool>("businessManagement.level5.c4");
+
+        await base.OnParametersSetAsync();
+    }
+
+    void gotoBack()
+    {
+        if (step == 1)
+        {
+            NavigationManager.NavigateTo("Leadership");
+        }
+        else
+        {
+            step--;
+        }
+    }
+    void gotoNext()
+    {
+        switch (step)
+        {
+            case 1:
+                {
+                    if (businessManagement.level1.c1 == true && businessManagement.level1.c2 == true && businessManagement.level1.c3 == true && businessManagement.level1.c4 == true)
+                    {
+                        if (businessManagement.level3 == null)
+                        {
+                            businessManagement.level3 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("businessManagement.level1.c1", businessManagement.level1.c1);
+                        sessionStorage.SetItemAsync("businessManagement.level1.c2", businessManagement.level1.c2);
+                        sessionStorage.SetItemAsync("businessManagement.level1.c3", businessManagement.level1.c3);
+                        sessionStorage.SetItemAsync("businessManagement.level1.c4", businessManagement.level1.c4);
+                        step++;
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("businessManagement.level1.c1", businessManagement.level1.c1);
+                        sessionStorage.SetItemAsync("businessManagement.level1.c2", businessManagement.level1.c2);
+                        sessionStorage.SetItemAsync("businessManagement.level1.c3", businessManagement.level1.c3);
+                        sessionStorage.SetItemAsync("businessManagement.level1.c4", businessManagement.level1.c4);
+
+                        NavigationManager.NavigateTo("Change-Catalyst");
+                    }
+                }; break;
+            case 2:
+                {
+                    if (businessManagement.level3.c1 == true && businessManagement.level3.c2 == true && businessManagement.level3.c3 == true)
+                    {
+                        if (businessManagement.level5 == null)
+                        {
+                            businessManagement.level5 = new Level();
+                        }
+                        sessionStorage.SetItemAsync("businessManagement.level3.c1", businessManagement.level3.c1);
+                        sessionStorage.SetItemAsync("businessManagement.level3.c2", businessManagement.level3.c2);
+                        sessionStorage.SetItemAsync("businessManagement.level3.c3", businessManagement.level3.c3);
+                        step++;
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("businessManagement.level3.c1", businessManagement.level3.c1);
+                        sessionStorage.SetItemAsync("businessManagement.level3.c2", businessManagement.level3.c2);
+                        sessionStorage.SetItemAsync("businessManagement.level3.c3", businessManagement.level3.c3);
+
+                        NavigationManager.NavigateTo("Change-Catalyst");
+                    }
+                }; break;
+            case 3:
+                {
+                    sessionStorage.SetItemAsync("businessManagement.level5.c1", businessManagement.level5.c1);
+                    sessionStorage.SetItemAsync("businessManagement.level5.c2", businessManagement.level5.c2);
+                    sessionStorage.SetItemAsync("businessManagement.level5.c3", businessManagement.level5.c3);
+                    sessionStorage.SetItemAsync("businessManagement.level5.c4", businessManagement.level5.c4);
+
+                    NavigationManager.NavigateTo("Change-Catalyst");
+                }; break;
+        }
+    }
+
+}

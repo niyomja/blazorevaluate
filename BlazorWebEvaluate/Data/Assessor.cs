@@ -7,8 +7,9 @@ namespace BlazorWebEvaluate.Data
 {
     public class Assessor
     {
-        public string id { get; set; }
+        public string code { get; set; }
         public string full_name { get; set; }
-        public string secret_code { get; set; }
+        public string division { get; set; }
+        public string level { get; set; }
     }
 }

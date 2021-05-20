@@ -6,15 +6,16 @@ include('inc.ini.php');
 //include('dev.ini.php');
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_STRINGIFY_FETCHES, false);
 
-    if (isset($_GET['person_id'])) {
-        $stmt = $conn->prepare("SELECT * FROM `pdo_evaluates` WHERE person_id=:person_id ORDER BY `full_name` ASC");
-        $stmt->bindParam(":person_id", $person_id);
-        $person_id = $_GET['person_id'];
+    if (isset($_GET['assessor_code'])) {
+        $stmt = $conn->prepare("SELECT * FROM `aot_evaluates` WHERE assessor_code=:assessor_code ORDER BY `full_name` ASC");
+        $stmt->bindParam(":assessor_code", $assessor_code);
+        $assessor_code = $_GET['assessor_code'];
     }else{
-        $stmt = $conn->prepare("SELECT * FROM `pdo_evaluates` WHERE person_id=0 ORDER BY `full_name` ASC");
+        $stmt = $conn->prepare("SELECT * FROM `aot_evaluates` WHERE assessor_code='' ORDER BY `full_name` ASC");
     }
     $stmt->execute();
   
@@ -22,8 +23,8 @@ try {
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     $data = $stmt->fetchAll();
-    
-    echo json_encode($data, JSON_NUMERIC_CHECK);
+
+    echo json_encode($data);
 
     $conn = null;
 } catch (PDOException $e) {

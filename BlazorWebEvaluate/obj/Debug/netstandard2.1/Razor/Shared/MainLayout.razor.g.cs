@@ -86,16 +86,20 @@ using BlazorWebEvaluate.Data;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "sidebar");
-            __builder.OpenComponent<BlazorWebEvaluate.Shared.NavMenu>(2);
+            __builder.AddMarkupContent(2, "\n    ");
+            __builder.OpenComponent<BlazorWebEvaluate.Shared.NavMenu>(3);
             __builder.CloseComponent();
+            __builder.AddMarkupContent(4, "\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(3, "\n\n");
-            __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "main");
-            __builder.AddMarkupContent(6, "<div class=\"top-row px-4\"></div>\n\n    ");
-            __builder.OpenElement(7, "div");
-            __builder.AddAttribute(8, "class", "content px-4");
-            __builder.AddContent(9, 
+            __builder.AddMarkupContent(5, "\n\n");
+            __builder.OpenElement(6, "div");
+            __builder.AddAttribute(7, "class", "main");
+            __builder.AddMarkupContent(8, "\n    ");
+            __builder.AddMarkupContent(9, "<div class=\"top-row px-4\">\n        \n    </div>\n\n    ");
+            __builder.OpenElement(10, "div");
+            __builder.AddAttribute(11, "class", "content px-4");
+            __builder.AddMarkupContent(12, "\n        ");
+            __builder.AddContent(13, 
 #nullable restore
 #line 14 "/Users/niyom/Repository/blazorevaluate/BlazorWebEvaluate/Shared/MainLayout.razor"
          Body
@@ -104,7 +108,9 @@ using BlazorWebEvaluate.Data;
 #line hidden
 #nullable disable
             );
+            __builder.AddMarkupContent(14, "\n    ");
             __builder.CloseElement();
+            __builder.AddMarkupContent(15, "\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998
